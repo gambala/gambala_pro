@@ -19,5 +19,10 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.console = true
+  end
+
   # config.action_view.raise_on_missing_translations = true
 end
