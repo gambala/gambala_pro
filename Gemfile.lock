@@ -77,7 +77,7 @@ GEM
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.7.0)
-    ffi (1.9.13)
+    ffi (1.9.14)
     flay (2.8.0)
       erubis (~> 2.7.0)
       path_expander (~> 1.0)
