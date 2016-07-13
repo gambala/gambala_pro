@@ -280,6 +280,7 @@ DEPENDENCIES
   annotate
   bullet
   bundler-audit
+  capybara
   coffee-rails
   cucumber-rails
   database_cleaner

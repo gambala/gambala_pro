@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'uglifier'
 
 group :test do
+  gem 'capybara'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
 end
