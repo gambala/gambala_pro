@@ -10,7 +10,9 @@ gem 'sqlite3'
 gem 'turbolinks'
 gem 'uglifier'
 
-group :development, :test do
+group :test do
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
 end
 
 group :development do
