@@ -1,6 +1,6 @@
-# Сайт www.gambala.pro
+# Сайт gambala.pro
 
-[![Build Status](https://semaphoreci.com/api/v1/gambala/gambala/branches/bundle-update-2016-07-13-031042/shields_badge.svg)](https://semaphoreci.com/gambala/gambala)
+[![Build Status](https://semaphoreci.com/api/v1/gambala/gambala/branches/master/shields_badge.svg)](https://semaphoreci.com/gambala/gambala)
 
 Работает на:
 * ruby 2.3.1
