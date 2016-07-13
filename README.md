@@ -1,24 +1,15 @@
-# README
+# Сайт www.gambala.pro
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Build Status](https://semaphoreci.com/api/v1/gambala/gambala/branches/bundle-update-2016-07-13-031042/shields_badge.svg)](https://semaphoreci.com/gambala/gambala)
 
-Things you may want to cover:
+Работает на:
+* ruby 2.3.1
+* rails 5.0.x
+* sqlite
 
-* Ruby version
+## Установка
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* clone repo
+* bundle
+* rake db:migrate
+* rails s
