@@ -4,6 +4,9 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
+require 'codeclimate-test-reporter'
+CodeClimate::TestReporter.start
+
 require 'cucumber/rails'
 require 'capybara/rails'
 
