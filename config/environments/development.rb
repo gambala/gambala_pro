@@ -9,6 +9,7 @@ Rails.application.configure do
   config.consider_all_requests_local = true
   config.eager_load = false
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
 
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
