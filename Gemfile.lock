@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/nex3/rb-inotify.git
+  remote: https://github.com/nex3/rb-inotify.git
   revision: 5aa4bdbb7a08628c82d6b0f425149719a5cc156a
   specs:
     rb-inotify (0.9.7)
