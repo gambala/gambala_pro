@@ -21,9 +21,15 @@ group :development do
   gem 'annotate'
   gem 'bullet'
   gem 'bundler-audit'
+  gem 'guard', require: false
+  gem 'guard-bundler', require: false
+  gem 'guard-livereload', require: false
+  gem 'guard-puma', require: false
   gem 'listen'
   gem 'meta_request'
+  gem 'rack-livereload'
   gem 'rails_best_practices', require: false
+  gem 'rb-inotify', github: 'nex3/rb-inotify', require: false
   gem 'rubocop', require: false
   gem 'rubycritic', require: false
   gem 'spring'
