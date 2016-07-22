@@ -1,4 +1,4 @@
-<img align="right" src="https://github.com/gambala/gambala/raw/master/app/assets/images/logo@2x.png" alt="Сайт Gambala.pro" height="96">
+<img align="right" src="https://github.com/gambala/gambala/raw/master/app/assets/images/logo@2x.png" alt="Сайт Gambala.pro" width="364">
 
 [![Build Status](https://semaphoreci.com/api/v1/gambala/gambala/branches/master/shields_badge.svg)](https://semaphoreci.com/gambala/gambala)
 [![Code Climate](https://codeclimate.com/github/gambala/gambala/badges/gpa.svg)](https://codeclimate.com/github/gambala/gambala)
