@@ -4,7 +4,6 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 gem 'coffee-rails'
 gem 'jquery-rails'
-gem 'puma'
 gem 'rails', '~> 5.0.0'
 gem 'sass-rails'
 gem 'slim'
@@ -23,12 +22,18 @@ group :development do
   gem 'annotate'
   gem 'bullet'
   gem 'bundler-audit'
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano-unicorn-nginx'
   gem 'guard', require: false
   gem 'guard-bundler', require: false
   gem 'guard-livereload', require: false
   gem 'guard-puma', require: false
   gem 'listen'
   gem 'meta_request'
+  gem 'puma'
   gem 'rack-livereload'
   gem 'rails_best_practices', require: false
   gem 'rb-inotify', github: 'nex3/rb-inotify', require: false
@@ -38,4 +43,8 @@ group :development do
   gem 'spring-watcher-listen'
   gem 'traceroute'
   gem 'web-console'
+end
+
+group :production do
+  gem 'unicorn'
 end

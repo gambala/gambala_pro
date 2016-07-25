@@ -1,0 +1,52 @@
+upstream unicorn_<%= fetch(:unicorn_app_name) %> {
+  server unix:/tmp/unicorn.<%= fetch(:unicorn_app_name) %>.sock fail_timeout=0;
+}
+
+server {
+  listen 80;
+  client_max_body_size 4G;
+  keepalive_timeout 10;
+
+  server_name <%= fetch(:nginx_server_name) %>;
+
+  error_page 500 502 504 /500.html;
+  error_page 503 @503;
+
+  rewrite ^/(.*)/$ /$1 permanent;
+  root <%= current_path %>/public;
+  try_files $uri/index.html $uri @unicorn_<%= fetch(:unicorn_app_name) %>;
+
+  location @unicorn_<%= fetch(:unicorn_app_name) %> {
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+    proxy_pass http://unicorn_<%= fetch(:unicorn_app_name) %>;
+    access_log <%= nginx_access_log_file %>;
+    error_log <%= nginx_error_log_file %>;
+    # limit_req zone=one;
+  }
+  location ^~ /assets/ {
+    gzip_static on;
+    expires max;
+    add_header Cache-Control public;
+  }
+  location @503 {
+    error_page 405 = /system/maintenance.html;
+    if (-f $document_root/system/maintenance.html) {
+      rewrite ^(.*)$ /system/maintenance.html break;
+    }
+    rewrite ^(.*)$ /503.html break;
+  }
+  location ~ (<%= fetch(:forbidden_locations).join('|') %>) {
+    deny all;
+    access_log off;
+    error_log off;
+  }
+
+  if ($request_method !~ ^(GET|HEAD|PUT|POST|PATCH|DELETE|OPTIONS)$ ){
+    return 405;
+  }
+  if (-f $document_root/system/maintenance.html) {
+    return 503;
+  }
+}
