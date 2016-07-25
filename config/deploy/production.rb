@@ -54,7 +54,7 @@ set :forbidden_locations, ['/88.php',
                            '^/wp-login.php',
                            '^/xml/',
                            '^/xmlrpc.php']
-set :nginx_config_name, 'gambala'
+set :nginx_config_name, 'gambala.conf.d'
 set :nginx_server_name, 'beta.gambala.ru'
 set :ssh_options, keys: %w(/home/gambala/.ssh/id_rsa),
                   forward_agent: false,
