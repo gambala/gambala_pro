@@ -4,10 +4,10 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 gem 'coffee-rails'
 gem 'jquery-rails'
+gem 'pg'
 gem 'rails', '~> 5.0.0'
 gem 'sass-rails'
 gem 'slim'
-gem 'sqlite3'
 gem 'turbolinks'
 gem 'uglifier'
 

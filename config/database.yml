@@ -1,19 +1,28 @@
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
   pool: 5
-  timeout: 5000
 
 development:
   <<: *default
-  database: db/development.sqlite3
-
-test: &test
-  <<: *default
-  database: db/test.sqlite3
+  database: gambala_development
+  username: <%= ENV["DB_USERNAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
+  host: <%= ENV["DB_HOST"] %>
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: gambala_production
+  username: <%= ENV["DB_USERNAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
+  host: <%= ENV["DB_HOST"] %>
+
+test: &test
+  <<: *default
+  database: gambala_test<%= ENV['TEST_ENV_NUMBER'] %>
+  username: <%= ENV["DB_USERNAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
+  host: <%= ENV["DB_HOST"] %>
 
 cucumber:
   <<: *test
