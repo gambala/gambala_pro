@@ -2,6 +2,7 @@ set :application, 'gambala'
 set :deploy_to, "/home/deployer/apps/#{fetch(:application)}"
 set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets
                      vendor/bundle public/system public/uploads public/assets public/sitemaps)
+set :linked_files, %w(config/application.yml)
 set :log_level, :info
 set :repo_url, 'git@github.com:gambala/gambala.git'
 set :unicorn_app_name, -> { "#{fetch(:application)}_#{fetch(:stage)}" }
