@@ -5,5 +5,6 @@ require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 require 'capistrano/unicorn_nginx'
+require 'capistrano/figaro_yml'
 
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }

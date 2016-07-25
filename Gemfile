@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 gem 'coffee-rails'
+gem 'figaro'
 gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '~> 5.0.0'
@@ -24,6 +25,7 @@ group :development do
   gem 'bundler-audit'
   gem 'capistrano'
   gem 'capistrano-bundler'
+  gem 'capistrano-figaro-yml'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
   gem 'capistrano-unicorn-nginx'

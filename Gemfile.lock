@@ -74,6 +74,9 @@ GEM
     capistrano-bundler (1.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
+    capistrano-figaro-yml (1.0.3)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2, >= 1.2.0)
     capistrano-harrow (0.5.2)
     capistrano-rails (1.1.7)
       capistrano (~> 3.1)
@@ -139,6 +142,8 @@ GEM
     eventmachine (1.2.0.1)
     execjs (2.7.0)
     ffi (1.9.14)
+    figaro (1.1.1)
+      thor (~> 0.14)
     flay (2.8.0)
       erubis (~> 2.7.0)
       path_expander (~> 1.0)
@@ -369,6 +374,7 @@ DEPENDENCIES
   bundler-audit
   capistrano
   capistrano-bundler
+  capistrano-figaro-yml
   capistrano-rails
   capistrano-rvm
   capistrano-unicorn-nginx
@@ -377,6 +383,7 @@ DEPENDENCIES
   coffee-rails
   cucumber-rails
   database_cleaner
+  figaro
   guard
   guard-bundler
   guard-livereload
