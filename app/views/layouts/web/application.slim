@@ -7,5 +7,6 @@ html
     = render 'favicons'
   body
     = yield
+    div id='permanent-smooch' data-turbolinks-permanent=''
     div id='permanent-js' data-turbolinks-permanent=''
       = javascript_include_tag 'application', data: { turbolinks_track: 'reload' }

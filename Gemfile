@@ -50,3 +50,7 @@ end
 group :production do
   gem 'unicorn'
 end
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-smooch'
+end
