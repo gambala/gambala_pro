@@ -1,7 +1,8 @@
-$(document).ready ->
+initSmooch = ->
   smoochPromise = Smooch.init(
     appToken: 'c4hggr2rsoskrn0hi7sfjveix'
     customText:
+      connectNotificationText: 'Продолжите общение в вашем любимом мессенджере'
       headerText: 'Чем могу помочь?'
       inputPlaceholder: 'Ваше сообщение...'
       introAppText: 'Пишите прямо здесь, или в своем любимом приложении.'
@@ -13,5 +14,7 @@ $(document).ready ->
   )
 
   smoochPromise.then ->
-    $('#permanent-smooch').remove()
-    $('#permanent-smooch').attr('data-turbolinks-permanent', '')
+    $('#sk-holder').remove()
+    $('#sk-holder').attr('data-turbolinks-permanent', '')
+
+$(document).ready initSmooch
