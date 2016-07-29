@@ -17,4 +17,4 @@ initSmooch = ->
     $('#sk-holder').remove()
     $('#sk-holder').attr('data-turbolinks-permanent', '')
 
-$(document).ready initSmooch
+# $(document).ready initSmooch
