@@ -12,3 +12,12 @@ html
     div id='permanent-js' data-turbolinks-permanent=''
       = javascript_include_tag 'application', data: { turbolinks_track: 'reload' }
     = render 'me_talk'
+    - if signed_in?
+      ' Signed in as: #{current_user.email}
+      = button_to 'Sign out', sign_out_path, method: :delete
+    - else
+      = link_to 'Sign in', sign_in_path
+    div id='flash'
+      - flash.each do |key, value|
+        .flash class=key
+          = value

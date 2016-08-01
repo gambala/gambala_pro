@@ -58,6 +58,7 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
+    bcrypt (3.1.11)
     builder (3.2.2)
     bullet (5.2.0)
       activesupport (>= 3.0.0)
@@ -95,6 +96,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    clearance (1.14.1)
+      bcrypt
+      email_validator (~> 1.4)
+      rails (>= 3.1)
     code_analyzer (0.4.5)
       sexp_processor
     codeclimate-engine-rb (0.3.1)
@@ -138,6 +143,8 @@ GEM
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
+    email_validator (1.6.0)
+      activemodel
     equalizer (0.0.11)
     erubis (2.7.0)
     eventmachine (1.2.0.1)
@@ -381,6 +388,7 @@ DEPENDENCIES
   capistrano-rvm
   capistrano-unicorn-nginx
   capybara
+  clearance
   codeclimate-test-reporter
   coffee-rails
   cucumber-rails
