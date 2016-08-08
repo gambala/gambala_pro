@@ -95,7 +95,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    code_analyzer (0.4.5)
+    code_analyzer (0.4.6)
       sexp_processor
     codeclimate-engine-rb (0.3.1)
       virtus (~> 1.0)
