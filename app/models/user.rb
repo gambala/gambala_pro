@@ -13,4 +13,6 @@
 
 class User < ApplicationRecord
   include Clearance::User
+
+  validates :password, length: { minimum: 3 }, on: :create
 end
