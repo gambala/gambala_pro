@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/gambala/clearance.git
+  revision: 3a445ddb306026feaa3ae3256e0ae2b29e6b4c02
+  specs:
+    clearance (1.14.2)
+      bcrypt
+      email_validator (~> 1.4)
+      rails (>= 3.1)
+      slim
+
+GIT
   remote: https://github.com/nex3/rb-inotify.git
   revision: 5aa4bdbb7a08628c82d6b0f425149719a5cc156a
   specs:
@@ -96,10 +106,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    clearance (1.14.1)
-      bcrypt
-      email_validator (~> 1.4)
-      rails (>= 3.1)
     code_analyzer (0.4.5)
       sexp_processor
     codeclimate-engine-rb (0.3.1)
@@ -388,7 +394,7 @@ DEPENDENCIES
   capistrano-rvm
   capistrano-unicorn-nginx
   capybara
-  clearance
+  clearance!
   codeclimate-test-reporter
   coffee-rails
   cucumber-rails
