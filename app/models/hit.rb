@@ -16,4 +16,8 @@ class Hit < ApplicationRecord
   friendly_id :id, use: [:slugged, :history, :finders]
 
   validates :slug, uniqueness: true
+
+  def to_s
+    title
+  end
 end

@@ -1,5 +1,12 @@
-section.section-promo
+section.section-padded
   .container
-    .h2 Достижения
-    - hits.each do |hit|
-      p = link_to hit, [:admin, hit]
+    .row
+      .col-md-4.col-md-push-8.col-lg-3.col-lg-push-9
+        .panel.panel-muted
+          .panel-body
+            p = link_to 'Новое достижение', [:new, :admin, :hit],
+                        class: 'btn btn-primary btn-block'
+      .col-md-8.col-md-pull-4.col-lg-9.col-lg-pull-3
+        h1 Достижения
+        - hits.each do |hit|
+          p = link_to hit, [:admin, hit]
