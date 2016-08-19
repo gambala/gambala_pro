@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/gambala/clearance.git
-  revision: 3a445ddb306026feaa3ae3256e0ae2b29e6b4c02
+  revision: fbefb0af08df5c99fba485346fa08f46317fe57f
   specs:
     clearance (1.14.2)
       bcrypt
