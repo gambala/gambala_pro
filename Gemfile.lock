@@ -70,7 +70,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.11)
     builder (3.2.2)
-    bullet (5.2.1)
+    bullet (5.3.0)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.10.0)
     bundler-audit (0.5.0)
@@ -99,7 +99,7 @@ GEM
     capistrano-unicorn-nginx (4.0.0)
       capistrano (>= 3.1)
       sshkit (>= 1.2.0)
-    capybara (2.7.1)
+    capybara (2.8.0)
       addressable
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -255,6 +255,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack-timeout (0.4.2)
     rails (5.0.0.1)
       actioncable (= 5.0.0.1)
       actionmailer (= 5.0.0.1)
@@ -267,7 +268,7 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 5.0.0.1)
       sprockets-rails (>= 2.0.0)
-    rails-assets-smooch (3.2.2)
+    rails-assets-smooch (3.3.0)
     rails-dom-testing (2.0.1)
       activesupport (>= 4.2.0, < 6.0)
       nokogiri (~> 1.6.0)
@@ -306,7 +307,7 @@ GEM
     ruby_dep (1.4.0)
     ruby_parser (3.8.2)
       sexp_processor (~> 4.1)
-    rubycritic (2.9.2)
+    rubycritic (2.9.3)
       colorize
       flay (= 2.8.0)
       flog (= 4.4.0)
@@ -411,6 +412,7 @@ DEPENDENCIES
   pg
   puma
   rack-livereload
+  rack-timeout
   rails (>= 5.0.0.1)
   rails-assets-smooch!
   rails_best_practices
