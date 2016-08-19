@@ -5,7 +5,7 @@ Rails.application.routes.draw do
         root to: 'welcome#index'
       end
 
-      resources :namespaces, only: :index
+      get 'personal', to: 'welcome#index'
     end
 
     root to: 'welcome#index'
