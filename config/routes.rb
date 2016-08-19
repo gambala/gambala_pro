@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   scope module: :web do
     scope module: :personal do
       namespace :admin do
+        resources :hits
+
         root to: 'welcome#index'
       end
 
