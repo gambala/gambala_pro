@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/gambala/bootstrap-components.git
+  revision: 2a5e99fca22beb180972c1160457b3e8097529fc
+  specs:
+    bootstrap-components (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
+
+GIT
   remote: https://github.com/gambala/clearance.git
   revision: fbefb0af08df5c99fba485346fa08f46317fe57f
   specs:
@@ -14,6 +22,18 @@ GIT
   specs:
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+
+GIT
+  remote: https://github.com/sass/sassc-rails.git
+  revision: b76761dd7b3bda9df559cf35f332364878ec7ad8
+  specs:
+    sassc-rails (1.3.0)
+      railties (>= 4.0.0)
+      sass
+      sassc (~> 1.9)
+      sprockets (> 2.11)
+      sprockets-rails
+      tilt
 
 GEM
   remote: https://rubygems.org/
@@ -64,6 +84,8 @@ GEM
       rake (>= 10.4, < 12.0)
     arel (7.1.1)
     ast (2.3.0)
+    autoprefixer-rails (6.4.0.2)
+      execjs
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
@@ -317,12 +339,10 @@ GEM
       ruby_parser (~> 3.8)
       virtus (~> 1.0)
     sass (3.4.22)
-    sass-rails (5.0.6)
-      railties (>= 4.0.0, < 6)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (>= 1.1, < 3)
+    sassc (1.10.0)
+      bundler
+      ffi (~> 1.9.6)
+      sass (>= 3.3.0)
     sexp_processor (4.7.0)
     shellany (0.0.1)
     simplecov (0.12.0)
@@ -387,6 +407,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  bootstrap-components!
   bullet
   bundler-audit
   capistrano
@@ -419,7 +440,7 @@ DEPENDENCIES
   rb-inotify!
   rubocop
   rubycritic
-  sass-rails
+  sassc-rails!
   slim
   spring
   spring-watcher-listen
