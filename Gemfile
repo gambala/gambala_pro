@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
+gem 'bootstrap-components', github: 'gambala/bootstrap-components'
 gem 'clearance', github: 'gambala/clearance'
 gem 'coffee-rails'
 gem 'figaro'
@@ -9,7 +10,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'rack-timeout'
 gem 'rails', '>= 5.0.0.1'
-gem 'sass-rails'
+gem 'sassc-rails', github: 'sass/sassc-rails'
 gem 'slim'
 gem 'turbolinks'
 gem 'uglifier'
