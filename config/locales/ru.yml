@@ -1,0 +1,13 @@
+ru:
+  activerecord:
+    attributes:
+      hit:
+        body: Тело
+        slug: Символьный ID
+        title: Тема
+  helpers:
+    placeholder:
+      hit:
+        body: Все, что произошло, в свободной форме
+        slug: Можно оставить пустым
+        title: Читатели увидят тему в ленте
