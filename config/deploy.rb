@@ -5,20 +5,9 @@ set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets
                      vendor/bundle public/system public/uploads public/assets public/sitemaps)
 set :linked_files, %w(config/application.yml)
 set :log_level, :info
+set :puma_bind, "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.sock"
+set :puma_init_active_record, true
+set :puma_preload_app, true
+set :puma_threads, [4, 16]
 set :repo_url, 'git@github.com:gambala/gambala.git'
-set :unicorn_app_name, -> { "#{fetch(:application)}_#{fetch(:stage)}" }
-
-namespace :deploy do
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-    end
-  end
-
-  after :publishing, :restart
-
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-    end
-  end
-end
+set :user, 'deployer'

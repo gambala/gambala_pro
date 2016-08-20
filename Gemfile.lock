@@ -120,9 +120,9 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    capistrano-unicorn-nginx (4.0.0)
-      capistrano (>= 3.1)
-      sshkit (>= 1.2.0)
+    capistrano3-puma (1.2.1)
+      capistrano (~> 3.0)
+      puma (>= 2.6)
     capybara (2.8.0)
       addressable
       mime-types (>= 1.16)
@@ -228,7 +228,6 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (2.0.2)
-    kgio (2.10.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.1.5)
@@ -317,7 +316,6 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rainbow (2.1.0)
-    raindrops (0.17.0)
     rake (11.2.2)
     rb-fsevent (0.9.7)
     reek (4.1.0)
@@ -388,9 +386,6 @@ GEM
     uglifier (3.0.2)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.1.0)
-    unicorn (5.1.0)
-      kgio (~> 2.6)
-      raindrops (~> 0.7)
     uniform_notifier (1.10.0)
     virtus (1.0.5)
       axiom-types (~> 0.1)
@@ -423,7 +418,7 @@ DEPENDENCIES
   capistrano-figaro-yml
   capistrano-rails
   capistrano-rvm
-  capistrano-unicorn-nginx
+  capistrano3-puma
   capybara
   clearance!
   codeclimate-test-reporter
@@ -458,7 +453,6 @@ DEPENDENCIES
   traceroute
   turbolinks
   uglifier
-  unicorn
   web-console
 
 BUNDLED WITH

@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'pry'
 gem 'pry-rails'
+gem 'puma'
 gem 'rack-timeout'
 gem 'rails', '>= 5.0.0.1'
 gem 'sassc-rails', github: 'sass/sassc-rails'
@@ -36,14 +37,13 @@ group :development do
   gem 'capistrano-figaro-yml'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
-  gem 'capistrano-unicorn-nginx'
+  gem 'capistrano3-puma'
   gem 'guard', require: false
   gem 'guard-bundler', require: false
   gem 'guard-livereload', require: false
   gem 'guard-puma', require: false
   gem 'listen'
   gem 'meta_request'
-  gem 'puma'
   gem 'rack-livereload'
   gem 'rails_best_practices', require: false
   gem 'rb-inotify', github: 'nex3/rb-inotify', require: false
@@ -53,10 +53,6 @@ group :development do
   gem 'spring-watcher-listen'
   gem 'traceroute'
   gem 'web-console'
-end
-
-group :production do
-  gem 'unicorn'
 end
 
 source 'https://rails-assets.org' do
