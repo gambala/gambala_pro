@@ -45,7 +45,7 @@ CKEDITOR.editorConfig = (config) ->
     { name: 'tools',       items: [ 'Toolbarswitch', 'ShowBlocks' ] }
   ]
 
-  config.toolbar = 'minToolbar'
+  # config.toolbar = 'minToolbar'
   config.uiColor = '#AADC6E'
 
 @CKeditor_OnComplete = (ckEditorInstance) ->
