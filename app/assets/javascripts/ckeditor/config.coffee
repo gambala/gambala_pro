@@ -1,10 +1,17 @@
 CKEDITOR.editorConfig = (config) ->
   config.allowedContent = true
   config.codeSnippet_theme = 'obsidian'
-  config.extraPlugins = 'panel,autolink,button,panelbutton,bt_table,floatpanel,divarea,menu,lineutils,widget,image2,youtube,tableresize,justify,codesnippet,sourcedialog,widgetbootstrap,widgetcommon,widgettemplatemenu,btgrid,pbckcode,btbutton,btquicktable,placeholder,bootstrapVisibility,nbsp,textselection,codeTag,toolbarswitch'
+  config.extraPlugins = 'panel,autolink,button,panelbutton,bt_table,floatpanel,divarea,menu,lineutils,widget,image2,youtube,tableresize,justify,codesnippet,sourcedialog,widgetbootstrap,widgetcommon,widgettemplatemenu,btgrid,pbckcode,btbutton,btquicktable,placeholder,bootstrapVisibility,nbsp,textselection,codeTag,toolbarswitch,easykeymap'
   config.removePlugins = 'scayt'
   config.disableNativeSpellChecker = false
   config.scayt_autoStartup = false
+
+  config.easykeymaps =
+    4456530: String.fromCharCode(174) # ALT+R
+    4456515: String.fromCharCode(169) # ALT+C
+
+  config.easykeymaps[CKEDITOR.CTRL + 83] = (editor) ->
+    alert("You have entered 'CTRL + S' In editor: #{editor.name}")
 
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashBrowseUrl = "/ckeditor/attachment_files"
