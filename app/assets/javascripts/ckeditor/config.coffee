@@ -1,6 +1,7 @@
 CKEDITOR.editorConfig = (config) ->
+  config.allowedContent = true
   config.codeSnippet_theme = 'obsidian'
-  config.extraPlugins = 'panel,autolink,button,panelbutton,bt_table,floatpanel,divarea,menu,lineutils,widget,image2,youtube,tableresize,justify,codesnippet,sourcedialog,widgetbootstrap,widgetcommon,widgettemplatemenu,btgrid,pbckcode,btbutton,btquicktable,placeholder,bootstrapVisibility,nbsp,textselection,codeTag'
+  config.extraPlugins = 'panel,autolink,button,panelbutton,bt_table,floatpanel,divarea,menu,lineutils,widget,image2,youtube,tableresize,justify,codesnippet,sourcedialog,widgetbootstrap,widgetcommon,widgettemplatemenu,btgrid,pbckcode,btbutton,btquicktable,placeholder,bootstrapVisibility,nbsp,textselection,codeTag,toolbarswitch'
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashUploadUrl = "/ckeditor/attachment_files"
@@ -26,16 +27,26 @@ CKEDITOR.editorConfig = (config) ->
     params[csrf_param] = csrf_token  if csrf_param isnt `undefined` and csrf_token isnt `undefined`
     params
 
-  config.toolbar_custom = [
+  config.maximizedToolbar = 'maxToolbar'
+  config.smallToolbar = 'minToolbar'
+
+  config.toolbar_maxToolbar = [
     { name: 'document',    items: [ 'Source' ] },
     { name: 'clipboard',   items: [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
-    { name: 'tools',       items: [ 'Maximize', 'ShowBlocks' ] }
+    { name: 'tools',       items: [ 'Toolbarswitch', 'ShowBlocks' ] }
     { name: 'basicstyles', items: [ 'Bold','Italic','Underline','Strike','-','RemoveFormat', '-', 'Link','Unlink' ] },
     { name: 'paragraph',   items: [ 'NumberedList','BulletedList','-','Blockquote' ] },
     '/',
     { name: 'insert',      items: [ 'Image', 'Youtube', 'Flash', 'Table'] },
     { name: 'styles',      items: [ 'Format', 'pbckcode'] }
   ]
+  config.toolbar_minToolbar = [
+    { name: 'basicstyles', items: [ 'Bold','Italic','Underline','Strike','-','RemoveFormat', '-', 'Link','Unlink' ] },
+    { name: 'tools',       items: [ 'Toolbarswitch', 'ShowBlocks' ] }
+  ]
 
-  # config.toolbar = 'custom'
+  config.toolbar = 'minToolbar'
   config.uiColor = '#AADC6E'
+
+@CKeditor_OnComplete = (ckEditorInstance) ->
+  return
