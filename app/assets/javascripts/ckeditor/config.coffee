@@ -2,6 +2,10 @@ CKEDITOR.editorConfig = (config) ->
   config.allowedContent = true
   config.codeSnippet_theme = 'obsidian'
   config.extraPlugins = 'panel,autolink,button,panelbutton,bt_table,floatpanel,divarea,menu,lineutils,widget,image2,youtube,tableresize,justify,codesnippet,sourcedialog,widgetbootstrap,widgetcommon,widgettemplatemenu,btgrid,pbckcode,btbutton,btquicktable,placeholder,bootstrapVisibility,nbsp,textselection,codeTag,toolbarswitch'
+  config.removePlugins = 'scayt'
+  config.disableNativeSpellChecker = false
+  config.scayt_autoStartup = false
+
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashUploadUrl = "/ckeditor/attachment_files"
