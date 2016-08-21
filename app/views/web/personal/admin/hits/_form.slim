@@ -10,7 +10,8 @@
       = f.error_message :slug
     = f.form_group :body do
       = f.label :body, class: 'control-label'
-      = f.text_area :body, class: 'form-control', required: true, placeholder: true, rows: 4
+      = f.text_area :body, class: 'form-control ckeditor', required: true,
+                           placeholder: true, rows: 4
       = f.error_message :body
     .form-group
       = f.button 'Сохранить', class: 'btn btn-primary btn-sm'
