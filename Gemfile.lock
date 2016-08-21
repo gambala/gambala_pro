@@ -1,12 +1,4 @@
 GIT
-  remote: https://github.com/galetahub/ckeditor.git
-  revision: a431c575f1e39647a19c050b60007613ece7870e
-  specs:
-    ckeditor (4.2.0)
-      cocaine
-      orm_adapter (~> 0.5.0)
-
-GIT
   remote: https://github.com/gambala/bootstrap-components.git
   revision: 2a5e99fca22beb180972c1160457b3e8097529fc
   specs:
@@ -144,6 +136,9 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
+    ckeditor (4.2.0)
+      cocaine
+      orm_adapter (~> 0.5.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -442,7 +437,7 @@ DEPENDENCIES
   capistrano3-puma
   capybara
   carrierwave
-  ckeditor!
+  ckeditor
   clearance!
   codeclimate-test-reporter
   coffee-rails
