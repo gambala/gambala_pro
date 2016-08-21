@@ -136,6 +136,13 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
+    ckeditor (4.2.0)
+      cocaine
+      orm_adapter (~> 0.5.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     code_analyzer (0.4.6)
       sexp_processor
     codeclimate-engine-rb (0.3.1)
@@ -270,6 +277,7 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    orm_adapter (0.5.0)
     parser (2.3.1.2)
       ast (~> 2.2)
     path_expander (1.0.0)
@@ -429,6 +437,7 @@ DEPENDENCIES
   capistrano3-puma
   capybara
   carrierwave
+  ckeditor
   clearance!
   codeclimate-test-reporter
   coffee-rails
