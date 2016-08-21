@@ -1,0 +1,3 @@
+[submodule "vendor/assets/javascripts/ckeditor/plugins/codeTag"]
+	path = vendor/assets/javascripts/ckeditor/plugins/codeTag
+	url = git@github.com:danielsvane/ckeditor-code-tag.git
