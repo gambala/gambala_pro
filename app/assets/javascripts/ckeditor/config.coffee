@@ -1,7 +1,7 @@
 CKEDITOR.editorConfig = (config) ->
   config.allowedContent = true
   config.codeSnippet_theme = 'obsidian'
-  config.extraPlugins = 'panel,autolink,button,panelbutton,bt_table,floatpanel,divarea,menu,lineutils,widget,image2,youtube,tableresize,justify,codesnippet,sourcedialog,widgetbootstrap,widgetcommon,widgettemplatemenu,btgrid,pbckcode,btbutton,btquicktable,placeholder,bootstrapVisibility,nbsp,textselection,codeTag,toolbarswitch,easykeymap,codemirror'
+  config.extraPlugins = 'panel,autolink,button,panelbutton,bt_table,floatpanel,divarea,menu,lineutils,widget,image2,youtube,tableresize,justify,codesnippet,sourcedialog,widgetbootstrap,widgetcommon,widgettemplatemenu,btgrid,pbckcode,btbutton,btquicktable,placeholder,bootstrapVisibility,nbsp,textselection,codeTag,toolbarswitch,easykeymap,codemirror,glvrdPlugin'
   config.removePlugins = 'scayt,wsc'
   config.disableNativeSpellChecker = false
   config.scayt_autoStartup = false
@@ -53,7 +53,7 @@ CKEDITOR.editorConfig = (config) ->
   ]
   config.toolbar_minToolbar = [
     { name: 'basicstyles', items: [ 'Bold','Italic','Underline','Strike','-','RemoveFormat', '-', 'Link','Unlink' ] },
-    { name: 'tools',       items: [ 'Toolbarswitch', 'ShowBlocks' ] }
+    { name: 'tools',       items: [ 'Toolbarswitch', 'ShowBlocks', 'glvrdPlugin' ] }
   ]
 
   # config.toolbar = 'minToolbar'
