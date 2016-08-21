@@ -1,4 +1,5 @@
 CKEDITOR.editorConfig = (config) ->
+  config.extraPlugins = 'youtube'
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashUploadUrl = "/ckeditor/attachment_files"
@@ -31,7 +32,7 @@ CKEDITOR.editorConfig = (config) ->
     { name: 'basicstyles', items: [ 'Bold','Italic','Underline','Strike','-','RemoveFormat', '-', 'Link','Unlink' ] },
     { name: 'paragraph',   items: [ 'NumberedList','BulletedList','-','Blockquote' ] },
     '/',
-    { name: 'insert',      items: [ 'Image', 'Flash', 'Table'] },
+    { name: 'insert',      items: [ 'Image', 'Youtube', 'Flash', 'Table'] },
     { name: 'styles',      items: [ 'Format' ] }
   ]
 
