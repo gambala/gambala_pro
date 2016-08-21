@@ -1,6 +1,6 @@
 CKEDITOR.editorConfig = (config) ->
   config.codeSnippet_theme = 'obsidian'
-  config.extraPlugins = 'panel,floatpanel,menu,lineutils,widget,image2,youtube,tableresize,justify,codesnippet,sourcedialog,widgetbootstrap,widgetcommon,widgettemplatemenu,btgrid'
+  config.extraPlugins = 'panel,floatpanel,menu,lineutils,widget,image2,youtube,tableresize,justify,codesnippet,sourcedialog,widgetbootstrap,widgetcommon,widgettemplatemenu,btgrid,pbckcode'
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashUploadUrl = "/ckeditor/attachment_files"
@@ -34,7 +34,7 @@ CKEDITOR.editorConfig = (config) ->
     { name: 'paragraph',   items: [ 'NumberedList','BulletedList','-','Blockquote' ] },
     '/',
     { name: 'insert',      items: [ 'Image', 'Youtube', 'Flash', 'Table'] },
-    { name: 'styles',      items: [ 'Format' ] }
+    { name: 'styles',      items: [ 'Format', 'pbckcode'] }
   ]
 
   # config.toolbar = 'custom'
