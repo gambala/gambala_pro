@@ -8,7 +8,7 @@ module Gambala
     config.action_view.default_form_builder = 'BootstrapFormBuilder'
     config.encoding = 'utf-8'
     config.i18n.available_locales = [:ru, :en]
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = :ru
     config.middleware.use Rack::Deflater
   end
 end
