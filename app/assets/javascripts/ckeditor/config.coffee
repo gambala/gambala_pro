@@ -57,7 +57,8 @@ CKEDITOR.editorConfig = (config) ->
   ]
 
   # config.toolbar = 'minToolbar'
-  config.uiColor = '#AADC6E'
+  # config.uiColor = '#AADC6E'
+  config.skin = 'moonocolor'
 
 @CKeditor_OnComplete = (ckEditorInstance) ->
   return
