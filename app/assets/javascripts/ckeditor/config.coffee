@@ -1,5 +1,5 @@
 CKEDITOR.editorConfig = (config) ->
-  config.extraPlugins = 'lineutils,widget,image2,youtube,tableresize'
+  config.extraPlugins = 'lineutils,widget,image2,youtube,tableresize,justify'
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashUploadUrl = "/ckeditor/attachment_files"
