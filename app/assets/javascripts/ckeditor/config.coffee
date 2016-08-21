@@ -1,6 +1,6 @@
 CKEDITOR.editorConfig = (config) ->
   config.codeSnippet_theme = 'obsidian'
-  config.extraPlugins = 'lineutils,widget,image2,youtube,tableresize,justify,codesnippet,sourcedialog'
+  config.extraPlugins = 'panel,floatpanel,menu,lineutils,widget,image2,youtube,tableresize,justify,codesnippet,sourcedialog,widgetbootstrap,widgetcommon,widgettemplatemenu'
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashUploadUrl = "/ckeditor/attachment_files"
