@@ -1,5 +1,5 @@
 CKEDITOR.editorConfig = (config) ->
-  config.extraPlugins = 'youtube'
+  config.extraPlugins = 'lineutils,widget,image2,youtube'
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashBrowseUrl = "/ckeditor/attachment_files"
   config.filebrowserFlashUploadUrl = "/ckeditor/attachment_files"
@@ -36,5 +36,5 @@ CKEDITOR.editorConfig = (config) ->
     { name: 'styles',      items: [ 'Format' ] }
   ]
 
-  config.toolbar = 'custom'
+  # config.toolbar = 'custom'
   config.uiColor = '#AADC6E'
