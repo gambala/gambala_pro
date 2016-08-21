@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
-
   scope module: :web do
+    mount Ckeditor::Engine => '/ckeditor'
+
     scope module: :personal do
       namespace :admin do
         resources :hits
