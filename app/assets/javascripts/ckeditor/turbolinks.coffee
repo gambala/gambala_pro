@@ -4,5 +4,6 @@ $(document).bind 'turbolinks:before-cache', ->
     CKEDITOR.instances[name].destroy() if name?
 
 $(document).bind 'turbolinks:load', ->
-  $('.ckeditor').each ->
+  return unless typeof(CKEDITOR) != 'undefined'
+  $('.js-ckeditor').each ->
     CKEDITOR.replace($(this).attr('id'))

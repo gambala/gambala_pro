@@ -10,7 +10,7 @@
       = f.error_message :slug
     = f.form_group :body do
       = f.label :body, class: 'control-label'
-      = f.text_area :body, class: 'form-control ckeditor', required: true,
+      = f.text_area :body, class: 'form-control js-ckeditor', required: true,
                            placeholder: true, rows: 4
       = f.error_message :body
     .form-group
