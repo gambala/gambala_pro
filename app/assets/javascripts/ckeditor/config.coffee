@@ -66,7 +66,6 @@ CKEDITOR.editorConfig = (config) ->
     'panelbutton',         # button
     'pbckcode',
     'placeholder',         # dialog widget
-    'sourcedialog',
     'tableresize',         # tabletools
     'textselection',
     'toolbarswitch',       # button maximize toolbar
