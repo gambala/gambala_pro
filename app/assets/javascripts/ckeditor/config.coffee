@@ -5,7 +5,6 @@ CKEDITOR.editorConfig = (config) ->
     'blockquote',
     'button',
     'clipboard',           # dialog
-    'colordialog',         # dialog
     'contextmenu',         # menu
     'dialog',              # dialogui
     'dialogui',
@@ -76,9 +75,23 @@ CKEDITOR.editorConfig = (config) ->
 
   REMOVE_PLUGINS = [
     'about',               # dialog
+    'bidi',
+    'colorbutton',         # floatpanel panelbutton
+    'colordialog',         # dialog
     'elementspath',
+    'flash',               # dialog fakeobjects
     'floatingspace',
+    'font',                # richcombo
+    'forms',               # dialog fakeobjects
+    'language',            # menubutton
+    'newpage',
+    'preview',
+    'print',
+    'save',
     'scayt',               # dialog menubutton
+    'smiley',              # dialog
+    'specialchar',         # dialog
+    'templates',           # dialog
     'wsc'                  # dialog
   ]
 
