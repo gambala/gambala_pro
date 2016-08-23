@@ -3,7 +3,7 @@ ru:
     attributes:
       hit:
         body: Тело
-        slug: Символьный ID
+        slug: Символьный идентификатор
         title: Тема
   helpers:
     placeholder:
