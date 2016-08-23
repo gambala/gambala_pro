@@ -126,6 +126,19 @@ CKEDITOR.editorConfig = (config) ->
     4456515: String.fromCharCode(169) # ALT+C
     4456530: String.fromCharCode(174) # ALT+R
 
+  CUSTOM_STYLESSET = [
+    {
+      name: 'Mark'
+      element: 'mark'
+    }
+    {
+      name: 'Snippet'
+      type: 'widget'
+      widget: 'codeSnippet'
+      attributes: { 'class': 'pulledSnippet narrow' }
+    }
+  ]
+
   filebrowserParams = ->
     csrf_token = null
     csrf_param = null
@@ -162,6 +175,7 @@ CKEDITOR.editorConfig = (config) ->
   config.scayt_autoStartup = false
   config.skin = 'moonocolor'
   config.smallToolbar = 'minToolbar'
+  config.stylesSet = CUSTOM_STYLESSET
   # config.toolbar = 'minToolbar'
   config.toolbar_maxToolbar = MAX_TOOLBAR
   config.toolbar_minToolbar = MIN_TOOLBAR
