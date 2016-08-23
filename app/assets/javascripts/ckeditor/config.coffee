@@ -1,7 +1,42 @@
 CKEDITOR.editorConfig = (config) ->
+  EXTRA_PLUGINS = [
+    'autolink',            # clipboard
+    'bootstrapVisibility',
+    'bt_table',            # dialog table
+    'btbutton',            # dialog widget
+    'btgrid',              # dialog widget
+    'btquicktable',        # bt_table floatpanel panelbutton
+    'button',
+    'codemirror',
+    'codesnippet',         # dialog widget
+    'codeTag',
+    'divarea',
+    'easykeymap',          # wysiwygarea
+    'floatpanel',          # panel
+    'glvrdPlugin',
+    'image2',              # dialog widget
+    'justify',
+    'lineutils',
+    'menu',                # floatpanel
+    'nbsp',
+    'panel',
+    'panelbutton',         # button
+    'pbckcode',
+    'placeholder',         # dialog widget
+    'sourcedialog',
+    'tableresize',         # tabletools
+    'textselection',
+    'toolbarswitch',       # button maximize toolbar
+    'widget',              # clipboard lineutils
+    'widgetbootstrap',     # widget
+    'widgetcommon',        # widget
+    'widgettemplatemenu',  # menu
+    'youtube'
+  ]
+
   config.allowedContent = true
   config.codeSnippet_theme = 'obsidian'
-  config.extraPlugins = 'panel,autolink,button,panelbutton,bt_table,floatpanel,divarea,menu,lineutils,widget,image2,youtube,tableresize,justify,codesnippet,sourcedialog,widgetbootstrap,widgetcommon,widgettemplatemenu,btgrid,pbckcode,btbutton,btquicktable,placeholder,bootstrapVisibility,nbsp,textselection,codeTag,toolbarswitch,easykeymap,codemirror,glvrdPlugin'
+  config.extraPlugins = EXTRA_PLUGINS.join()
   config.removePlugins = 'scayt,wsc'
   config.disableNativeSpellChecker = false
   config.scayt_autoStartup = false
