@@ -63,7 +63,6 @@ CKEDITOR.editorConfig = (config) ->
     'justify',
     'lineutils',
     'panelbutton',         # button
-    'pbckcode',
     'placeholder',         # dialog widget
     'tableresize',         # tabletools
     'textselection',
@@ -91,13 +90,20 @@ CKEDITOR.editorConfig = (config) ->
     { name: 'paragraph',   items: [ 'NumberedList','BulletedList','-','Blockquote' ] },
     '/',
     { name: 'insert',      items: [ 'Image', 'Youtube', 'Flash', 'Table'] },
-    { name: 'styles',      items: [ 'Format', 'pbckcode'] }
+    { name: 'styles',      items: [ 'Format'] }
   ]
 
   MIN_TOOLBAR = [
     { name: 'basicstyles', items: [ 'Bold','Italic','Underline','Strike','-','RemoveFormat', '-', 'Link','Unlink' ] },
     { name: 'tools',       items: [ 'Toolbarswitch', 'ShowBlocks', 'glvrdPlugin' ] }
   ]
+
+  CODESNIPPET_LANGUAGES =
+    coffeescript: 'CoffeeScript'
+    css:          'CSS'
+    html:         'HTML'
+    javascript:   'JavaScript'
+    ruby:         'Ruby'
 
   EASYKEYMAPS_HASH =
     1114144: (editor) ->              # CTRL+Space
@@ -125,7 +131,8 @@ CKEDITOR.editorConfig = (config) ->
     params
 
   config.allowedContent = true
-  config.codeSnippet_theme = 'obsidian'
+  config.codeSnippet_theme = 'arta'
+  config.codeSnippet_languages = CODESNIPPET_LANGUAGES
   config.disableNativeSpellChecker = false
   config.easykeymaps = EASYKEYMAPS_HASH
   config.extraPlugins = EXTRA_PLUGINS.join()

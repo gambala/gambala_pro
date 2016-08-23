@@ -1,6 +1,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require ckeditor/init
+//= require ckeditor/plugins/codesnippet/lib/highlight/highlight.pack
 //= require smooch
 //= require turbolinks
 //= require_tree ./components
