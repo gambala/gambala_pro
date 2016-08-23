@@ -182,3 +182,4 @@ CKEDITOR.editorConfig = (config) ->
 
 @CKeditor_OnComplete = (ckEditorInstance) ->
   return
+
