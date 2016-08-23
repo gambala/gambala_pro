@@ -62,7 +62,6 @@ CKEDITOR.editorConfig = (config) ->
     'image2',              # dialog widget
     'justify',
     'lineutils',
-    'nbsp',
     'panelbutton',         # button
     'pbckcode',
     'placeholder',         # dialog widget
@@ -101,11 +100,12 @@ CKEDITOR.editorConfig = (config) ->
   ]
 
   EASYKEYMAPS_HASH =
-    4456530: String.fromCharCode(174) # ALT+R
+    1114144: (editor) ->              # CTRL+Space
+      editor.insertHtml '&nbsp;'
+    1114195: (editor) ->              # CTRL+S
+      alert("You have entered 'CTRL + S' In editor: #{editor.name}")
     4456515: String.fromCharCode(169) # ALT+C
-
-  EASYKEYMAPS_HASH[CKEDITOR.CTRL + 83] = (editor) ->
-    alert("You have entered 'CTRL + S' In editor: #{editor.name}")
+    4456530: String.fromCharCode(174) # ALT+R
 
   filebrowserParams = ->
     csrf_token = null
