@@ -1,5 +1,6 @@
 /*
 *= require ckeditor/plugins/codesnippet/lib/highlight/styles/arta
+*= require emojify
 *= require ./bootstrap
 *= require_tree ./components
 */

@@ -60,5 +60,7 @@ group :development do
 end
 
 source 'https://rails-assets.org' do
+  gem 'rails-assets-emojify'
+  gem 'rails-assets-jquery-textcomplete'
   gem 'rails-assets-smooch'
 end

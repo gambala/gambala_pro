@@ -311,6 +311,10 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 5.0.0.1)
       sprockets-rails (>= 2.0.0)
+    rails-assets-emojify (1.1.0)
+    rails-assets-jquery (3.1.0)
+    rails-assets-jquery-textcomplete (1.6.2)
+      rails-assets-jquery (>= 1.7.0)
     rails-assets-smooch (3.3.0)
     rails-dom-testing (2.0.1)
       activesupport (>= 4.2.0, < 6.0)
@@ -463,6 +467,8 @@ DEPENDENCIES
   rack-livereload
   rack-timeout
   rails (>= 5.0.0.1)
+  rails-assets-emojify!
+  rails-assets-jquery-textcomplete!
   rails-assets-smooch!
   rails-i18n
   rails_best_practices
