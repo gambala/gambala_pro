@@ -1,4 +1,50 @@
 CKEDITOR.editorConfig = (config) ->
+  CORE_PLUGINS = [
+    'a11yhelp',            # dialog
+    'basicstyles',
+    'blockquote',
+    'clipboard',           # dialog
+    'colordialog',         # dialog
+    'contextmenu',         # menu
+    'dialog',              # dialogui
+    'dialogui',
+    'enterkey',
+    'entities',
+    'fakeobjects',
+    'filebrowser',         # popup
+    'floatpanel',          # panel
+    'format',              # richcombo
+    'horizontalrule',
+    'htmlwriter',
+    'image',               # dialog
+    'indent',
+    'indentlist',          # indent
+    'link',                # dialog fakeobjects
+    'list',                # indentlist
+    'listblock',           # panel
+    'magicline',
+    'maximize',
+    'menu',                # floatpanel
+    'menubutton',          # button menu
+    'panel',
+    'pastefromword',       # clipboard
+    'pastetext',           # clipboard
+    'popup',
+    'removeformat',
+    'resize',
+    'richcombo',           # button floatpanel listblock
+    'showborders',
+    'sourcearea',
+    'specialchar',         # dialog
+    'stylescombo',         # richcombo
+    'tab',
+    'table',               # dialog
+    'tabletools',          # contextmenu dialog table
+    'toolbar',             # button
+    'undo',
+    'wysiwygarea'
+  ]
+
   EXTRA_PLUGINS = [
     'autolink',            # clipboard
     'bootstrapVisibility',
@@ -12,14 +58,11 @@ CKEDITOR.editorConfig = (config) ->
     'codeTag',
     'divarea',
     'easykeymap',          # wysiwygarea
-    'floatpanel',          # panel
     'glvrdPlugin',
     'image2',              # dialog widget
     'justify',
     'lineutils',
-    'menu',                # floatpanel
     'nbsp',
-    'panel',
     'panelbutton',         # button
     'pbckcode',
     'placeholder',         # dialog widget
@@ -34,49 +77,15 @@ CKEDITOR.editorConfig = (config) ->
     'youtube'
   ]
 
-  config.allowedContent = true
-  config.codeSnippet_theme = 'obsidian'
-  config.extraPlugins = EXTRA_PLUGINS.join()
-  config.removePlugins = 'scayt,wsc'
-  config.disableNativeSpellChecker = false
-  config.scayt_autoStartup = false
+  REMOVE_PLUGINS = [
+    'about',               # dialog
+    'elementspath',
+    'floatingspace',
+    'scayt',               # dialog menubutton
+    'wsc'                  # dialog
+  ]
 
-  config.easykeymaps =
-    4456530: String.fromCharCode(174) # ALT+R
-    4456515: String.fromCharCode(169) # ALT+C
-
-  config.easykeymaps[CKEDITOR.CTRL + 83] = (editor) ->
-    alert("You have entered 'CTRL + S' In editor: #{editor.name}")
-
-  config.filebrowserBrowseUrl = "/ckeditor/attachment_files"
-  config.filebrowserFlashBrowseUrl = "/ckeditor/attachment_files"
-  config.filebrowserFlashUploadUrl = "/ckeditor/attachment_files"
-  config.filebrowserImageBrowseLinkUrl = "/ckeditor/pictures"
-  config.filebrowserImageBrowseUrl = "/ckeditor/pictures"
-  config.filebrowserImageUploadUrl = "/ckeditor/pictures"
-  config.filebrowserUploadUrl = "/ckeditor/attachment_files"
-
-  config.filebrowserParams = ->
-    csrf_token = null
-    csrf_param = null
-    meta = null
-    metas = document.getElementsByTagName("meta")
-    params = new Object()
-    i = 0
-    while i < metas.length
-      meta = metas[i]
-      switch(meta.name)
-        when "csrf-token" then csrf_token = meta.content
-        when "csrf-param" then csrf_param = meta.content
-        else continue
-      i++
-    params[csrf_param] = csrf_token  if csrf_param isnt `undefined` and csrf_token isnt `undefined`
-    params
-
-  config.maximizedToolbar = 'maxToolbar'
-  config.smallToolbar = 'minToolbar'
-
-  config.toolbar_maxToolbar = [
+  MAX_TOOLBAR = [
     { name: 'document',    items: [ 'Source' ] },
     { name: 'clipboard',   items: [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
     { name: 'tools',       items: [ 'Toolbarswitch', 'ShowBlocks' ] }
@@ -86,14 +95,57 @@ CKEDITOR.editorConfig = (config) ->
     { name: 'insert',      items: [ 'Image', 'Youtube', 'Flash', 'Table'] },
     { name: 'styles',      items: [ 'Format', 'pbckcode'] }
   ]
-  config.toolbar_minToolbar = [
+
+  MIN_TOOLBAR = [
     { name: 'basicstyles', items: [ 'Bold','Italic','Underline','Strike','-','RemoveFormat', '-', 'Link','Unlink' ] },
     { name: 'tools',       items: [ 'Toolbarswitch', 'ShowBlocks', 'glvrdPlugin' ] }
   ]
 
-  # config.toolbar = 'minToolbar'
-  # config.uiColor = '#AADC6E'
+  EASYKEYMAPS_HASH =
+    4456530: String.fromCharCode(174) # ALT+R
+    4456515: String.fromCharCode(169) # ALT+C
+
+  EASYKEYMAPS_HASH[CKEDITOR.CTRL + 83] = (editor) ->
+    alert("You have entered 'CTRL + S' In editor: #{editor.name}")
+
+  filebrowserParams = ->
+    csrf_token = null
+    csrf_param = null
+    meta = null
+    metas = document.getElementsByTagName('meta')
+    params = new Object()
+    i = 0
+    while i < metas.length
+      meta = metas[i]
+      switch(meta.name)
+        when 'csrf-token' then csrf_token = meta.content
+        when 'csrf-param' then csrf_param = meta.content
+        else continue
+      i++
+    params[csrf_param] = csrf_token if csrf_param isnt `undefined` and csrf_token isnt `undefined`
+    params
+
+  config.allowedContent = true
+  config.codeSnippet_theme = 'obsidian'
+  config.disableNativeSpellChecker = false
+  config.easykeymaps = EASYKEYMAPS_HASH
+  config.extraPlugins = EXTRA_PLUGINS.join()
+  config.filebrowserBrowseUrl = '/ckeditor/attachment_files'
+  config.filebrowserFlashBrowseUrl = '/ckeditor/attachment_files'
+  config.filebrowserFlashUploadUrl = '/ckeditor/attachment_files'
+  config.filebrowserImageBrowseLinkUrl = '/ckeditor/pictures'
+  config.filebrowserImageBrowseUrl = '/ckeditor/pictures'
+  config.filebrowserImageUploadUrl = '/ckeditor/pictures'
+  config.filebrowserParams = filebrowserParams
+  config.filebrowserUploadUrl = '/ckeditor/attachment_files'
+  config.maximizedToolbar = 'maxToolbar'
+  config.removePlugins = REMOVE_PLUGINS.join()
+  config.scayt_autoStartup = false
   config.skin = 'moonocolor'
+  config.smallToolbar = 'minToolbar'
+  # config.toolbar = 'minToolbar'
+  config.toolbar_maxToolbar = MAX_TOOLBAR
+  config.toolbar_minToolbar = MIN_TOOLBAR
 
 @CKeditor_OnComplete = (ckEditorInstance) ->
   return
