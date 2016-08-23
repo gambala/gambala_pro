@@ -3,6 +3,7 @@ CKEDITOR.editorConfig = (config) ->
     'a11yhelp',            # dialog
     'basicstyles',
     'blockquote',
+    'button',
     'clipboard',           # dialog
     'colordialog',         # dialog
     'contextmenu',         # menu
@@ -52,7 +53,6 @@ CKEDITOR.editorConfig = (config) ->
     'btbutton',            # dialog widget
     'btgrid',              # dialog widget
     'btquicktable',        # bt_table floatpanel panelbutton
-    'button',
     'codemirror',
     'codesnippet',         # dialog widget
     'codeTag',
