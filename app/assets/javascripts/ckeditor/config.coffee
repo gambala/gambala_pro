@@ -54,7 +54,6 @@ CKEDITOR.editorConfig = (config) ->
     'btquicktable',        # bt_table floatpanel panelbutton
     'codemirror',
     'codesnippet',         # dialog widget
-    'codeTag',
     'divarea',
     'easykeymap',          # wysiwygarea
     'glvrdPlugin',
@@ -127,6 +126,10 @@ CKEDITOR.editorConfig = (config) ->
     4456530: String.fromCharCode(174) # ALT+R
 
   CUSTOM_STYLESSET = [
+    {
+      name: 'Code'
+      element: 'code'
+    }
     {
       name: 'Mark'
       element: 'mark'
