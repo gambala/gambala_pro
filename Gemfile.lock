@@ -92,7 +92,7 @@ GEM
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.11)
-    bugsnag (4.2.1)
+    bugsnag (5.0.0)
     builder (3.2.2)
     bullet (5.3.0)
       activesupport (>= 3.0.0)
@@ -130,7 +130,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    code_analyzer (0.4.6)
+    code_analyzer (0.4.7)
       sexp_processor
     codeclimate-engine-rb (0.3.1)
       virtus (~> 1.0)
