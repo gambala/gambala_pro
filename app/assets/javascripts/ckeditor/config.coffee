@@ -1,97 +1,97 @@
 CKEDITOR.editorConfig = (config) ->
   CORE_PLUGINS = [
-    'a11yhelp',            # dialog
-    'basicstyles',
-    'blockquote',
-    'button',
-    'clipboard',           # dialog
-    'contextmenu',         # menu
-    'dialog',              # dialogui
-    'dialogui',
-    'enterkey',
-    'entities',
-    'fakeobjects',
-    'filebrowser',         # popup
-    'floatpanel',          # panel
-    'format',              # richcombo
-    'horizontalrule',
-    'htmlwriter',
-    'image',               # dialog
-    'indent',
-    'indentlist',          # indent
-    'link',                # dialog fakeobjects
-    'list',                # indentlist
-    'listblock',           # panel
-    'magicline',
-    'maximize',
-    'menu',                # floatpanel
-    'menubutton',          # button menu
-    'panel',
-    'pastefromword',       # clipboard
-    'pastetext',           # clipboard
-    'popup',
-    'removeformat',
-    'resize',
-    'richcombo',           # button floatpanel listblock
-    'showborders',
-    'sourcearea',
-    'specialchar',         # dialog
-    'stylescombo',         # richcombo
-    'tab',
-    'table',               # dialog
-    'tabletools',          # contextmenu dialog table
-    'toolbar',             # button
-    'undo',
+    'a11yhelp'            # dialog
+    'basicstyles'
+    'blockquote'
+    'button'
+    'clipboard'           # dialog
+    'contextmenu'         # menu
+    'dialog'              # dialogui
+    'dialogui'
+    'enterkey'
+    'entities'
+    'fakeobjects'
+    'filebrowser'         # popup
+    'floatpanel'          # panel
+    'format'              # richcombo
+    'horizontalrule'
+    'htmlwriter'
+    'image'               # dialog
+    'indent'
+    'indentlist'          # indent
+    'link'                # dialog fakeobjects
+    'list'                # indentlist
+    'listblock'           # panel
+    'magicline'
+    'maximize'
+    'menu'                # floatpanel
+    'menubutton'          # button menu
+    'panel'
+    'pastefromword'       # clipboard
+    'pastetext'           # clipboard
+    'popup'
+    'removeformat'
+    'resize'
+    'richcombo'           # button floatpanel listblock
+    'showborders'
+    'sourcearea'
+    'specialchar'         # dialog
+    'stylescombo'         # richcombo
+    'tab'
+    'table'               # dialog
+    'tabletools'          # contextmenu dialog table
+    'toolbar'             # button
+    'undo'
     'wysiwygarea'
   ]
 
   EXTRA_PLUGINS = [
-    'autolink',            # clipboard
-    'bootstrapVisibility',
-    'bt_table',            # dialog table
-    'btbutton',            # dialog widget
-    'btgrid',              # dialog widget
-    'btquicktable',        # bt_table floatpanel panelbutton
-    'codemirror',
-    'codesnippet',         # dialog widget
-    'divarea',
-    'easykeymap',          # wysiwygarea
-    'glvrdPlugin',
-    'image2',              # dialog widget
-    'justify',
-    'lineutils',
-    'panelbutton',         # button
-    'placeholder',         # dialog widget
-    'tableresize',         # tabletools
-    'textselection',
-    'toolbarswitch',       # button maximize toolbar
-    'widget',              # clipboard lineutils
-    'widgetbootstrap',     # widget
-    'widgetcommon',        # widget
-    'widgettemplatemenu',  # menu
+    'autolink'            # clipboard
+    'bootstrapVisibility'
+    'bt_table'            # dialog table
+    'btbutton'            # dialog widget
+    'btgrid'              # dialog widget
+    'btquicktable'        # bt_table floatpanel panelbutton
+    'codemirror'
+    'codesnippet'         # dialog widget
+    'divarea'
+    'easykeymap'          # wysiwygarea
+    'glvrdPlugin'
+    'image2'              # dialog widget
+    'justify'
+    'lineutils'
+    'panelbutton'         # button
+    'placeholder'         # dialog widget
+    'tableresize'         # tabletools
+    'textselection'
+    'toolbarswitch'       # button maximize toolbar
+    'widget'              # clipboard lineutils
+    'widgetbootstrap'     # widget
+    'widgetcommon'        # widget
+    'widgettemplatemenu'  # menu
     'youtube'
   ]
 
   REMOVE_PLUGINS = [
-    'about',               # dialog
-    'bidi',
-    'colorbutton',         # floatpanel panelbutton
-    'colordialog',         # dialog
-    'elementspath',
-    'flash',               # dialog fakeobjects
-    'floatingspace',
-    'font',                # richcombo
-    'forms',               # dialog fakeobjects
-    'language',            # menubutton
-    'newpage',
-    'preview',
-    'print',
-    'save',
-    'scayt',               # dialog menubutton
-    'smiley',              # dialog
-    'specialchar',         # dialog
-    'templates',           # dialog
-    'wsc'                  # dialog
+    'about'               # dialog
+    'bidi'
+    'colorbutton'         # floatpanel panelbutton
+    'colordialog'         # dialog
+    'elementspath'
+    'flash'               # dialog fakeobjects
+    'floatingspace'
+    'font'                # richcombo
+    'forms'               # dialog fakeobjects
+    'language'            # menubutton
+    'newpage'
+    'preview'
+    'print'
+    'save'
+    'scayt'               # dialog menubutton
+    'smiley'              # dialog
+    'specialchar'         # dialog
+    'templates'           # dialog
+    'wsc'                 # dialog
   ]
 
   MAX_TOOLBAR = [
@@ -205,13 +205,11 @@ CKEDITOR.editorConfig = (config) ->
         'btbutton'
         'btgrid'
         'WidgetTemplateMenu'
+        'glvrdPlugin'
       ]
   ]
 
-  MIN_TOOLBAR = [
-    { name: 'basicstyles', items: [ 'Bold','Italic','Underline','Strike','-','RemoveFormat', '-', 'Link','Unlink' ] },
-    { name: 'tools',       items: [ 'Toolbarswitch', 'ShowBlocks', 'glvrdPlugin' ] }
-  ]
+  MIN_TOOLBAR = MAX_TOOLBAR
 
   CODESNIPPET_LANGUAGES =
     coffeescript: 'CoffeeScript'
@@ -229,20 +227,17 @@ CKEDITOR.editorConfig = (config) ->
     4456530: String.fromCharCode(174) # ALT+R
 
   CUSTOM_STYLESSET = [
-    {
       name: 'Code'
       element: 'code'
-    }
-    {
+    ,
       name: 'Mark'
       element: 'mark'
-    }
-    {
+    ,
       name: 'Snippet'
       type: 'widget'
       widget: 'codeSnippet'
-      attributes: { 'class': 'pulledSnippet narrow' }
-    }
+      attributes:
+        class: 'pulledSnippet narrow'
   ]
 
   filebrowserParams = ->
