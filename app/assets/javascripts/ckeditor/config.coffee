@@ -95,14 +95,117 @@ CKEDITOR.editorConfig = (config) ->
   ]
 
   MAX_TOOLBAR = [
-    { name: 'document',    items: [ 'Source' ] },
-    { name: 'clipboard',   items: [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
-    { name: 'tools',       items: [ 'Toolbarswitch', 'ShowBlocks' ] }
-    { name: 'basicstyles', items: [ 'Bold','Italic','Underline','Strike','-','RemoveFormat', '-', 'Link','Unlink' ] },
-    { name: 'paragraph',   items: [ 'NumberedList','BulletedList','-','Blockquote' ] },
-    '/',
-    { name: 'insert',      items: [ 'Image', 'Youtube', 'Flash', 'Table'] },
-    { name: 'styles',      items: [ 'Format'] }
+      name: 'document'
+      groups: ['mode', 'document', 'doctools']
+      items: [
+        'Source'
+        '-'
+        'autoFormat'
+        'CommentSelectedRange'
+        'UncommentSelectedRange'
+        'AutoComplete'
+      ]
+    ,
+      name: 'clipboard'
+      groups: ['clipboard', 'undo']
+      items: [
+        'Cut'
+        'Copy'
+        'Paste'
+        'PasteText'
+        'PasteFromWord'
+        '-'
+        'Undo'
+        'Redo'
+      ]
+    ,
+      name: 'editing'
+      groups: ['find', 'selection']
+      items: [
+        'Find'
+        'Replace'
+        '-'
+        'SelectAll'
+      ]
+    ,
+      '/'
+    ,
+      name: 'basicstyles'
+      groups: ['basicstyles', 'cleanup']
+      items: [
+        'Bold'
+        'Italic'
+        'Underline'
+        'Strike'
+        'Subscript'
+        'Superscript'
+        '-'
+        'RemoveFormat'
+      ]
+    ,
+      name: 'paragraph'
+      groups: ['list', 'indent', 'blocks', 'align', 'bidi']
+      items: [
+        'NumberedList'
+        'BulletedList'
+        '-'
+        'Outdent'
+        'Indent'
+        '-'
+        'Blockquote'
+        'CreateDiv'
+        '-'
+        'JustifyLeft'
+        'JustifyCenter'
+        'JustifyRight'
+        'JustifyBlock'
+      ]
+    ,
+      name: 'links'
+      items: [
+        'Link', 'Unlink', 'Anchor'
+      ]
+    ,
+      name: 'insert'
+      items: [
+        'CreatePlaceholder'
+        'WidgetcommonQuotebox'
+        'WidgetbootstrapTwoCol'
+        'CodeSnippet'
+        'Image'
+        'WidgetcommonBox'
+        'WidgetbootstrapAlert'
+        'WidgetbootstrapLeftCol'
+        'WidgetbootstrapRightCol'
+        'WidgetbootstrapThreeCol'
+        'Table'
+        'HorizontalRule'
+        'PageBreak'
+        'Iframe'
+        'Youtube'
+      ]
+    ,
+      '/'
+    ,
+      name: 'styles'
+      items: [
+        'Styles'
+        'Format'
+      ]
+    ,
+      name: 'tools'
+      items: [
+        'Maximize'
+        'Toolbarswitch'
+        'ShowBlocks'
+      ]
+    ,
+      name: 'others'
+      items: [
+        'btbutton'
+        'btgrid'
+        'WidgetTemplateMenu'
+      ]
   ]
 
   MIN_TOOLBAR = [
@@ -179,7 +282,7 @@ CKEDITOR.editorConfig = (config) ->
   config.skin = 'moonocolor'
   config.smallToolbar = 'minToolbar'
   config.stylesSet = CUSTOM_STYLESSET
-  # config.toolbar = 'minToolbar'
+  config.toolbar = 'maxToolbar'
   config.toolbar_maxToolbar = MAX_TOOLBAR
   config.toolbar_minToolbar = MIN_TOOLBAR
 
