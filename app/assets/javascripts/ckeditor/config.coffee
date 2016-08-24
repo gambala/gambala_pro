@@ -211,6 +211,11 @@ CKEDITOR.editorConfig = (config) ->
   ]
 
   MIN_TOOLBAR = [
+      name: 'tools'
+      items: [
+        'Toolbarswitch'
+      ]
+    ,
       name: 'styles'
       items: [
         'Format'
@@ -241,8 +246,6 @@ CKEDITOR.editorConfig = (config) ->
       name: 'document'
       items: [
         'Source'
-        '-'
-        'Toolbarswitch'
       ]
     ,
   ]
