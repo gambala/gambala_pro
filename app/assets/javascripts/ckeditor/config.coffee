@@ -95,19 +95,12 @@ CKEDITOR.editorConfig = (config) ->
   ]
 
   MAX_TOOLBAR = [
-      name: 'document'
-      groups: ['mode', 'document', 'doctools']
+      name: 'tools'
       items: [
-        'Source'
-        '-'
-        'autoFormat'
-        'CommentSelectedRange'
-        'UncommentSelectedRange'
-        'AutoComplete'
+        'Toolbarswitch'
       ]
     ,
       name: 'clipboard'
-      groups: ['clipboard', 'undo']
       items: [
         'Cut'
         'Copy'
@@ -120,85 +113,13 @@ CKEDITOR.editorConfig = (config) ->
       ]
     ,
       name: 'editing'
-      groups: ['find', 'selection']
       items: [
         'Find'
         'Replace'
         '-'
         'SelectAll'
-      ]
-    ,
-      '/'
-    ,
-      name: 'basicstyles'
-      groups: ['basicstyles', 'cleanup']
-      items: [
-        'Bold'
-        'Italic'
-        'Underline'
-        'Strike'
-        'Subscript'
-        'Superscript'
-        '-'
+        'glvrdPlugin'
         'RemoveFormat'
-      ]
-    ,
-      name: 'paragraph'
-      groups: ['list', 'indent', 'blocks', 'align', 'bidi']
-      items: [
-        'NumberedList'
-        'BulletedList'
-        '-'
-        'Outdent'
-        'Indent'
-        '-'
-        'Blockquote'
-        'CreateDiv'
-        '-'
-        'JustifyLeft'
-        'JustifyCenter'
-        'JustifyRight'
-        'JustifyBlock'
-      ]
-    ,
-      name: 'links'
-      items: [
-        'Link'
-        'Unlink'
-        'Anchor'
-      ]
-    ,
-      name: 'insert'
-      items: [
-        'CreatePlaceholder'
-        'WidgetcommonQuotebox'
-        'WidgetbootstrapTwoCol'
-        'CodeSnippet'
-        'Image'
-        'WidgetcommonBox'
-        'WidgetbootstrapAlert'
-        'WidgetbootstrapLeftCol'
-        'WidgetbootstrapRightCol'
-        'WidgetbootstrapThreeCol'
-        'Table'
-        'HorizontalRule'
-        'PageBreak'
-        'Iframe'
-        'Youtube'
-      ]
-    ,
-      '/'
-    ,
-      name: 'styles'
-      items: [
-        'Styles'
-        'Format'
-      ]
-    ,
-      name: 'tools'
-      items: [
-        'Toolbarswitch'
-        'ShowBlocks'
       ]
     ,
       name: 'others'
@@ -206,7 +127,64 @@ CKEDITOR.editorConfig = (config) ->
         'btbutton'
         'btgrid'
         'WidgetTemplateMenu'
-        'glvrdPlugin'
+      ]
+    ,
+      name: 'document'
+      items: [
+        'ShowBlocks'
+        '-'
+        'autoFormat'
+        'CommentSelectedRange'
+        'UncommentSelectedRange'
+        'AutoComplete'
+        '-'
+        'Source'
+      ]
+    ,
+      '/'
+    ,
+      name: 'styles'
+      items: [
+        'Format'
+        'Styles'
+      ]
+    ,
+      name: 'basicstyles'
+      items: [
+        'Bold'
+        'Italic'
+        'Underline'
+        'Strike'
+        'Subscript'
+        'Superscript'
+        'Link'
+        'Unlink'
+        'Anchor'
+        '-'
+        'NumberedList'
+        'BulletedList'
+      ]
+    ,
+      name: 'paragraph'
+      items: [
+        'JustifyLeft'
+        'JustifyCenter'
+        'JustifyRight'
+        'JustifyBlock'
+      ]
+    ,
+      name: 'insert'
+      items: [
+        'Image'
+        'CodeSnippet'
+        'Blockquote'
+        'HorizontalRule'
+        'Table'
+        'PageBreak'
+        'Youtube'
+        'Iframe'
+        'CreatePlaceholder'
+        'CreateDiv'
       ]
   ]
 
