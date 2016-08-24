@@ -163,7 +163,9 @@ CKEDITOR.editorConfig = (config) ->
     ,
       name: 'links'
       items: [
-        'Link', 'Unlink', 'Anchor'
+        'Link'
+        'Unlink'
+        'Anchor'
       ]
     ,
       name: 'insert'
@@ -195,7 +197,6 @@ CKEDITOR.editorConfig = (config) ->
     ,
       name: 'tools'
       items: [
-        'Maximize'
         'Toolbarswitch'
         'ShowBlocks'
       ]
@@ -209,7 +210,42 @@ CKEDITOR.editorConfig = (config) ->
       ]
   ]
 
-  MIN_TOOLBAR = MAX_TOOLBAR
+  MIN_TOOLBAR = [
+      name: 'styles'
+      items: [
+        'Format'
+        'Styles'
+      ]
+    ,
+      name: 'basicstyles'
+      items: [
+        'Bold'
+        'Italic'
+        'Underline'
+        'Strike'
+        'Link'
+        'Unlink'
+        '-'
+        'NumberedList'
+        'BulletedList'
+      ]
+    ,
+      name: 'insert'
+      items: [
+        'Image'
+        'CodeSnippet'
+        'Blockquote'
+        'HorizontalRule'
+      ]
+    ,
+      name: 'document'
+      items: [
+        'Source'
+        '-'
+        'Toolbarswitch'
+      ]
+    ,
+  ]
 
   CODESNIPPET_LANGUAGES =
     coffeescript: 'CoffeeScript'
@@ -277,7 +313,7 @@ CKEDITOR.editorConfig = (config) ->
   config.skin = 'moonocolor'
   config.smallToolbar = 'minToolbar'
   config.stylesSet = CUSTOM_STYLESSET
-  config.toolbar = 'maxToolbar'
+  config.toolbar = 'minToolbar'
   config.toolbar_maxToolbar = MAX_TOOLBAR
   config.toolbar_minToolbar = MIN_TOOLBAR
 
