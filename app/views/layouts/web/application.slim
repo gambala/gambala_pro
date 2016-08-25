@@ -9,6 +9,7 @@ html
   body
     = yield
     div id='sk-holder' data-turbolinks-permanent=''
+    div id='permanent-textcomplete-dropdown'
     div id='permanent-js' data-turbolinks-permanent=''
       = javascript_include_tag 'application', data: { turbolinks_track: 'reload' }
     = render 'me_talk'

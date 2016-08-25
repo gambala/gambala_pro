@@ -1,5 +1,11 @@
 //= require jquery
 //= require jquery_ujs
+//= require ckeditor/init
+//= require ckeditor/plugins/codesnippet/lib/highlight/highlight.pack
+//= require emojify
+//= require jquery-textcomplete
 //= require smooch
 //= require turbolinks
-//= require_tree .
+//= require_tree ./components
+//= require_tree ./ckeditor
+//= require ./cable

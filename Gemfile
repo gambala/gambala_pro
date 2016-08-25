@@ -5,11 +5,14 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 gem 'aasm'
 gem 'bootstrap-components', github: 'gambala/bootstrap-components'
 gem 'bugsnag'
+gem 'carrierwave'
+gem 'ckeditor'
 gem 'clearance', github: 'gambala/clearance'
 gem 'coffee-rails'
 gem 'figaro'
 gem 'friendly_id'
 gem 'jquery-rails'
+gem 'mini_magick'
 gem 'pg'
 gem 'pry'
 gem 'pry-rails'
@@ -57,5 +60,7 @@ group :development do
 end
 
 source 'https://rails-assets.org' do
+  gem 'rails-assets-emojify'
+  gem 'rails-assets-jquery-textcomplete'
   gem 'rails-assets-smooch'
 end
