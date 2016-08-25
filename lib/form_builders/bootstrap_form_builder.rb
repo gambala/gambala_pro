@@ -12,8 +12,8 @@ class BootstrapFormBuilder < ActionView::Helpers::FormBuilder
     @template.content_tag(:div, options) { yield }
   end
 
-  def bs_collection_radio_buttons(*args, &block)
-    radio = collection_radio_buttons *args do |ff|
+  def bs_collection_radio_buttons(*args)
+    radio = collection_radio_buttons(*args) do |ff|
       ff.label(class: "btn btn-default btn-sm #{active_class_for_radio(ff.radio_button)}") do
         ff.radio_button + ff.text
       end
