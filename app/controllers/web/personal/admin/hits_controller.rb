@@ -47,7 +47,7 @@ class Web::Personal::Admin::HitsController < Web::Personal::Admin::ApplicationCo
   end
 
   def hit
-    @hit ||= Hit.find(params[:id])
+    @hit ||= Hit.friendly.find(params[:id])
   end
 
   def hit_params

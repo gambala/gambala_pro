@@ -13,9 +13,13 @@
 class Hit < ApplicationRecord
   extend FriendlyId
 
+  SLUG_FORMAT = /[a-z-\d]+/
+
   friendly_id :id, use: [:slugged, :history, :finders]
 
-  validates :slug, uniqueness: true
+  validates :slug, uniqueness: { case_sensitive: false },
+                   format: { with: Regexp.new('\A' + SLUG_FORMAT.source + '\z') },
+                   allow_blank: true
 
   def to_s
     title
