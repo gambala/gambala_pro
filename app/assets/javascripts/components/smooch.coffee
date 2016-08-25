@@ -16,5 +16,6 @@ initSmooch = ->
   smoochPromise.then ->
     $('#sk-holder').remove()
     $('#sk-holder').attr('data-turbolinks-permanent', '')
+    $('#sk-holder').find('#sk-conversation').attr('data-turbolinks-permanent-scroll', '')
 
-# $(document).ready initSmooch
+$(document).ready initSmooch
