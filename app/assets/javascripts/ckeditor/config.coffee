@@ -238,8 +238,8 @@ CKEDITOR.editorConfig = (config) ->
   EASYKEYMAPS_HASH =
     1114144: (editor) ->              # CTRL+Space
       editor.insertHtml '&nbsp;'
-    1114195: (editor) ->              # CTRL+S
-      alert("You have entered 'CTRL + S' In editor: #{editor.name}")
+    3342525: (editor) ->              # CTRL+SHIFT+-
+      editor.execCommand('horizontalrule')
     4456515: String.fromCharCode(169) # ALT+C
     4456530: String.fromCharCode(174) # ALT+R
 
