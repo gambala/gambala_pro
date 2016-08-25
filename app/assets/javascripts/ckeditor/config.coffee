@@ -288,6 +288,7 @@ CKEDITOR.editorConfig = (config) ->
   config.filebrowserImageUploadUrl = '/ckeditor/pictures'
   config.filebrowserParams = filebrowserParams
   config.filebrowserUploadUrl = '/ckeditor/attachment_files'
+  config.format_tags = 'p;h1;h2;h3;h4;h5;h6;div'
   config.maximizedToolbar = 'maxToolbar'
   config.removePlugins = REMOVE_PLUGINS.join()
   config.scayt_autoStartup = false
