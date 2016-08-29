@@ -1,6 +1,6 @@
 section.section-padded
   .container
     .pull-right
-      .text-muted.moment-date = hit.created_at
+      .text-muted = human_datetime(hit.created_at)
     h1 = hit.title
     = hit.body.html_safe
