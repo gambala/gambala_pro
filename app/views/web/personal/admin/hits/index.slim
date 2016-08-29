@@ -7,5 +7,7 @@ section.section-padded
             p = link_to 'Добавить новость', [:new, :admin, :hit],
                         class: 'btn btn-primary btn-block'
       .col-md-8.col-md-pull-4.col-lg-9.col-lg-pull-3
-        - hits.each do |hit|
-          p = link_to hit, [:admin, hit]
+        - hit_groups.each do |group, hits|
+          .hr-with-title
+            span.bg-body.moment-db-date = group
+          = render hits

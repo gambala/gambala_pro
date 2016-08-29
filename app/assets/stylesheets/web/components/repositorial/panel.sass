@@ -3,3 +3,19 @@
 .panel-body
   > :last-child
     margin-bottom: 0
+
+
+.panel-muted
+  background: none
+  border: none
+  box-shadow: none
+  opacity: 0.6
+  transition: opacity 0.1s
+
+  .panel-heading,
+  .panel-body,
+    box-shadow: none
+    padding: 0
+
+  &:hover
+    opacity: 1

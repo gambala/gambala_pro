@@ -1,6 +1,13 @@
 section.section-padded
   .container
-    .pull-right
-      .text-muted = human_datetime(hit.created_at)
-    h1 = hit.title
-    = hit.body.html_safe
+    .row
+      .col-md-4.col-md-push-8.col-lg-3.col-lg-push-9
+        .panel.panel-muted
+          .panel-body
+            - if current_user&.admin?
+              p = link_to 'Открыть в админке', [:admin, hit],
+                          class: 'btn btn-default btn-block'
+            p.text-right = human_datetime(hit.created_at)
+      .col-md-8.col-md-pull-4.col-lg-9.col-lg-pull-3
+        h1 = hit.title
+        = hit.body.html_safe
