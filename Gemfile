@@ -60,7 +60,9 @@ group :development do
 end
 
 source 'https://rails-assets.org' do
+  gem 'rails-assets-breakpoint-sass'
   gem 'rails-assets-emojify'
   gem 'rails-assets-jquery-textcomplete'
+  gem 'rails-assets-moment'
   gem 'rails-assets-smooch'
 end

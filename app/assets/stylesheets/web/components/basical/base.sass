@@ -1,0 +1,32 @@
+@import 'web/bootstrap/variables'
+@import 'bootstrap/basical/base/mixins/rh'
+@import 'mixins'
+
++bg-variant('.bg-body', $base-background-color, $base-color)
+
+// hr modificators
+
+hr,
+.hr-with-title
+  margin-top: 0
+  margin-bottom: rh()
+
+.hr-with-title
+  position: relative
+  text-align: center
+
+  > span,
+  > a
+    padding: 0 5px
+    position: relative
+    text-transform: uppercase
+    z-index: 1
+
+  &:before
+    background-color: $hr-border-color
+    content: ''
+    height: 1px
+    left: 0
+    position: absolute
+    top: 50%
+    width: 100%

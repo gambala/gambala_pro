@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get 'personal', to: 'welcome#index'
     end
 
+    resources :hits, only: [:index, :show]
     root to: 'welcome#index'
   end
 end

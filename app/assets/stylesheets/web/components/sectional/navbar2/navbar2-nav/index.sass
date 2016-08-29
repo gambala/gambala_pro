@@ -1,0 +1,68 @@
+@import 'web/bootstrap/variables'
+@import 'mixins'
+@import 'breakpoint-sass'
+
+// Component
+
+.navbar2-nav
+  display: inline-block
+  height: $navbar-height
+
+// Elements
+
+.navbar2-nav
+  > li
+    float: left
+    margin-bottom: 0
+
+    > a
+      color: lighten($legend-color, 15%)
+      padding: ($navbar-height - 24px) / 2 15px
+
+      > span + span
+        margin-left: 10px
+
+      &:hover
+        background: none
+        color: darken($legend-color, 10%)
+
+  > li.active
+    > a
+      color: $base-color
+      font-weight: bold
+      position: relative
+
+      &:after
+        background: $base-primary-background-color
+        bottom: 0
+        content: ''
+        height: 4px
+        left: 10px
+        position: absolute
+        right: 10px
+
+      &:hover
+        color: #000
+
+// Context
+
+.navbar2-account,
+.navbar2-moderator,
+.navbar2-admin
+  .navbar2-nav.offset-left
+    +breakpoint($screen-lg-min + 200px * 2)
+      +navbar2-nav-offset-left
+
+  .navbar2-nav.offset-right
+    +breakpoint($screen-lg-min + 100px * 2)
+      +navbar2-nav-offset-right
+
+.navbar2-guest,
+.navbar2-user
+  .navbar2-nav.offset-left
+    +breakpoint($screen-lg-min + 210px * 2)
+      +navbar2-nav-offset-left
+
+  .navbar2-nav.offset-right
+    +breakpoint($screen-lg-min + 100px * 2)
+      +navbar2-nav-offset-right
