@@ -1,0 +1,24 @@
+@import 'web/bootstrap/variables'
+@import 'bootstrap/basical/base/mixins/scrollbar'
+
+=navbar2-breakpoint
+  .container
+    +scrollbar
+    -webkit-overflow-scrolling: touch
+    min-width: initial
+    overflow-x: scroll
+    overflow-y: hidden
+    white-space: nowrap
+    width: 100%
+
+  .pull-left,
+  .pull-right
+    display: inline-block
+    float: none !important
+
+  .navbar2-nav
+    display: inline-block
+
+    > li
+      display: inline-block
+      float: none !important
