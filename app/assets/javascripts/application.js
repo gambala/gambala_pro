@@ -4,6 +4,8 @@
 //= require ckeditor/plugins/codesnippet/lib/highlight/highlight.pack
 //= require emojify
 //= require jquery-textcomplete
+//= require moment
+//= require moment/locale/ru
 //= require smooch
 //= require turbolinks
 //= require_tree ./components
