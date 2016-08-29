@@ -2,12 +2,13 @@
 #
 # Table name: hits
 #
-#  id         :integer          not null, primary key
-#  title      :string
-#  slug       :string
-#  body       :text
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :integer          not null, primary key
+#  title       :string
+#  slug        :string
+#  body        :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  happened_at :datetime         default(Mon, 29 Aug 2016 18:34:05 MSK +03:00), not null
 #
 
 class Hit < ApplicationRecord
@@ -27,5 +28,21 @@ class Hit < ApplicationRecord
 
   def created_at_db_date
     created_at.to_date.to_s(:db)
+  end
+
+  def happened_at_date
+    happened_at.strftime('%F')
+  end
+
+  def happened_at_date=(value)
+    self.happened_at = DateTime.parse("#{value} #{happened_at_time}")
+  end
+
+  def happened_at_time
+    happened_at.strftime('%H:%M %z')
+  end
+
+  def happened_at_time=(value)
+    self.happened_at = DateTime.parse("#{happened_at_date} #{value}")
   end
 end

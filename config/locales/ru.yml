@@ -3,6 +3,7 @@ ru:
     attributes:
       hit:
         body: Тело
+        happened_at: Дата события
         slug: Символьный идентификатор
         title: Тема
   copyright: 'Версия сайта от %{updated_at} ©'
@@ -10,5 +11,6 @@ ru:
     placeholder:
       hit:
         body: Все, что произошло, в свободной форме
+        happened_at: Когда событие произошло
         slug: Можно оставить пустым
         title: Читатели увидят тему в ленте
