@@ -56,15 +56,20 @@ CKEDITOR.editorConfig = (config) ->
     'codesnippet'         # dialog widget
     'divarea'
     'easykeymap'          # wysiwygarea
+    'filetools'
     'glvrdPlugin'
     'image2'              # dialog widget
     'justify'
     'lineutils'
+    'notification'        # toolbar
+    'notificationaggregator' # notification
     'panelbutton'         # button
     'placeholder'         # dialog widget
     'tableresize'         # tabletools
     'textselection'
     'toolbarswitch'       # button maximize toolbar
+    'uploadimage'         # uploadwidget
+    'uploadwidget'        # clipboard filetools notificationaggregator widget
     'widget'              # clipboard lineutils
     'widgetbootstrap'     # widget
     'widgetcommon'        # widget
@@ -298,6 +303,7 @@ CKEDITOR.editorConfig = (config) ->
   config.toolbar = 'minToolbar'
   config.toolbar_maxToolbar = MAX_TOOLBAR
   config.toolbar_minToolbar = MIN_TOOLBAR
+  config.uploadUrl = '/ckeditor/pictures?responseType=json'
 
 @CKeditor_OnComplete = (ckEditorInstance) ->
   return
