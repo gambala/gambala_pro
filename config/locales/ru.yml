@@ -5,6 +5,7 @@ ru:
         body: Тело
         slug: Символьный идентификатор
         title: Тема
+  copyright: 'Версия сайта от %{updated_at} ©'
   helpers:
     placeholder:
       hit:

@@ -1,0 +1,35 @@
+@import 'web/bootstrap/variables'
+@import 'bootstrap/basical/base/mixins/rh'
+
+footer
+  padding: rh(1.5) 0
+
+  p
+    margin-bottom: 0
+
+// footer hacks
+
+html.with-sticky-footer
+  height: auto
+  min-height: 100%
+  position: relative
+
+  body
+    height: auto
+    margin-bottom: rh(2 + 1.5 * 2)
+    position: initial
+
+    .body-before-footer
+      background: $base-background-color
+
+    footer
+      bottom: 0
+      height: rh(2 + 1.5 * 2)
+      min-width: 100%
+      position: absolute
+
+
+// footer modificators
+
+footer.bg-dark
+  box-shadow: 0 3px 20px rgba(#000, 0.3) inset
