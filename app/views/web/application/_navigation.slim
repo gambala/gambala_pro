@@ -1,7 +1,12 @@
-.navbar2 class="navbar2-#{current_user.present? ? 'user' : 'guest'}"
+.navbar2.navbar2-user
   .container
     .pull-left
       ul.nav.navbar2-nav.offset-left
-        = menu_link_to 'Gambala.pro', :root, exact_route_match: true
+        li = image_tag 'logo.png', class: 'navbar2-image'
       ul.nav.navbar2-nav
-        = menu_link_to 'Достижения', :hits
+        = menu_link_to 'Главная', :root, exact_route_match: true
+        = menu_link_to 'Новости', :hits
+    - if current_user&.admin?
+      .pull-right
+        ul.nav.navbar2-nav.offset-right
+          = menu_link_to 'В админку', [:admin, :root], exact_route_match: true

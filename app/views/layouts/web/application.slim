@@ -1,5 +1,5 @@
 doctype html
-html
+html.with-sticky-footer
   head
     title gambala.pro
     = csrf_meta_tags
@@ -7,8 +7,10 @@ html
     = viewport_tag
     = render 'favicons'
   body
-    = render 'navigation'
-    = yield
+    .body-before-footer
+      = render 'navigation'
+      = yield
+    = render 'footer'
     div id='sk-holder' data-turbolinks-permanent=''
     div id='permanent-textcomplete-dropdown'
     div id='permanent-js' data-turbolinks-permanent=''

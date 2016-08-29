@@ -1,6 +1,6 @@
 class Web::Personal::Admin::HitsController < Web::Personal::Admin::ApplicationController
   def index
-    render locals: { hits: hits }
+    render locals: { hit_groups: hit_groups }
   end
 
   def new
@@ -41,6 +41,10 @@ class Web::Personal::Admin::HitsController < Web::Personal::Admin::ApplicationCo
   end
 
   private
+
+  def hit_groups
+    @hit_groups ||= Hit.all.order(created_at: :desc).group_by(&:created_at_db_date)
+  end
 
   def hits
     @hits ||= Hit.all

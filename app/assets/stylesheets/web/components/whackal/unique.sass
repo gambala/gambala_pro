@@ -1,5 +1,7 @@
+@import 'web/bootstrap/variables'
 @import "bootstrap/basical/base/mixins/gg"
 @import "bootstrap/basical/base/mixins/rh"
+@import "breakpoint-sass"
 
 pre
   padding: 0
@@ -27,9 +29,6 @@ pre
 .js-ckeditor
   min-height: 271px
 
-.sk-tab-display.sk-animation
-  animation: initial !important
-
 .emoji
   height: 20px
   margin-bottom: 2px
@@ -46,3 +45,12 @@ figure
 
   figcaption
     font-style: italic
+
++breakpoint(max-width $screen-xs-max)
+  h1,
+  .h1
+    font-size: 24px
+
+.media
+  margin-bottom: rh(0.5)
+  margin-top: 0
