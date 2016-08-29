@@ -10,7 +10,7 @@ class Web::HitsController < Web::ApplicationController
   private
 
   def hit_groups
-    @hit_groups ||= Hit.all.order(created_at: :desc).group_by(&:created_at_db_date)
+    @hit_groups ||= Hit.all.order(happened_at: :desc).group_by(&:happened_at_db_date)
   end
 
   def hit
