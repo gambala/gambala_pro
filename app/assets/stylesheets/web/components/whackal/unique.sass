@@ -1,5 +1,7 @@
+@import 'web/bootstrap/variables'
 @import "bootstrap/basical/base/mixins/gg"
 @import "bootstrap/basical/base/mixins/rh"
+@import "breakpoint-sass"
 
 pre
   padding: 0
@@ -52,3 +54,8 @@ figure
 
   figcaption
     font-style: italic
+
++breakpoint(max-width $screen-xs-max)
+  h1,
+  .h1
+    font-size: 24px
