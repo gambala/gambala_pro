@@ -56,6 +56,6 @@ class Web::Personal::Admin::HitsController < Web::Personal::Admin::ApplicationCo
 
   def hit_params
     params.require(:hit)
-          .permit(:title, :slug, :body, :happened_at)
+          .permit(:title, :slug, :body, :happened_at_date, :happened_at_time)
   end
 end
