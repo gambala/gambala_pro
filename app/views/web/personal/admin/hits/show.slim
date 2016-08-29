@@ -12,4 +12,4 @@ section.section-padded
                         class: 'btn btn-danger btn-xs btn-block'
       .col-md-8.col-md-pull-4.col-lg-9.col-lg-pull-3
         h1 = hit.title
-        = hit.body.html_safe
+        .rich-text = hit.body.html_safe
