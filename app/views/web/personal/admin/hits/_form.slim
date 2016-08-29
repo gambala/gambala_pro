@@ -8,6 +8,11 @@
       = f.label :slug, class: 'control-label'
       = f.text_field :slug, class: 'form-control', required: false, placeholder: true
       = f.error_message :slug
+    = f.form_group :happened_at do
+      = f.label :happened_at, class: 'control-label'
+      = f.text_field :happened_at, class: 'form-control', required: false,
+                     placeholder: true
+      = f.error_message :happened_at
     = f.form_group :body do
       = f.label :body, class: 'control-label'
       = f.text_area :body, class: 'form-control js-ckeditor', required: true,

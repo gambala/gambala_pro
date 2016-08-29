@@ -4,7 +4,7 @@ class Web::Personal::Admin::HitsController < Web::Personal::Admin::ApplicationCo
   end
 
   def new
-    render locals: { hit: Hit.new }
+    render locals: { hit: Hit.new(happened_at: Time.zone.now) }
   end
 
   def create
@@ -56,6 +56,6 @@ class Web::Personal::Admin::HitsController < Web::Personal::Admin::ApplicationCo
 
   def hit_params
     params.require(:hit)
-          .permit(:title, :slug, :body)
+          .permit(:title, :slug, :body, :happened_at)
   end
 end
