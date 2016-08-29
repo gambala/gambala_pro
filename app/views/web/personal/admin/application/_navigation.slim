@@ -1,0 +1,7 @@
+.navbar2.navbar2-user
+  .container
+    .pull-left
+      ul.nav.navbar2-nav.offset-left
+        = menu_link_to 'На сайт', :root, exact_route_match: true
+      ul.nav.navbar2-nav
+        = menu_link_to 'Достижения', [:admin, :hits]
