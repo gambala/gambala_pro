@@ -1,6 +1,6 @@
 class Web::HitsController < Web::ApplicationController
   def index
-    render locals: { hits: hits }
+    render locals: { hit_groups: hit_groups }
   end
 
   def show
@@ -9,8 +9,8 @@ class Web::HitsController < Web::ApplicationController
 
   private
 
-  def hits
-    @hits ||= Hit.all
+  def hit_groups
+    @hit_groups ||= Hit.all.group_by(&:created_at_db_date)
   end
 
   def hit

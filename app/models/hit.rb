@@ -24,4 +24,8 @@ class Hit < ApplicationRecord
   def to_s
     title
   end
+
+  def created_at_db_date
+    created_at.to_date.to_s(:db)
+  end
 end

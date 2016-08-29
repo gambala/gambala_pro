@@ -1,3 +1,6 @@
 section.section-padded
   .container
-    = render hits
+    - hit_groups.each do |group, hits|
+      .hr-with-title
+        span.bg-body.moment-date = group
+      = render hits
