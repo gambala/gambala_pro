@@ -241,12 +241,15 @@ CKEDITOR.editorConfig = (config) ->
     ruby:         'Ruby'
 
   EASYKEYMAPS_HASH =
-    1114144: (editor) ->              # CTRL+Space
+    1114144: (editor) ->               # CTRL+Space
       editor.insertHtml '&nbsp;'
-    3342525: (editor) ->              # CTRL+SHIFT+-
+    3342525: (editor) ->               # CTRL+SHIFT+-
       editor.execCommand('horizontalrule')
-    4456515: String.fromCharCode(169) # ALT+C
-    4456530: String.fromCharCode(174) # ALT+R
+    4456515: String.fromCharCode(169)  # ALT+C / copyright
+    4456530: String.fromCharCode(174)  # ALT+R / registered
+    4456636: String.fromCharCode(171)  # ALT+< / «
+    4456637: String.fromCharCode(8212) # ALT+- / em dash
+    4456638: String.fromCharCode(187)  # ALT+> / »
 
   CUSTOM_STYLESSET = [
       name: 'Code'
