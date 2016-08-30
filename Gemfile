@@ -4,6 +4,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 gem 'aasm'
 gem 'bootstrap-components', github: 'gambala/bootstrap-components'
+gem 'bootstrap3-datetimepicker-rails'
 gem 'bugsnag'
 gem 'carrierwave'
 gem 'ckeditor'
@@ -13,6 +14,7 @@ gem 'figaro'
 gem 'friendly_id'
 gem 'jquery-rails'
 gem 'mini_magick'
+gem 'momentjs-rails'
 gem 'pg'
 gem 'pry'
 gem 'pry-rails'
@@ -63,6 +65,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-breakpoint-sass'
   gem 'rails-assets-emojify'
   gem 'rails-assets-jquery-textcomplete'
-  gem 'rails-assets-moment'
   gem 'rails-assets-smooch'
 end
