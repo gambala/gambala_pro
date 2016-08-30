@@ -12,10 +12,10 @@
       = f.label :happened_at, class: 'control-label'
       .row
         .col-sm-6
-          = f.text_field :happened_at_date, class: 'form-control',
+          = f.text_field :happened_at_date, class: 'form-control js-date',
                          required: false, placeholder: true
         .col-sm-6
-          = f.text_field :happened_at_time, class: 'form-control',
+          = f.text_field :happened_at_time, class: 'form-control js-time',
                          required: false, placeholder: true
       = f.error_message :happened_at
     = f.form_group :body do

@@ -1,11 +1,15 @@
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap/transition
+//= require bootstrap/collapse
+//= require bootstrap/dropdown
 //= require ckeditor/init
 //= require ckeditor/plugins/codesnippet/lib/highlight/highlight.pack
 //= require emojify
 //= require jquery-textcomplete
 //= require moment
-//= require moment/locale/ru
+//= require moment/ru
+//= require bootstrap-datetimepicker
 //= require smooch
 //= require turbolinks
 //= require_tree ./components
