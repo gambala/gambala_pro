@@ -3,7 +3,7 @@
 //= require bootstrap/transition
 //= require bootstrap/collapse
 //= require bootstrap/dropdown
-//= require ckeditor/init
+//= require ckeditor/loader
 //= require ckeditor/plugins/codesnippet/lib/highlight/highlight.pack
 //= require emojify
 //= require jquery-textcomplete
@@ -13,5 +13,4 @@
 //= require smooch
 //= require turbolinks
 //= require_tree ./components
-//= require_tree ./ckeditor
 //= require ./cable
