@@ -1,7 +1,7 @@
-.media
+.media.media-hit
   .media-left
     .media-object
-      div = human_time(hit.happened_at)
+      p = human_time(hit.happened_at)
       - if hit.cover.present?
         .img-cover style="background-image: url(#{hit.cover});"
   .media-body
