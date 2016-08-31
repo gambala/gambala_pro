@@ -315,6 +315,8 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 5.0.0.1)
       sprockets-rails (>= 2.0.0)
+    rails-assets-bootstrap-maxlength (1.7.0)
+      rails-assets-jquery (>= 1.9)
     rails-assets-breakpoint-sass (2.7.0)
       rails-assets-sassy-maps (< 1.0.0)
     rails-assets-emojify (1.1.0)
@@ -477,6 +479,7 @@ DEPENDENCIES
   rack-livereload
   rack-timeout
   rails (>= 5.0.0.1)
+  rails-assets-bootstrap-maxlength!
   rails-assets-breakpoint-sass!
   rails-assets-emojify!
   rails-assets-jquery-textcomplete!

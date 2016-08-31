@@ -1,5 +1,6 @@
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-maxlength
 //= require bootstrap/transition
 //= require bootstrap/collapse
 //= require bootstrap/dropdown

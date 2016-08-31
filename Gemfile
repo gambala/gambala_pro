@@ -62,6 +62,7 @@ group :development do
 end
 
 source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap-maxlength'
   gem 'rails-assets-breakpoint-sass'
   gem 'rails-assets-emojify'
   gem 'rails-assets-jquery-textcomplete'
