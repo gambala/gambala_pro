@@ -1,5 +1,7 @@
 script async='async' src='https://yastatic.net/share2/share.js'
 div { class = 'ya-share2 text-right'
       data-services = 'vkontakte,facebook,twitter,telegram,pocket'
-      data-image = image
+      data-description = content_for(:description)
+      data-image = content_for(:image)
+      data-title = content_for(:title)
     }
