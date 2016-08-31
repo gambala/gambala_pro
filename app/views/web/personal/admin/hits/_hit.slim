@@ -3,8 +3,7 @@
     .media-object
       div = human_time(hit.happened_at)
       - if hit.cover.present?
-        = link_to '', [:admin, hit], class: 'img-cover',
-                                     style: "background-image: url(#{hit.cover});"
+        .img-cover style="background-image: url(#{hit.cover});"
   .media-body
     .media-title
       = link_to hit, [:admin, hit]
