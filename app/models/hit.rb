@@ -14,7 +14,7 @@
 class Hit < ApplicationRecord
   extend FriendlyId
 
-  SLUG_FORMAT = /[a-z-\d]+/
+  SLUG_FORMAT = /[a\-z\-\d]+/
 
   friendly_id :id, use: [:slugged, :history, :finders]
 
