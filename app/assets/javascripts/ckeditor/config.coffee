@@ -264,6 +264,12 @@ CKEDITOR.editorConfig = (config) ->
       widget: 'codeSnippet'
       attributes:
         class: 'pulledSnippet narrow'
+    ,
+      name: 'Само-ссылка'
+      type: 'widget'
+      widget: 'image'
+      attributes:
+        class: 'img-with-link'
   ]
 
   filebrowserParams = ->
