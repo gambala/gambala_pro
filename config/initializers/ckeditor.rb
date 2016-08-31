@@ -4,24 +4,39 @@ Ckeditor.setup do |config|
   config.assets_languages = %w(ru)
   config.assets_plugins = %w(
     a11yhelp
+    autolink
     basicstyles
     blockquote
+    bootstrapVisibility
+    bt_table
+    btbutton
+    btgrid
+    btquicktable
     button
     clipboard
+    codemirror
+    codesnippet
     contextmenu
     dialog
     dialogui
+    divarea
+    easykeymap
     enterkey
     entities
     fakeobjects
     filebrowser
+    filetools
     floatpanel
     format
+    glvrdPlugin
     horizontalrule
     htmlwriter
     image
+    image2
     indent
     indentlist
+    justify
+    lineutils
     link
     list
     listblock
@@ -29,9 +44,13 @@ Ckeditor.setup do |config|
     maximize
     menu
     menubutton
+    notification
+    notificationaggregator
     panel
+    panelbutton
     pastefromword
     pastetext
+    placeholder
     popup
     removeformat
     resize
@@ -42,38 +61,19 @@ Ckeditor.setup do |config|
     stylescombo
     tab
     table
-    tabletools
-    toolbar
-    undo
-    wysiwygarea
-    autolink
-    bootstrapVisibility
-    bt_table
-    btbutton
-    btgrid
-    btquicktable
-    codemirror
-    codesnippet
-    divarea
-    easykeymap
-    filetools
-    glvrdPlugin
-    image2
-    justify
-    lineutils
-    notification
-    notificationaggregator
-    panelbutton
-    placeholder
     tableresize
+    tabletools
     textselection
+    toolbar
     toolbarswitch
+    undo
     uploadimage
     uploadwidget
     widget
     widgetbootstrap
     widgetcommon
     widgettemplatemenu
+    wysiwygarea
     youtube
   )
   config.attachment_file_types = %w(doc docx xls odt ods pdf rar zip tar tar.gz swf)
