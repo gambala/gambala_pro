@@ -11,6 +11,7 @@
 //= require moment/ru
 //= require bootstrap-datetimepicker
 //= require smooch
+//= require webfontloader
 //= require turbolinks
 //= require_tree ./components
 //= require ./cable

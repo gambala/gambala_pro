@@ -323,6 +323,7 @@ GEM
       rails-assets-jquery (>= 1.7.0)
     rails-assets-sassy-maps (0.4.0)
     rails-assets-smooch (3.3.0)
+    rails-assets-webfontloader (1.6.26)
     rails-dom-testing (2.0.1)
       activesupport (>= 4.2.0, < 6.0)
       nokogiri (~> 1.6.0)
@@ -480,6 +481,7 @@ DEPENDENCIES
   rails-assets-emojify!
   rails-assets-jquery-textcomplete!
   rails-assets-smooch!
+  rails-assets-webfontloader!
   rails-i18n
   rails_best_practices
   rb-inotify!
