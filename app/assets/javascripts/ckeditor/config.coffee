@@ -224,6 +224,7 @@ CKEDITOR.editorConfig = (config) ->
         'CodeSnippet'
         'Blockquote'
         'HorizontalRule'
+        'PageBreak'
       ]
     ,
       name: 'document'
