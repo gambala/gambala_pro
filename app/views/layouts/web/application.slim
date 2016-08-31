@@ -2,10 +2,10 @@ doctype html
 html.with-sticky-footer
   head
     = csrf_meta_tags
-    = seo_title_tag
     = stylesheet_link_tag 'web/application', media: 'all', data: { turbolinks_track: 'reload' }
     = viewport_tag
     = render 'favicons'
+    = render 'meta'
   body
     .body-before-footer
       = render 'navigation'
