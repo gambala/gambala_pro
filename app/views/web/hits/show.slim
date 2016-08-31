@@ -8,7 +8,7 @@ section.section-padded
               p = link_to 'Открыть в админке', [:admin, hit],
                           class: 'btn btn-default btn-block'
             p.text-right = human_datetime(hit.happened_at)
-            = render 'share2'
+            = render 'share2', image: hit.cover
       .col-md-8.col-md-pull-4.col-lg-9.col-lg-pull-3
         h1 = hit.title
         .rich-text = hit.body.html_safe
