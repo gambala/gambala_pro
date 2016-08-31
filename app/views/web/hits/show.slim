@@ -1,3 +1,9 @@
+- description_from_html hit.annotation
+- image image_url(hit.cover) if hit.cover.present?
+- pagetype 'article'
+- title hit.title
+- published_time hit.happened_at
+- modified_time hit.updated_at
 section.section-padded
   .container
     .row
@@ -8,6 +14,7 @@ section.section-padded
               p = link_to 'Открыть в админке', [:admin, hit],
                           class: 'btn btn-default btn-block'
             p.text-right = human_datetime(hit.happened_at)
+            = render 'share2'
       .col-md-8.col-md-pull-4.col-lg-9.col-lg-pull-3
         h1 = hit.title
         .rich-text = hit.body.html_safe

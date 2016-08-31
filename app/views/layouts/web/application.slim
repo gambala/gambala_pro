@@ -1,11 +1,11 @@
 doctype html
-html.with-sticky-footer
+html.with-sticky-footer prefix=meta_html_prefix
   head
-    title gambala.pro
     = csrf_meta_tags
     = stylesheet_link_tag 'web/application', media: 'all', data: { turbolinks_track: 'reload' }
     = viewport_tag
     = render 'favicons'
+    = render 'meta'
   body
     .body-before-footer
       = render 'navigation'
