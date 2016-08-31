@@ -26,6 +26,11 @@ class Hit < ApplicationRecord
     title
   end
 
+  def cover
+    return @cover if defined? @cover
+    @cover = first_image_from_body
+  end
+
   def happened_at_db_date
     happened_at.to_date.to_s(:db)
   end
@@ -44,5 +49,13 @@ class Hit < ApplicationRecord
 
   def happened_at_time=(value)
     self.happened_at = DateTime.parse("#{happened_at_date} #{value}")
+  end
+
+  private
+
+  def first_image_from_body
+    match = body.match(/src="([^"]+)"/)
+    return unless match.present?
+    match[1]
   end
 end
