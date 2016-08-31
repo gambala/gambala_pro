@@ -79,8 +79,8 @@ module SeoHelper
   end
 
   def meta_for_title
-    concat content_tag :title, page_title
-    content_tag :meta, nil, content: page_title, property: 'og:title'
+    return unless content_for?(:title)
+    content_tag :meta, nil, content: content_for(:title), property: 'og:title'
   end
 
   def meta_for_url
@@ -94,11 +94,15 @@ module SeoHelper
      "#{content_for(:pagetype)}: http://ogp.me/ns/#{content_for(:pagetype)}#"].join(' ')
   end
 
+  def title_tag
+    content_tag :title, page_title
+  end
+
   private
 
   def page_title
     if content_for(:title)
-      "#{content_for(:title)} | #{t('site.title')}"
+      "#{content_for(:title)} | #{site_name}"
     else
       site_name
     end
