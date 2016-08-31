@@ -1,6 +1,9 @@
 - description_from_html hit.annotation
 - image image_url(hit.cover) if hit.cover.present?
+- pagetype 'article'
 - title hit.title
+- published_time hit.happened_at
+- modified_time hit.updated_at
 section.section-padded
   .container
     .row

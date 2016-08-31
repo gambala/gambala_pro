@@ -1,4 +1,7 @@
 module SeoHelper
+  OG_AUTHOR = [ 'https://www.facebook.com/gambala.pro',
+                'https://vk.com/gambala' ]
+
   def description(value)
     content_for :description, value.to_s
   end
@@ -18,8 +21,16 @@ module SeoHelper
     content_for :keywords, value.to_s
   end
 
+  def modified_time(value)
+    content_for :modified_time, value.iso8601
+  end
+
   def pagetype(value)
     content_for :pagetype, value.to_s
+  end
+
+  def published_time(value)
+    content_for :published_time, value.iso8601
   end
 
   def title(value = nil, &block)
@@ -28,6 +39,18 @@ module SeoHelper
     else
       content_for :title, value.to_s
     end
+  end
+
+  def meta_for_article
+    return unless content_for?(:pagetype)
+    return unless content_for(:pagetype) == 'article'
+    concat content_tag :meta, nil,
+                       content: content_for(:published_time),
+                       property: 'article:published_time' if content_for?(:published_time)
+    concat content_tag :meta, nil,
+                       content: content_for(:modified_time),
+                       property: 'article:modified_time' if content_for?(:modified_time)
+    content_tag :meta, nil, content: OG_AUTHOR.join(', '), property: 'article:author'
   end
 
   def meta_for_description
@@ -51,14 +74,24 @@ module SeoHelper
     content_tag :meta, nil, content: content_for(:pagetype), property: 'og:type'
   end
 
+  def meta_for_site_name
+    content_tag :meta, nil, content: site_name, property: 'og:site_name'
+  end
+
   def meta_for_title
     concat content_tag :title, page_title
     content_tag :meta, nil, content: page_title, property: 'og:title'
-    content_tag :meta, nil, content: site_name, property: 'og:site_name'
   end
 
   def meta_for_url
     content_tag :meta, nil, content: request.original_url, property: 'og:url'
+  end
+
+  def meta_html_prefix
+    return unless content_for?(:pagetype)
+    return unless content_for(:pagetype).in? %w(article)
+    ['og: http://ogp.me/ns#',
+     "#{content_for(:pagetype)}: http://ogp.me/ns/#{content_for(:pagetype)}#"].join(' ')
   end
 
   private
