@@ -67,6 +67,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-breakpoint-sass'
   gem 'rails-assets-emojify'
   gem 'rails-assets-jquery-textcomplete'
+  gem 'rails-assets-ladda'
   gem 'rails-assets-smooch'
   gem 'rails-assets-webfontloader'
 end

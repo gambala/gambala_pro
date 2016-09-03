@@ -8,6 +8,9 @@
 //= require ckeditor/plugins/codesnippet/lib/highlight/highlight.pack
 //= require emojify
 //= require jquery-textcomplete
+//= require ladda/spin.min
+//= require ladda/ladda.min
+//= require ladda/ladda.jquery.min
 //= require moment
 //= require moment/ru
 //= require bootstrap-datetimepicker

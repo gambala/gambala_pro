@@ -328,8 +328,11 @@ GEM
     rails-assets-jquery (3.1.0)
     rails-assets-jquery-textcomplete (1.7.1)
       rails-assets-jquery (>= 1.7.0)
+    rails-assets-ladda (1.0.0)
+      rails-assets-spin.js (~> 2.0.2)
     rails-assets-sassy-maps (0.4.0)
     rails-assets-smooch (3.3.0)
+    rails-assets-spin.js (2.0.2)
     rails-assets-webfontloader (1.6.26)
     rails-dom-testing (2.0.1)
       activesupport (>= 4.2.0, < 6.0)
@@ -494,6 +497,7 @@ DEPENDENCIES
   rails-assets-breakpoint-sass!
   rails-assets-emojify!
   rails-assets-jquery-textcomplete!
+  rails-assets-ladda!
   rails-assets-smooch!
   rails-assets-webfontloader!
   rails-i18n
