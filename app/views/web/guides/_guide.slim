@@ -1,0 +1,9 @@
+.media.media-guide
+  .media-left
+    .media-object
+      p = human_time(guide.created_at)
+      - if guide.cover.present?
+        .img-cover style="background-image: url(#{guide.cover});"
+  .media-body
+    .media-title
+      = link_to guide, guide

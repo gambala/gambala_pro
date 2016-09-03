@@ -1,0 +1,13 @@
+- title 'Новости'
+section.section-padded
+  .container
+    .row
+      .col-md-4.col-md-push-8.col-lg-3.col-lg-push-9
+        .panel.panel-muted
+          .panel-body
+            p Техники и методики, которыми пользуюсь сам. Концентрированные знания.
+      .col-md-8.col-md-pull-4.col-lg-9.col-lg-pull-3
+        - guide_groups.each do |group, guides|
+          .hr-with-title
+            span.bg-body.moment-db-date = group
+          = render guides
