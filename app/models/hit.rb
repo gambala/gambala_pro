@@ -9,11 +9,14 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  happened_at :datetime         default(Mon, 29 Aug 2016 18:34:05 MSK +03:00), not null
+#  project_id  :integer
 #
 
 class Hit < ApplicationRecord
   include Sluggable
   include Htmlable
+
+  belongs_to :project, optional: true
 
   def to_s
     title

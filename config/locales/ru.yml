@@ -8,8 +8,12 @@ ru:
       hit:
         body: Тело
         happened_at: Дата события
+        project_id: Проект
         slug: Символьный идентификатор
         title: Тема
+      project:
+        slug: Символьный идентификатор
+        title: Название проекта
   copyright: 'Версия сайта от %{updated_at} ©'
   helpers:
     placeholder:
@@ -22,5 +26,8 @@ ru:
         happened_at: Когда событие произошло
         slug: Можно оставить пустым
         title: Читатели увидят тему в ленте
+      project:
+        slug: В одно слово на латинице
+        title: Полное название, можно на русском
   site:
     title: Gambala.pro
