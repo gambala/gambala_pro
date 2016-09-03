@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   scope module: :web do
     scope module: :personal do
       namespace :admin do
+        resources :guides
         resources :hits
 
         root to: 'welcome#index'
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
       get 'personal', to: 'welcome#index'
     end
 
+    resources :guides, only: [:index, :show]
     resources :hits, only: [:index, :show]
     root to: 'welcome#index'
   end

@@ -1,6 +1,10 @@
 ru:
   activerecord:
     attributes:
+      guide:
+        body: Ответ
+        slug: Символьный идентификатор
+        title: Вопрос
       hit:
         body: Тело
         happened_at: Дата события
@@ -9,6 +13,10 @@ ru:
   copyright: 'Версия сайта от %{updated_at} ©'
   helpers:
     placeholder:
+      guide:
+        body: Полный ответ на вопрос
+        slug: Можно оставить пустым
+        title: Вопрос, на который я даю ответ
       hit:
         body: Все, что произошло, в свободной форме
         happened_at: Когда событие произошло

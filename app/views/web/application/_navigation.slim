@@ -6,6 +6,7 @@
       ul.nav.navbar2-nav
         = menu_link_to 'Главная', :root, exact_route_match: true
         = menu_link_to 'Новости', :hits
+        = menu_link_to 'Советы', :guides
     - if current_user&.admin?
       .pull-right
         ul.nav.navbar2-nav.offset-right
