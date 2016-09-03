@@ -8,6 +8,7 @@ ru:
       hit:
         body: Тело
         happened_at: Дата события
+        project_id: Проект
         slug: Символьный идентификатор
         title: Тема
       project:

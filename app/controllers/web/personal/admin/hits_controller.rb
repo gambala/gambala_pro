@@ -1,4 +1,6 @@
 class Web::Personal::Admin::HitsController < Web::Personal::Admin::ApplicationController
+  helper_method :projects
+
   def index
     render locals: { hit_groups: hit_groups }
   end
@@ -56,6 +58,10 @@ class Web::Personal::Admin::HitsController < Web::Personal::Admin::ApplicationCo
 
   def hit_params
     params.require(:hit)
-          .permit(:title, :slug, :body, :happened_at_date, :happened_at_time)
+          .permit(:title, :slug, :body, :happened_at_date, :happened_at_time, :project_id)
+  end
+
+  def projects
+    @projects ||= Project.order(:title)
   end
 end

@@ -12,6 +12,8 @@
 class Project < ApplicationRecord
   include Sluggable
 
+  has_many :hits
+
   def to_s
     title
   end

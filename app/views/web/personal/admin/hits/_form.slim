@@ -24,6 +24,12 @@
       = f.text_area :body, class: 'form-control js-ckeditor', required: true,
                            placeholder: true, rows: 4
       = f.error_message :body
+    = f.form_group :project_id do
+      = f.label :project_id, class: 'control-label'
+      = f.collection_select :project_id, projects, :id, :title,
+                            { include_blank: 'Без привязки к проекту' },
+                            { class: 'form-control select2-control' }
+      = f.error_message :project_id
     .form-group
       = f.button 'Сохранить', class: 'btn btn-primary btn-sm'
       = link_to 'Закрыть форму', [:admin, :hits], class: 'btn btn-link btn-xs'
