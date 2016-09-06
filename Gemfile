@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 gem 'aasm'
+gem 'autoprefixer-rails'
 gem 'bootstrap-components', github: 'gambala/bootstrap-components'
 gem 'bootstrap3-datetimepicker-rails'
 gem 'bugsnag'
