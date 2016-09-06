@@ -1,4 +1,11 @@
-- title project.title
+- title project.page_title
+section.-mockup class=project.page_cover_class
+  .container
+    h1 = project.page_title
+    p = project.page_subtitle
+    .mockup.-responsive
+      .img
+      .body = image_tag project.page_mockup_image
 section.section-padded
   .container
     .row
@@ -10,5 +17,4 @@ section.section-padded
                           class: 'btn btn-default btn-block'
             = render 'share2'
       .col-md-8.col-md-pull-4.col-lg-9.col-lg-pull-3
-        h1 = project.title
         = render project.hits

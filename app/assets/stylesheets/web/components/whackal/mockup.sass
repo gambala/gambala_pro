@@ -1,0 +1,28 @@
+@import 'web/bootstrap/variables'
+@import "bootstrap/basical/base/mixins/gg"
+@import "bootstrap/basical/base/mixins/rh"
+@import "bootstrap/elemental/img/mixins"
+
+.mockup
+  position: relative
+
+.mockup.-responsive
+  max-width: 100%
+
+.mockup > .img
+  +svg-image('browser-mockup.png', 'browser-mockup.svg', 1290px, 540px)
+  height: 0
+  padding-bottom: 540px / 1290px * 100%
+  position: relative
+  width: 100%
+
+.mockup > .body
+  height: 440px / 540px * 100%
+  left: 25px / 1290px * 100%
+  overflow: hidden
+  position: absolute
+  top: 76px / 540px * 100%
+  width: 1240px / 1290px * 100%
+
+.mockup > .body > img
+  width: 100%

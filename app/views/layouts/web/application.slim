@@ -14,6 +14,7 @@ html.with-sticky-footer prefix=meta_html_prefix
     div id='sk-holder' data-turbolinks-permanent=''
     div id='permanent-textcomplete-dropdown'
     div id='permanent-js' data-turbolinks-permanent=''
+      = javascript_include_tag 'modernizr-custom', data: { turbolinks_track: 'reload' }
       = javascript_include_tag 'application', data: { turbolinks_track: 'reload' }
     div id='flash'
       - flash.each do |key, value|
