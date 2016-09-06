@@ -1,4 +1,4 @@
-= form_for [:admin, project], remote: true do |f|
+= form_for [:admin, project], remote: true, authenticity_token: true do |f|
   .form-groups
     = f.form_group :title do
       = f.label :title, class: 'control-label'
@@ -21,6 +21,20 @@
       = f.label :page_cover_class, class: 'control-label'
       = f.text_field :page_cover_class, class: 'form-control', required: false, placeholder: true
       = f.error_message :page_cover_class
+    .form-group
+      .media.text-center.fileinput.fileinput-new data-provides='fileinput'
+        .media-object.fileinput-new data-trigger='fileinput'
+          - if project.page_mockup_image?
+            = image_tag project.page_mockup_image, class: 'img-responsive'
+          - else
+            span.fa.fa-photo.fa-3x.text-legend
+        .media-object.fileinput-exists.thumbnail.fileinput-preview data-trigger='fileinput'
+        .media-body.media-middle.text-legend.fileinput-new data-trigger='fileinput'
+          .media-heading = project.page_mockup_image? ? 'Заменить фото' : 'Добавить фото'
+        .media-body.media-middle.text-muted.fileinput-exists data-dismiss='fileinput'
+          .media-heading = project.page_mockup_image? ? 'Отменить выбор' : 'Удалить фото'
+        = f.file_field :page_mockup_image, accept: 'image/png,image/gif,image/jpeg',
+                       class: 'form-control-invisible'
     .form-group
       = f.button 'Сохранить', class: 'btn btn-primary btn-sm'
       = link_to 'Закрыть форму', [:admin, :projects], class: 'btn btn-link btn-xs'
