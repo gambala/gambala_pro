@@ -12,6 +12,7 @@ ru:
         slug: Символьный идентификатор
         title: Тема
       project:
+        hit_ids: Новости
         page_cover_class: CSS-классы обложки
         page_mockup_image: Изображение в мокапе
         page_subtitle: Микроописание
@@ -31,6 +32,7 @@ ru:
         slug: Можно оставить пустым
         title: Читатели увидят тему в ленте
       project:
+        hit_ids: Новости по данному проекту
         page_cover_class: Писать через пробел
         page_subtitle: Чем занимаюсь в проекте
         page_title: Виден на странице с проектом

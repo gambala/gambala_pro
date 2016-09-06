@@ -6,6 +6,4 @@
         .img-cover style="background-image: url(#{hit.cover});"
   .media-body
     .media-title
-      = link_to hit, [:admin, hit]
-    - if hit.project.present?
-      = link_to hit.project, [:admin, hit.project], class: 'label label-success'
+      = link_to hit, hit
