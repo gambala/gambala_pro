@@ -5,4 +5,5 @@ Rails.application.config.assets.precompile += %w(
   ckeditor/filebrowser/*
   ckeditor/plugins/*
   ckeditor/skins/moonocolor/*
+  modernizr-custom.js
 )
