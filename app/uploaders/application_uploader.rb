@@ -5,10 +5,7 @@ class ApplicationUploader < CarrierWave::Uploader::Base
   storage :file
 
   def default_url
-    ActionController::Base.helpers
-                          .asset_path('carrierwave/' + [version_name, 'photo.jpg']
-                          .compact
-                          .join('_'))
+    ActionController::Base.helpers.asset_path("carrierwave/#{default_filename}")
   end
 
   def extension_white_list
@@ -24,6 +21,12 @@ class ApplicationUploader < CarrierWave::Uploader::Base
   end
 
   protected
+
+  def default_filename
+    @default_filename ||= [model.model_name.to_s.underscore,
+                           version_name,
+                           'image.jpg'].compact.join('_')
+  end
 
   def secure_token
     var = :"@#{mounted_as}_secure_token"
