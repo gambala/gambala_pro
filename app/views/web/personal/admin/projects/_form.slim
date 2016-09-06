@@ -35,6 +35,13 @@
           .media-heading = project.page_mockup_image? ? 'Отменить выбор' : 'Удалить фото'
         = f.file_field :page_mockup_image, accept: 'image/png,image/gif,image/jpeg',
                        class: 'form-control-invisible'
+    = f.form_group :hit_ids do
+      = f.label :hit_ids, class: 'control-label'
+      = f.collection_select :hit_ids, hits, :id, :title,
+                            { prompt: 'Новости по данному проекту:' },
+                            { class: 'form-control select2-control',
+                              multiple: true }
+      = f.error_message :hit_ids
     .form-group
       = f.button 'Сохранить', class: 'btn btn-primary btn-sm'
       = link_to 'Закрыть форму', [:admin, project], class: 'btn btn-link btn-xs'
