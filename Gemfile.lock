@@ -324,6 +324,7 @@ GEM
       rails-assets-jquery (>= 1.9)
     rails-assets-breakpoint-sass (2.7.0)
       rails-assets-sassy-maps (< 1.0.0)
+    rails-assets-colors (3.0.0)
     rails-assets-emojify (1.1.0)
     rails-assets-jquery (3.1.0)
     rails-assets-jquery-textcomplete (1.7.1)
@@ -497,6 +498,7 @@ DEPENDENCIES
   rails (>= 5.0.0.1)
   rails-assets-bootstrap-maxlength!
   rails-assets-breakpoint-sass!
+  rails-assets-colors!
   rails-assets-emojify!
   rails-assets-jquery-textcomplete!
   rails-assets-ladda!
