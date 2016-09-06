@@ -7,6 +7,7 @@
 //= require ckeditor/loader
 //= require ckeditor/plugins/codesnippet/lib/highlight/highlight.pack
 //= require emojify
+//= require jasny-bootstrap
 //= require jquery-textcomplete
 //= require ladda/spin.min
 //= require ladda/ladda.min
