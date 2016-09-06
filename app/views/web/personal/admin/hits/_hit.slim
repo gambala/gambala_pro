@@ -7,3 +7,5 @@
   .media-body
     .media-title
       = link_to hit, [:admin, hit]
+    - if hit.project.present?
+      = link_to hit.project, hit.project, class: 'label label-success'
