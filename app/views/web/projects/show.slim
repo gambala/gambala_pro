@@ -19,4 +19,6 @@ section.section-padded
                           class: 'btn btn-default btn-block'
             = render 'share2'
       .col-md-8.col-md-pull-4.col-lg-9.col-lg-pull-3
-        = render project.hits
+        - if project.hits.any?
+          h2 Новости
+          = render project.hits
