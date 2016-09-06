@@ -17,6 +17,7 @@ class Project < ApplicationRecord
   include Sluggable
 
   has_many :hits
+  mount_uploader :page_mockup_image, MockupImageUploader
 
   def to_s
     title
