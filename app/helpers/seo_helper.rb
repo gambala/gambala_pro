@@ -6,11 +6,11 @@ module SeoHelper
     content_for :description, value.to_s
   end
 
-  def description_from_html(value)
+  def text_from_html(value)
     value = strip_tags(value)
     value = truncate(value, length: 150)
     value = value.gsub(/\n\n+/, '\n').gsub(/^\n|\n$/, ' ').squish
-    description value
+    value
   end
 
   def image(value)
