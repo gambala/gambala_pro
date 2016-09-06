@@ -1,6 +1,7 @@
 @import 'web/bootstrap/variables'
 @import "bootstrap/basical/base/mixins/gg"
 @import "bootstrap/basical/base/mixins/rh"
+@import 'bootstrap/basical/base/mixins/scrollbar'
 @import "breakpoint-sass"
 
 pre
@@ -109,6 +110,7 @@ figure
   width: 100%
 
 pre
+  +scrollbar(#fff)
   overflow-x: auto
 
 pre code
