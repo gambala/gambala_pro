@@ -8,17 +8,20 @@
       .mockup.-responsive
         .img
         .body = image_tag project.page_mockup_image
-section.section-padded
-  .container
-    .row
-      .col-md-4.col-md-push-8.col-lg-3.col-lg-push-9
-        .panel.panel-muted
-          .panel-body
-            - if current_user&.admin?
-              p = link_to 'Открыть в админке', [:admin, project],
-                          class: 'btn btn-default btn-block'
-            = render 'share2'
-      .col-md-8.col-md-pull-4.col-lg-9.col-lg-pull-3
-        - if project.hits.any?
-          h2 Новости
-          = render partial: 'hit', collection: project.hits
+  section.section-padded
+    .container
+      .row
+        .col-md-4.col-md-push-8.col-lg-3.col-lg-push-9
+          .panel.panel-muted
+            .panel-body
+              - if current_user&.admin?
+                p = link_to 'Открыть в админке', [:admin, project],
+                            class: 'btn btn-default btn-block'
+              = render 'share2'
+        .col-md-8.col-md-pull-4.col-lg-9.col-lg-pull-3
+          - if project.hits.any?
+            h2 Новости
+            - p.hit_groups.each do |group, hits|
+              .hr-with-title
+                span.bg-body.moment-db-date = group
+              = render partial: 'hit', collection: hits
