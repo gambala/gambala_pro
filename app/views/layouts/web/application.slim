@@ -16,6 +16,7 @@ html.with-sticky-footer prefix=meta_html_prefix
     div id='permanent-js' data-turbolinks-permanent=''
       = javascript_include_tag 'modernizr-custom', data: { turbolinks_track: 'reload' }
       = javascript_include_tag 'application', data: { turbolinks_track: 'reload' }
+      = render 'scripts' if Rails.env.production?
     div id='flash'
       - flash.each do |key, value|
         .flash class=key
