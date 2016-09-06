@@ -9,6 +9,18 @@
       = f.label :slug, class: 'control-label'
       = f.text_field :slug, class: 'form-control', required: false, placeholder: true
       = f.error_message :slug
+    = f.form_group :page_title do
+      = f.label :page_title, class: 'control-label'
+      = f.text_field :page_title, class: 'form-control', required: false, placeholder: true
+      = f.error_message :page_title
+    = f.form_group :page_subtitle do
+      = f.label :page_subtitle, class: 'control-label'
+      = f.text_field :page_subtitle, class: 'form-control', required: false, placeholder: true
+      = f.error_message :page_subtitle
+    = f.form_group :page_cover_class do
+      = f.label :page_cover_class, class: 'control-label'
+      = f.text_field :page_cover_class, class: 'form-control', required: false, placeholder: true
+      = f.error_message :page_cover_class
     .form-group
       = f.button 'Сохранить', class: 'btn btn-primary btn-sm'
       = link_to 'Закрыть форму', [:admin, :projects], class: 'btn btn-link btn-xs'

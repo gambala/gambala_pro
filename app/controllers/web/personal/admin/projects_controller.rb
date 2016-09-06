@@ -56,6 +56,8 @@ class Web::Personal::Admin::ProjectsController < Web::Personal::Admin::Applicati
 
   def project_params
     params.require(:project)
-          .permit(:title, :slug)
+          .permit(:title, :slug,
+                  :page_title, :page_subtitle, :page_cover_class,
+                  :page_mockup_image)
   end
 end

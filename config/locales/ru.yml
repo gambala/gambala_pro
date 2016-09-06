@@ -12,6 +12,10 @@ ru:
         slug: Символьный идентификатор
         title: Тема
       project:
+        page_cover_class: CSS-классы обложки
+        page_mockup_image: Изображение в мокапе
+        page_subtitle: Микроописание
+        page_title: Заголовок
         slug: Символьный идентификатор
         title: Название проекта
   copyright: 'Версия сайта от %{updated_at} ©'
@@ -27,6 +31,9 @@ ru:
         slug: Можно оставить пустым
         title: Читатели увидят тему в ленте
       project:
+        page_cover_class: Писать через пробел
+        page_subtitle: Чем занимаюсь в проекте
+        page_title: Виден на странице с проектом
         slug: В одно слово на латинице
         title: Полное название, можно на русском
   site:
