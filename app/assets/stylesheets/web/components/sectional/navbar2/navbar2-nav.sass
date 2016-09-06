@@ -1,6 +1,4 @@
 @import 'web/bootstrap/variables'
-@import 'mixins'
-@import 'breakpoint-sass'
 
 // Component
 
@@ -43,26 +41,3 @@
 
       &:hover
         color: #000
-
-// Context
-
-.navbar2-account,
-.navbar2-moderator,
-.navbar2-admin
-  .navbar2-nav.offset-left
-    +breakpoint($screen-lg-min + 200px * 2)
-      +navbar2-nav-offset-left
-
-  .navbar2-nav.offset-right
-    +breakpoint($screen-lg-min + 100px * 2)
-      +navbar2-nav-offset-right
-
-.navbar2-guest,
-.navbar2-user
-  .navbar2-nav.offset-left
-    +breakpoint($screen-lg-min + 100px * 2)
-      +navbar2-nav-offset-left
-
-  .navbar2-nav.offset-right
-    +breakpoint($screen-lg-min + 100px * 2)
-      +navbar2-nav-offset-right

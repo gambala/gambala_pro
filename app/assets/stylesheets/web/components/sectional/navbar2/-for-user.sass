@@ -1,0 +1,16 @@
+@import 'web/bootstrap/variables'
+@import 'web/mixins/navbar2-breakpoint'
+@import 'web/mixins/navbar2-nav-offset'
+@import 'breakpoint-sass'
+
+.navbar2.-for-user
+  +breakpoint(max-width 570px)
+    +navbar2-breakpoint
+
+  .navbar2-nav.offset-left
+    +breakpoint($screen-lg-min + 100px * 2)
+      +navbar2-nav-offset-left
+
+  .navbar2-nav.offset-right
+    +breakpoint($screen-lg-min + 100px * 2)
+      +navbar2-nav-offset-right
