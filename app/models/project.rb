@@ -22,8 +22,4 @@ class Project < ApplicationRecord
   def to_s
     title
   end
-
-  def page_mockup_class
-    '-without-image' unless page_mockup_image?
-  end
 end
