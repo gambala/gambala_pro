@@ -2,7 +2,7 @@
   .col-sm-6.col-lg-4
     .panel.panel-default
       section.-mockup class=p.mockup_section_class
-        .h3 = link_to project, project, class: 'text-inherit'
+        .h3 = link_to project.page_title, project, class: 'text-inherit'
         p
           small = project.page_subtitle
         = link_to project, class: 'mockup -responsive' do
