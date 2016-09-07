@@ -7,4 +7,5 @@ section.section-padded
             p = link_to 'Добавить новость', [:new, :admin, :project],
                         class: 'btn btn-primary btn-block'
       .col-md-8.col-md-pull-4.col-lg-9.col-lg-pull-3
-        = render projects
+        .row
+          = render projects
