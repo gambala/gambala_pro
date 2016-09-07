@@ -1,11 +1,21 @@
 @import 'web/bootstrap/variables'
 
 section.-mockup
-  background-image: radial-gradient(at top, transparent, rgba(#000, 0.4))
   color: #fff
   overflow: hidden
   padding: 10% 0 0
+  position: relative
   text-align: center
+  z-index: 0
+
+  &:before
+    content: ''
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: -1
 
   .mockup
     margin-bottom: -10%
@@ -13,3 +23,13 @@ section.-mockup
 section.-mockup.-without-image
   .mockup
     margin-bottom: -30%
+
+section.-mockup.-to-dark
+  &:before
+    background-image: radial-gradient(at top, transparent, rgba(#000, 0.4))
+
+section.-mockup.-from-light
+  color: $legend-color
+
+  &:before
+    background-image: radial-gradient(at top, rgba(#fff, 0.7), transparent)
