@@ -5,6 +5,6 @@
         .h3 = link_to project, project, class: 'text-inherit'
         p
           small = project.page_subtitle
-        .mockup.-responsive
+        = link_to project, class: 'mockup -responsive' do
           .img
           .body = image_tag project.page_mockup_image
