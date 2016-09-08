@@ -92,7 +92,7 @@ GEM
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.11)
-    bootstrap3-datetimepicker-rails (4.17.37)
+    bootstrap3-datetimepicker-rails (4.17.42)
       momentjs-rails (>= 2.8.1)
     bugsnag (5.0.0)
     builder (3.2.2)
