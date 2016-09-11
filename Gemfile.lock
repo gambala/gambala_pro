@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/gambala/bootstrap-components.git
-  revision: 2a5e99fca22beb180972c1160457b3e8097529fc
+  revision: 703efe62586f55dc308145cc542a3ca6dd4ad676
   specs:
     bootstrap-components (3.3.6)
       autoprefixer-rails (>= 5.2.1)
