@@ -10,6 +10,9 @@ section.section-padded
                         class: 'btn btn-default btn-block'
             p = link_to 'Удалить', [:admin, guide], method: :delete, remote: true,
                         class: 'btn btn-danger btn-xs btn-block'
+            dl
+              dt Аннотация:
+              dd = text_from_html(hit.annotation)
       .col-md-8.col-md-pull-4.col-lg-9.col-lg-pull-3
         h1 = guide.title
         .rich-text = guide.body.html_safe
