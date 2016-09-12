@@ -12,7 +12,7 @@ section.section-padded
                         class: 'btn btn-danger btn-xs btn-block'
             dl
               dt Аннотация:
-              dd = text_from_html(hit.annotation)
+              dd = text_from_html(guide.annotation)
       .col-md-8.col-md-pull-4.col-lg-9.col-lg-pull-3
         h1 = guide.title
         .rich-text = guide.body.html_safe
