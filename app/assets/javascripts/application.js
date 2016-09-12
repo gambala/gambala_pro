@@ -12,6 +12,7 @@
 //= require ladda/spin.min
 //= require ladda/ladda.min
 //= require ladda/ladda.jquery.min
+//= require masonry/dist/masonry.pkgd
 //= require moment
 //= require moment/ru
 //= require bootstrap-datetimepicker

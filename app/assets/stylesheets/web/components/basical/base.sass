@@ -1,9 +1,13 @@
-@import 'web/bootstrap/variables'
-@import 'bootstrap/basical/base/mixins/rh'
-@import 'mixins'
+@import 'web/variables'
+@import 'bootstrap/mixins/rh'
+@import 'web/mixins/bg-variant'
 
 +bg-variant('.bg-body', $base-background-color, $base-color)
 +bg-variant('.bg-dark', $legend-color, #d7d7d9)
+
+.bg-stripes
+  background-image: image_url('bg-stripes.png')
+  background-size: 150px / 2
 
 // hr modificators
 
@@ -43,3 +47,9 @@ hr,
 
 .text-white
   color: #fff
+
+.text-inherit
+  color: inherit
+
+a.text-inherit:hover
+  color: inherit

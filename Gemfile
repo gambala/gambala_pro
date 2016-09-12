@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 gem 'aasm'
-gem 'autoprefixer-rails'
 gem 'bootstrap-components', github: 'gambala/bootstrap-components'
 gem 'bootstrap3-datetimepicker-rails'
 gem 'bugsnag'
@@ -65,6 +64,10 @@ group :development do
   gem 'web-console'
 end
 
+group :production do
+  gem 'autoprefixer-rails'
+end
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap-maxlength'
   gem 'rails-assets-breakpoint-sass'
@@ -73,6 +76,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-jasny-bootstrap'
   gem 'rails-assets-jquery-textcomplete'
   gem 'rails-assets-ladda'
+  gem 'rails-assets-masonry'
   gem 'rails-assets-smooch'
   gem 'rails-assets-webfontloader'
 end

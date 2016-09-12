@@ -1,14 +1,14 @@
-.navbar2.navbar2-user
+.navbar2.-for-user
   .container
     .pull-left
-      ul.nav.navbar2-nav.offset-left
-        li = image_tag 'logo.png', class: 'navbar2-image'
-      ul.nav.navbar2-nav
+      ul.nav.-offset-left
+        li = image_tag 'logo.png'
+      ul.nav
         = menu_link_to 'Главная', :root, exact_route_match: true
         = menu_link_to 'Новости', :hits
         = menu_link_to 'Советы', :guides
         = menu_link_to 'Проекты', :projects
     - if current_user&.admin?
       .pull-right
-        ul.nav.navbar2-nav.offset-right
+        ul.nav.-offset-right
           = menu_link_to 'В админку', [:admin, :root], exact_route_match: true

@@ -1,1 +1,10 @@
-p = link_to project, [:admin, project]
+- present project do |p|
+  .col-xs-12.col-sm-6.col-md-12.col-lg-6.js-masonry-item
+    .panel.panel-default
+      section.-mockup class=p.mockup_section_class
+        .h3 = link_to project.page_title, [:admin, project], class: 'text-inherit'
+        p
+          small = project.page_subtitle
+        = link_to [:admin, project], class: 'mockup -responsive' do
+          .img
+          .body = image_tag project.page_mockup_image

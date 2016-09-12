@@ -1,7 +1,7 @@
-@import 'web/bootstrap/variables'
-@import "bootstrap/basical/base/mixins/gg"
-@import "bootstrap/basical/base/mixins/rh"
-@import "bootstrap/elemental/img/mixins"
+@import 'web/variables'
+@import "bootstrap/mixins/gg"
+@import "bootstrap/mixins/retina-svg"
+@import "bootstrap/mixins/rh"
 
 .mockup
   position: relative
@@ -26,3 +26,11 @@
 
 .mockup > .body > img
   width: 100%
+
+a.mockup
+  display: block
+  transform: translate(0, 0)
+  transition: transform 0.1s
+
+  &:hover
+    transform: translate(0, -5%)
