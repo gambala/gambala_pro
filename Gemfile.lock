@@ -83,7 +83,7 @@ GEM
     annotate (2.7.1)
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 12.0)
-    arel (7.1.1)
+    arel (7.1.2)
     ast (2.3.0)
     autoprefixer-rails (6.4.1.1)
       execjs
@@ -116,7 +116,7 @@ GEM
       capistrano (~> 3.1)
       sshkit (~> 1.2, >= 1.2.0)
     capistrano-harrow (0.5.3)
-    capistrano-rails (1.1.7)
+    capistrano-rails (1.1.8)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
     capistrano-rvm (0.1.2)
