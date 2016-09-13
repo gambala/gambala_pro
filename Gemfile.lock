@@ -85,7 +85,7 @@ GEM
       rake (>= 10.4, < 12.0)
     arel (7.1.1)
     ast (2.3.0)
-    autoprefixer-rails (6.4.1)
+    autoprefixer-rails (6.4.1.1)
       execjs
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
@@ -339,7 +339,7 @@ GEM
       rails-assets-bootstrap (>= 3.1.0)
       rails-assets-jquery (>= 1.9.0)
     rails-assets-jquery (3.1.0)
-    rails-assets-jquery-textcomplete (1.7.1)
+    rails-assets-jquery-textcomplete (1.7.2)
       rails-assets-jquery (>= 1.7.0)
     rails-assets-ladda (1.0.0)
       rails-assets-spin.js (~> 2.0.2)
