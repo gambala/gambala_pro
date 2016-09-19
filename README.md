@@ -11,12 +11,62 @@
 
 ## Установка
 
+### Клонирование и установка гемов
+
 ```
 git clone git@github.com:gambala/gambala.git
 cd gambala
 bundle install
+```
+
+### Установка параметров для БД и гемов
+
+Скопируйте файл командой:
+
+```
+cp config/application.yml.example config/application.yml
+```
+
+И измените его (`config/application.yml`) в редакторе по инструкциям внутри.
+
+### Установка Postgres
+
+```
 rake db:migrate
+```
+
+Если не создается БД, то:
+```
+rake db:create
+rake db:migrate
+```
+
+Если не установлен Postgres, то:
+
+```
+sudo apt-get install postgresql-9.5 postgresql-server-dev-9.5
+gem install pg -- --with-pg-config=/usr/bin/pg_config
+sudo -u postgres psql
+create user username with password 'secret';
+alter role username superuser createrole createdb replication;
+create database projectname_development owner username;
+\q
+```
+
+Где `username` - имя вашего пользователя на ПК, и `projectname_development` - имя базы данных вашего проекта.
+
+### Запуск
+
+Только рельсовый сервер:
+
+```
 rails s
+```
+
+Или запуск через `guard` для автообновления гемов, сервера и страниц (livereload):
+
+```
+guard
 ```
 
 ## Цель проекта
