@@ -1,0 +1,23 @@
+BUGSNAG_KEY: 1ddsc123re13f (get key from bugsnag site, or remove bugsnag gem and initializer)
+SECRET_KEY_BASE: 12312edad2d2f342g23tg3 (generate this key with `rake secret` command)
+
+development:
+  DB_USERNAME: gambala (your local username)
+  DB_PASSWORD:
+  DB_HOST:
+  REDIS_URL: redis://localhost:6379
+  REDIS_PASSWORD:
+
+production:
+  DB_USERNAME: deployer (your server postgres username)
+  DB_PASSWORD: 12345 (your server postgres password)
+  DB_HOST:
+  REDIS_URL: redis://localhost:6379
+  REDIS_PASSWORD: qwerty (your server redis password)
+
+test:
+  DB_USERNAME: gambala (your local username)
+  DB_PASSWORD:
+  DB_HOST:
+  REDIS_URL: redis://localhost:6379
+  REDIS_PASSWORD:
