@@ -8,6 +8,9 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /log/*
+/node_modules
 /public/uploads/
 /tmp/*
+/vendor/assets/javascripts/brunch
+/vendor/assets/stylesheets/brunch
 rails_best_practices_output.html
