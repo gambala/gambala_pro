@@ -85,7 +85,7 @@ GEM
       rake (>= 10.4, < 12.0)
     arel (7.1.2)
     ast (2.3.0)
-    autoprefixer-rails (6.5.0.1)
+    autoprefixer-rails (6.5.0.2)
       execjs
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
