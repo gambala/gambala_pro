@@ -83,7 +83,7 @@ GEM
     annotate (2.7.1)
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 12.0)
-    arel (7.1.2)
+    arel (7.1.3)
     ast (2.3.0)
     autoprefixer-rails (6.5.0.2)
       execjs
