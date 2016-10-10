@@ -1,9 +1,11 @@
-class Web::Personal::Admin::ApplicationController < Web::Personal::ApplicationController
-  before_action :require_admin
+module Web::Personal::Admin
+  class ApplicationController < Web::Personal::ApplicationController
+    before_action :require_admin
 
-  private
+    private
 
-  def require_admin
-    redirect_to :root, error: 'Нет доступа к админке' unless current_user.admin?
+    def require_admin
+      redirect_to :root, error: 'Нет доступа к админке' unless current_user.admin?
+    end
   end
 end
