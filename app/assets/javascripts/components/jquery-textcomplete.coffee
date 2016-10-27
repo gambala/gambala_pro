@@ -1,9 +1,9 @@
 EMOJI_HASH =
   id: 'emoji'
   index: 1
-  match: /\B:([\-+\w]*)$/
+  match: /\ :([\-+\w]*)$/
   replace: (value) ->
-    ':' + value + ': '
+    ' :' + value + ': '
   search: (term, callback) ->
     callback $.map(emojify.emojiNames, (emoji) ->
       if emoji.indexOf(term) == 0 then emoji else null
