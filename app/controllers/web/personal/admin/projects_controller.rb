@@ -1,7 +1,5 @@
 module Web::Personal::Admin
   class ProjectsController < Web::Personal::Admin::ApplicationController
-    helper_method :hits
-
     def index
       render locals: { projects: projects }
     end
@@ -53,16 +51,11 @@ module Web::Personal::Admin
       @project ||= Project.friendly.find(params[:id])
     end
 
-    def hits
-      @hits ||= Hit.all.order(happened_at: :desc)
-    end
-
     def project_params
       params.require(:project)
             .permit(:title, :slug,
                     :page_title, :page_subtitle, :page_cover_class,
-                    :page_mockup_image,
-                    hit_ids: [])
+                    :page_mockup_image)
     end
   end
 end

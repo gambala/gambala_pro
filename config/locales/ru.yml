@@ -1,14 +1,7 @@
 ru:
   activerecord:
     attributes:
-      hit:
-        body: Тело
-        happened_at: Дата события
-        project_id: Проект
-        slug: Символьный идентификатор
-        title: Тема
       project:
-        hit_ids: Новости
         page_cover_class: CSS-классы обложки
         page_mockup_image: Изображение в мокапе
         page_subtitle: Микроописание
@@ -18,13 +11,7 @@ ru:
   copyright: 'Версия сайта от %{updated_at} ©'
   helpers:
     placeholder:
-      hit:
-        body: Все, что произошло, в свободной форме
-        happened_at: Когда событие произошло
-        slug: Можно оставить пустым
-        title: Читатели увидят тему в ленте
       project:
-        hit_ids: Новости по данному проекту
         page_cover_class: Писать через пробел
         page_subtitle: Чем занимаюсь в проекте
         page_title: Виден на странице с проектом

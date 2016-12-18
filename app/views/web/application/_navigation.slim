@@ -5,7 +5,6 @@
         li = image_tag 'logo.png'
       ul.nav
         = menu_link_to 'Главная', :root, exact_route_match: true
-        = menu_link_to 'Новости', :hits
         = menu_link_to 'Проекты', :projects
     - if current_user&.admin?
       .pull-right
