@@ -18,7 +18,6 @@
 //= require bootstrap-datetimepicker
 //= require select2
 //= require select2_locale_ru
-//= require smooch
 //= require webfontloader
 //= require turbolinks
 //= require_tree ./components

@@ -76,6 +76,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-jquery-textcomplete'
   gem 'rails-assets-ladda'
   gem 'rails-assets-masonry'
-  gem 'rails-assets-smooch'
   gem 'rails-assets-webfontloader'
 end

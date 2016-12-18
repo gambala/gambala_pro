@@ -355,7 +355,6 @@ GEM
       rails-assets-fizzy-ui-utils (>= 2.0.0, < 3)
       rails-assets-get-size (>= 2.0.2, < 3)
     rails-assets-sassy-maps (0.4.0)
-    rails-assets-smooch (3.9.0)
     rails-assets-spin.js (2.0.2)
     rails-assets-webfontloader (1.6.27)
     rails-dom-testing (2.0.1)
@@ -529,7 +528,6 @@ DEPENDENCIES
   rails-assets-jquery-textcomplete!
   rails-assets-ladda!
   rails-assets-masonry!
-  rails-assets-smooch!
   rails-assets-webfontloader!
   rails-i18n
   rails_best_practices
