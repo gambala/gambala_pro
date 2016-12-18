@@ -4,7 +4,7 @@ module SafeSeoHelper
     route, params = block_given? ? args[0..1] : args[1..2]
 
     return link_to(*args, &block) if params[:method].present?
-    return link_to(*args, &block) unless route_matches?(route)
+    return link_to(*args, &block) unless full_route_matches?(route)
 
     if block_given?
       args[0] = 'javascript:;'
@@ -16,7 +16,7 @@ module SafeSeoHelper
 
   private
 
-  def route_matches?(route)
+  def full_route_matches?(route)
     url_for(route) == request.fullpath
   end
 end
