@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/gambala/ckeditor.git
-  revision: 9e619524d416ad9d1d88cf40be9ba12f35399488
+  revision: 81a81260137d63fbe253af0662351ee274f6e46f
   specs:
     ckeditor (4.2.1)
       cocaine
@@ -386,7 +386,7 @@ GEM
       parser (~> 2.3.1, >= 2.3.1.2)
       rainbow (~> 2.0)
     require_all (1.3.3)
-    rubocop (0.44.1)
+    rubocop (0.45.0)
       parser (>= 2.3.1.1, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
