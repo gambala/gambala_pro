@@ -28,13 +28,6 @@ gem 'slim'
 gem 'turbolinks'
 gem 'uglifier'
 
-group :test do
-  gem 'capybara'
-  gem 'codeclimate-test-reporter', require: false
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
-end
-
 group :development do
   gem 'annotate'
   gem 'bullet'
