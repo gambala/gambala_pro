@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 gem 'aasm'
+gem 'breakpoint'
 gem 'bugsnag'
 gem 'carrierwave'
 gem 'ckeditor', github: 'gambala/ckeditor'
@@ -21,6 +22,7 @@ gem 'rails-i18n'
 gem 'sassc-rails', github: 'sass/sassc-rails'
 gem 'slim'
 gem 'stlr'
+gem 'susy'
 gem 'turbolinks'
 gem 'uglifier'
 
