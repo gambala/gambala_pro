@@ -5,17 +5,17 @@ AllCops:
     - 'db/schema.rb'
     - 'vendor/**/*'
   TargetRubyVersion: 2.3
-Documentation:
-  Enabled: false
-LineLength:
-  Enabled: false
-  Max: 100
 Lint/AssignmentInCondition:
   Enabled: false
+Metrics/LineLength:
+  Enabled: false
+  Max: 100
 Rails:
   Enabled: true
 Rails/ActionFilter:
   Enabled: false
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
 Style/ClassAndModuleChildren:
   Enabled: false
 Style/CollectionMethods:
@@ -28,6 +28,8 @@ Style/CollectionMethods:
     find: detect
     find_all: select
     reduce: inject
+Style/Documentation:
+  Enabled: false
 Style/FileName:
   Description: Use snake_case for source file names.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#snake-case-files
@@ -36,6 +38,8 @@ Style/FileName:
 Style/FrozenStringLiteralComment:
   Enabled: false
 Style/MultilineOperationIndentation:
+  Enabled: false
+Style/PerlBackrefs:
   Enabled: false
 Style/PredicateName:
   Description: Check the names of predicate methods.
