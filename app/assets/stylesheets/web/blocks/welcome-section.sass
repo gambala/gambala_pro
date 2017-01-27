@@ -5,33 +5,62 @@
   background: #fff
   padding: 15% 20px 15%
 
-  .welcome-card
+  .welcome-section__card
     padding: 0
+
+  .welcome-section__title
+    font-size: 22px
+    font-weight: bold
+    margin-bottom: 24px
+
+  .welcome-section__text
+    font-size: 14px
+    margin-bottom: 24px
+
+    p
+      margin-bottom: 6px
+      margin-top: 0
+
+      &:last-child
+        margin-bottom: 0
+
+  .welcome-section__links
+    font-size: 14px
+
+  .welcome-section__link
+    color: #1178FF
+    font-weight: bold
+    text-decoration: none
+
+    &:hover
+      color: mix(#000, #1178FF, 20%)
 
 +breakpoint(600px)
   .welcome-section
     +retina-bg('welcome-bg', '.jpg', $options: 0% 50% no-repeat #fff, $size: cover)
     box-shadow: 0 5px 20px rgba(#000, 0.3)
 
-    .welcome-card
-      border: 3px solid #444
-      box-shadow: 0 5px 20px rgba(#000, 0.3)
+    .welcome-section__card
+      background: mix(#f7f7f7, #f0f0f0, 50%)
+      background: linear-gradient(135deg, #f7f7f7, #f0f0f0)
+      border-radius: 3px
+      border: 1px solid #ccc
+      box-shadow: -2px 5px 30px rgba(#000, 0.2)
       padding: 24px 20px
       max-width: 400px
 
 +breakpoint(900px)
   .welcome-section
-    .welcome-card
-      border: 4px solid #444
+    .welcome-section__card
       max-width: 500px
       padding: 24px 30px
 
-      .welcome-card__title
-        font-size: 26px
-        line-height: 30px
+    .welcome-section__title
+      font-size: 26px
+      line-height: 30px
 
-      .welcome-card__text
-        font-size: 16px
+    .welcome-section__text
+      font-size: 16px
 
-      .welcome-card__links
-        font-size: 16px
+    .welcome-section__links
+      font-size: 16px
