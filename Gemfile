@@ -3,19 +3,16 @@ source 'https://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 gem 'aasm'
-gem 'bootstrap-components', github: 'gambala/bootstrap-components'
-gem 'bootstrap3-datetimepicker-rails'
+gem 'autoprefixer-rails'
 gem 'bugsnag'
 gem 'carrierwave'
 gem 'ckeditor', github: 'gambala/ckeditor'
 gem 'clearance', github: 'gambala/clearance'
 gem 'coffee-rails'
 gem 'figaro'
-gem 'font-awesome-rails'
 gem 'friendly_id'
 gem 'jquery-rails'
 gem 'mini_magick'
-gem 'momentjs-rails'
 gem 'pg'
 gem 'pry'
 gem 'pry-rails'
@@ -23,8 +20,8 @@ gem 'puma'
 gem 'rails', '>= 5.0.0.1'
 gem 'rails-i18n'
 gem 'sassc-rails', github: 'sass/sassc-rails'
-gem 'select2-rails'
 gem 'slim'
+gem 'stlr'
 gem 'turbolinks'
 gem 'uglifier'
 
@@ -56,18 +53,6 @@ group :development do
   gem 'web-console'
 end
 
-group :production do
-  gem 'autoprefixer-rails'
-end
-
 source 'https://rails-assets.org' do
-  gem 'rails-assets-bootstrap-maxlength'
-  gem 'rails-assets-breakpoint-sass'
-  gem 'rails-assets-colors'
-  gem 'rails-assets-emojify'
-  gem 'rails-assets-jasny-bootstrap'
   gem 'rails-assets-jquery-textcomplete'
-  gem 'rails-assets-ladda'
-  gem 'rails-assets-masonry'
-  gem 'rails-assets-webfontloader'
 end

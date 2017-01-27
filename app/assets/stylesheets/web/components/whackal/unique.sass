@@ -1,15 +1,19 @@
 @import 'web/variables'
-@import "bootstrap/mixins/gg"
-@import "bootstrap/mixins/rh"
-@import 'bootstrap/mixins/scrollbar'
-@import "breakpoint-sass"
+@import 'stlr/functions/gg'
+@import 'stlr/functions/rh'
+@import 'stlr/mixins/scrollbar'
 
 pre
+  +scrollbar(#fff)
+  -webkit-overflow-scrolling: touch
+  overflow-x: scroll
   padding: 0
 
   code
     display: block
     padding: rh(0.5) gg(0.5)
+    white-space: pre
+    word-wrap: normal
 
 .hljs
   padding: rh(0.5) gg(0.5)
@@ -47,69 +51,8 @@ figure
   figcaption
     font-style: italic
 
-+breakpoint(max-width $screen-xs-max)
-  h1,
-  .h1
-    font-size: 24px
-
-.media
-  margin-bottom: rh(0.5)
-  margin-top: 0
-
 .rich-text
   img:not(.emoji)
     border-radius: 4px
     height: auto
     max-width: 100%
-
-.bootstrap-datetimepicker-widget
-  display: block
-
-.form-control
-  &.js-date,
-  &.js-time
-    background-color: $input-background-color
-
-.media
-  overflow: visible
-
-.img-cover
-  background-position: 50% 50%
-  background-size: cover
-  border-radius: 2px
-  border: 1px solid rgba($legend-color, 0.3)
-  cursor: -webkit-zoom-in
-  display: block
-  height: 24px
-  margin: 0 auto
-  transform-origin: 25% 50%
-  transform: scale(1)
-  transition: transform 0.25s
-  width: 24px
-
-  &:hover,
-  &:focus
-    transform: scale(3)
-
-.label-group
-  margin: 0 -2px
-
-  .label
-    margin: 0 2px
-
-.form-control-invisible
-  bottom: 0
-  left: 0
-  opacity: 0
-  pointer-events: none
-  position: absolute
-  width: 100%
-
-pre
-  +scrollbar(#fff)
-  -webkit-overflow-scrolling: touch
-  overflow-x: scroll
-
-pre code
-  white-space: pre
-  word-wrap: normal
