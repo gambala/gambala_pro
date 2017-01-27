@@ -1,0 +1,26 @@
+@import 'web/variables'
+
+.breadcrumbs
+  padding: 6px 0
+
+  .breadcrumb
+    margin-right: 20px
+    position: relative
+
+    &::after
+      background: $base-color
+      border-radius: 50%
+      content: ''
+      height: 4px
+      margin-right: -2px
+      margin-top: -2px
+      position: absolute
+      right: -10px
+      top: 50%
+      width: 4px
+
+    &:last-child
+      margin-right: 0
+
+      &::after
+        display: none
