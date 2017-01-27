@@ -1,12 +1,5 @@
 /*
-*= require ./bootstrap
-*= require bootstrap-datetimepicker
-*= require ckeditor/plugins/codesnippet/lib/highlight/styles/arta
-*= require colors
-*= require emojify
-*= require font-awesome
-*= require jasny-bootstrap
-*= require ladda/ladda-themeless.min
-*= require select2
-*= require_tree ./components
+*= require normalize-css
+*= require_tree ./hacks
+*= require_tree ./blocks
 */

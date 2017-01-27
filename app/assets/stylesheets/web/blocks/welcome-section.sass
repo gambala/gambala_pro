@@ -1,0 +1,36 @@
+@import 'stlr/mixins/retina-bg'
+@import 'breakpoint'
+
+.welcome-section
+  background: #fff
+  padding: 15% 20px 15%
+
+  .welcome-card
+    padding: 0
+
++breakpoint(600px)
+  .welcome-section
+    +retina-bg('welcome-bg', '.jpg', $options: 0% 50% no-repeat #fff, $size: cover)
+
+    .welcome-card
+      border: 3px solid #444
+      box-shadow: 0 5px 20px rgba(#000, 0.3)
+      padding: 24px 20px
+      max-width: 400px
+
++breakpoint(900px)
+  .welcome-section
+    .welcome-card
+      border: 4px solid #444
+      max-width: 500px
+      padding: 24px 30px
+
+      .welcome-card__title
+        font-size: 26px
+        line-height: 30px
+
+      .welcome-card__text
+        font-size: 16px
+
+      .welcome-card__links
+        font-size: 16px

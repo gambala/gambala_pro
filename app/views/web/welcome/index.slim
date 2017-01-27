@@ -1,8 +1,18 @@
-- title 'Главная'
-section.section-promo
+.welcome-section
   .container
-    .h2 Здравствуй, дорогой гость
-    p
-      ' Сайт в разработке. Следить за процессом можно
-      = link_to 'здесь', external_url('github.com/gambala/gambala/milestone/1')
-      | .
+    .welcome-card
+      .welcome-card__title Виталий Емельянцев
+      .welcome-card__text
+        p Создаю сайты, интернет-магазины и онлайн-стартапы. 5&nbsp;лет на рынке.
+        p Проектирую, дизайню, программирую, поддерживаю.
+        p Люблю простоту, качество и лоск.
+      .welcome-card__links
+          ' Напишите мне:
+          = link_to 'ВК', 'https://vk.com/gambala',
+                    class: 'welcome-card__link', target: '_blank'
+          ' ,
+          = link_to 'Телеграм', 'https://t.me/gambala',
+                    class: 'welcome-card__link', target: '_blank'
+          ' ,
+          = link_to 'Почта', 'mailto:gambala.rus@gmail.com',
+                    class: 'welcome-card__link', target: '_blank'
