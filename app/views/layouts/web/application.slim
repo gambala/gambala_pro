@@ -1,5 +1,5 @@
 doctype html
-html.with-sticky-footer prefix=meta_html_prefix
+html prefix=meta_html_prefix
   head
     = csrf_meta_tags
     = stylesheet_link_tag 'web/application', media: 'all', data: { turbolinks_track: 'reload' }
@@ -7,16 +7,9 @@ html.with-sticky-footer prefix=meta_html_prefix
     = render 'favicons'
     = render 'meta'
   body
-    .body-before-footer
-      = render 'navigation'
-      = yield
+    = yield
     = render 'footer'
-    div id='permanent-textcomplete-dropdown'
     div id='permanent-js' data-turbolinks-permanent=''
       = javascript_include_tag 'modernizr-custom', data: { turbolinks_track: 'reload' }
       = javascript_include_tag 'application', data: { turbolinks_track: 'reload' }
-    = render 'scripts' if Rails.env.production?
-    div id='flash'
-      - flash.each do |key, value|
-        .flash class=key
-          = value
+      = render 'scripts' if Rails.env.production?
