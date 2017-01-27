@@ -27,13 +27,19 @@
   .welcome-section__links
     font-size: 14px
 
-  .welcome-section__link
+  .link
     color: #1178FF
     font-weight: bold
     text-decoration: none
 
     &:hover
       color: mix(#000, #1178FF, 20%)
+
+    &:visited
+      color: mix(#fc00ff, #1178FF, 50%)
+
+      &:hover
+        color: mix(#000, mix(#fc00ff, #1178FF, 50%), 20%)
 
 +breakpoint(600px)
   .welcome-section
