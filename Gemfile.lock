@@ -283,6 +283,7 @@ GEM
     rails-assets-jquery (3.1.1)
     rails-assets-jquery-textcomplete (1.8.0)
       rails-assets-jquery (>= 1.7.0)
+    rails-assets-normalize-css (5.0.0)
     rails-dom-testing (2.0.1)
       activesupport (>= 4.2.0, < 6.0)
       nokogiri (~> 1.6.0)
@@ -433,6 +434,7 @@ DEPENDENCIES
   rack-livereload
   rails (>= 5.0.0.1)
   rails-assets-jquery-textcomplete!
+  rails-assets-normalize-css!
   rails-i18n
   rails_best_practices
   rb-inotify!

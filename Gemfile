@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 gem 'aasm'
-gem 'autoprefixer-rails'
 gem 'bugsnag'
 gem 'carrierwave'
 gem 'ckeditor', github: 'gambala/ckeditor'
@@ -53,6 +52,11 @@ group :development do
   gem 'web-console'
 end
 
+group :production do
+  gem 'autoprefixer-rails'
+end
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery-textcomplete'
+  gem 'rails-assets-normalize-css'
 end
