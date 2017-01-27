@@ -15,35 +15,3 @@ Metrics/BlockLength:
 # Configuration parameters: CountComments.
 Metrics/MethodLength:
   Max: 13
-
-# Offense count: 2
-Rails/FilePath:
-  Exclude:
-    - 'app/controllers/application_controller.rb'
-    - 'config/environments/development.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: compact, expanded
-Style/EmptyMethod:
-  Exclude:
-    - 'app/controllers/web/welcome_controller.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/MultilineIfModifier:
-  Exclude:
-    - 'app/helpers/seo_helper.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/MutableConstant:
-  Exclude:
-    - 'app/helpers/seo_helper.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/SpaceInsideBrackets:
-  Exclude:
-    - 'app/helpers/seo_helper.rb'

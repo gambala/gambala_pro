@@ -1,6 +1,6 @@
 module SeoHelper
-  OG_AUTHOR = [ 'https://www.facebook.com/gambala.pro',
-                'https://vk.com/gambala' ]
+  OG_AUTHOR = ['https://www.facebook.com/gambala.pro',
+               'https://vk.com/gambala'].freeze
 
   def description(value)
     content_for :description, value.to_s
@@ -44,12 +44,16 @@ module SeoHelper
   def meta_for_article
     return unless content_for?(:pagetype)
     return unless content_for(:pagetype) == 'article'
-    concat content_tag :meta, nil,
-                       content: content_for(:published_time),
-                       property: 'article:published_time' if content_for?(:published_time)
-    concat content_tag :meta, nil,
-                       content: content_for(:modified_time),
-                       property: 'article:modified_time' if content_for?(:modified_time)
+    if content_for?(:published_time)
+      concat content_tag :meta, nil,
+                         content: content_for(:published_time),
+                         property: 'article:published_time'
+    end
+    if content_for?(:modified_time)
+      concat content_tag :meta, nil,
+                         content: content_for(:modified_time),
+                         property: 'article:modified_time'
+    end
     content_tag :meta, nil, content: OG_AUTHOR.join(', '), property: 'article:author'
   end
 

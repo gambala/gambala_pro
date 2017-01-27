@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   private
 
   def deployed_at
-    File.atime("#{Rails.root}/REVISION").utc
+    File.atime(Rails.root.join('REVISION')).utc
   end
 end
