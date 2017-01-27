@@ -1,1 +1,17 @@
-- title 'Главная'
+.welcome-section
+  .container
+    .welcome-section__title Виталий Емельянцев
+    .welcome-section__text
+      p Создаю сайты, интернет-магазины и онлайн-стартапы. 5 лет на рынке.
+      p Проектирую, дизайню, программирую, поддерживаю.
+      p Люблю Ruby on Rails, легкий фронтенд, качество и рост.
+      p
+        ' Свяжитесь со мной:
+        = link_to 'ВК', 'https://vk.com/gambala',
+                  class: 'welcome-section__link', target: '_blank'
+        ' ,
+        = link_to 'Телеграм', 'https://t.me/gambala',
+                  class: 'welcome-section__link', target: '_blank'
+        ' ,
+        = link_to 'Почта', 'mailto:gambala.rus@gmail.com',
+                  class: 'welcome-section__link', target: '_blank'
