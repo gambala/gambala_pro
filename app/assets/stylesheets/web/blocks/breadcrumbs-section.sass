@@ -1,9 +1,16 @@
+@import 'stlr/mixins/scrollbar'
+
 .breadcrumbs-section
+  +scrollbar(transparent)
+  -webkit-overflow-scrolling: touch
   left: 0
+  overflow-x: scroll
+  overflow-y: hidden
+  padding: 12px 20px
   position: absolute
+  text-shadow: 0 2px 3px rgba(#000, 0.1)
   top: 0
   width: 100%
-  text-shadow: 0 2px 3px rgba(#000, 0.1)
 
   .breadcrumbs
     .breadcrumb
