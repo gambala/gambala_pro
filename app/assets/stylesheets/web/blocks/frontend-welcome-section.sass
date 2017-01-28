@@ -23,10 +23,19 @@
   .frontend-welcome-section__links
     font-size: 14px
 
-    .link
-      color: #fff
-      font-weight: bold
-      text-decoration: none
+  .link
+    color: #fff
+    font-weight: bold
+    text-decoration: none
+
+    &:hover
+      color: mix(#000, #fff, 5%)
+
+    &:visited
+      color: mix(#000, #fff, 5%)
+
+      &:hover
+        color: mix(#000, mix(#000, #fff, 5%), 5%)
 
 +breakpoint(900px)
   .frontend-welcome-section
