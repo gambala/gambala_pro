@@ -1,3 +1,4 @@
+@import 'stlr/mixins/bg'
 @import 'stlr/mixins/retina-bg'
 @import 'breakpoint'
 
@@ -9,6 +10,8 @@
   padding: 10% 20px 10%
   padding-top: calc(#{48px + 12px} + 8%)
   padding-bottom: calc(48px + 8%)
+  position: relative
+  overflow: hidden
   text-shadow: 0 1px 3px rgba(#000, 0.05)
 
   .frontend-welcome-section__title
@@ -19,9 +22,11 @@
   .frontend-welcome-section__text
     font-size: 14px
     margin-bottom: 24px
+    position: relative
 
   .frontend-welcome-section__links
     font-size: 14px
+    position: relative
 
   .link
     color: #fff
@@ -36,6 +41,16 @@
 
       &:hover
         color: mix(#000, mix(#000, #fff, 5%), 5%)
+
++breakpoint(600px)
+  .frontend-welcome-section
+    .frontend-welcome-section__mockup
+      +bg('frontend-mockup', $size: contain)
+      bottom: -30%
+      left: 40%
+      position: absolute
+      right: 0
+      top: 20%
 
 +breakpoint(900px)
   .frontend-welcome-section
