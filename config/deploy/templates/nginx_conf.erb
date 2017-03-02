@@ -21,6 +21,12 @@ server {
 <% end %>
 
 server {
+  listen 80;
+  server_name www.<%= fetch(:nginx_server_name) %>;
+  return 301 $scheme://<%= fetch(:nginx_server_name) %>$request_uri;
+}
+
+server {
 <% if fetch(:nginx_use_ssl) %>
   listen 443;
   ssl on;

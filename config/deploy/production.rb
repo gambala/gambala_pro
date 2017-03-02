@@ -55,7 +55,7 @@ set :forbidden_locations, ['/88.php',
                            '^/xml/',
                            '^/xmlrpc.php']
 set :nginx_config_name, 'gambala.nginx.conf'
-set :nginx_server_name, 'www.gambala.pro'
+set :nginx_server_name, 'gambala.pro'
 set :ssh_options, keys: %w(/home/gambala/.ssh/id_rsa),
                   forward_agent: false,
                   auth_methods: %w(publickey)
