@@ -9,13 +9,6 @@ guard :puma, port: 3000 do
   watch(%r{^config|lib|api/.*})
 end
 
-guard :spring, bundler: true do
-  watch('Gemfile.lock')
-  watch(%r{^config/})
-  watch(%r{^spec/(support|factories)/})
-  watch(%r{^spec/factory.rb})
-end
-
 guard :livereload do
   watch(%r{app/views/.+(.html|.erb|.slim)$})
   watch(%r{app/helpers/.+.rb})

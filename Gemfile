@@ -40,7 +40,6 @@ group :development do
   gem 'guard-bundler', require: false
   gem 'guard-livereload', require: false
   gem 'guard-puma', require: false
-  gem 'guard-spring', require: false
   gem 'inch', require: false
   gem 'listen'
   gem 'meta_request'
