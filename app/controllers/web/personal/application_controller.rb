@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Web::Personal
   class ApplicationController < Web::ApplicationController
     before_action :require_login

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 Rails.application.configure do
   config.action_controller.perform_caching = true
   config.action_mailer.default_url_options = { host: 'www.gambala.pro' }

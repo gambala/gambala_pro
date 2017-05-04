@@ -21,10 +21,3 @@ Metrics/MethodLength:
 Performance/RegexpMatch:
   Exclude:
     - 'app/helpers/url_helper.rb'
-
-# Offense count: 72
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: when_needed, always, never
-Style/FrozenStringLiteralComment:
-  Enabled: false

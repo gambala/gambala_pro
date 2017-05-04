@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 ActiveSupport.halt_callback_chains_on_return_false = false
 ActiveSupport.to_time_preserves_timezone = true
 Rails.application.config.action_controller.forgery_protection_origin_check = true

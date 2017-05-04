@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 Clearance.configure do |config|
   config.allow_sign_up = true
   config.cookie_domain = '.gambala.pro'

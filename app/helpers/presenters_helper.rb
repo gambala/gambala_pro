@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module PresentersHelper
   def present(object, klass = nil)
     klass ||= "#{object.class}Presenter".constantize

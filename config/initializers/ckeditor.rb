@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 Ckeditor.setup do |config|
   require 'ckeditor/orm/active_record'
 

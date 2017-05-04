@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module SafeSeoHelper
   def safe_seo_link_to(*args, &block)
     # because of link_to behavior
