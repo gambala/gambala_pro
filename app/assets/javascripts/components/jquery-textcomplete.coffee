@@ -1,3 +1,5 @@
+#= require jquery-textcomplete/dist/jquery.textcomplete
+
 EMOJI_HASH =
   id: 'emoji'
   index: 1

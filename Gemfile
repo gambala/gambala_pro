@@ -56,8 +56,3 @@ group :development do
   gem 'traceroute'
   gem 'web-console'
 end
-
-source 'https://rails-assets.org' do
-  gem 'rails-assets-jquery-textcomplete'
-  gem 'rails-assets-normalize-css'
-end
