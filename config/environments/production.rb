@@ -15,6 +15,7 @@ Rails.application.configure do
   config.log_level = :debug
   config.log_tags = [:request_id]
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.read_encrypted_secrets = true
 
   if ENV['RAILS_LOG_TO_STDOUT'].present?
     config.logger    = ActiveSupport::TaggedLogging.new(logger)

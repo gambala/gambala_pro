@@ -8,6 +8,7 @@ Rails.application.config.assets.precompile += %w(
   ckeditor/skins/moonocolor/*
   modernizr-custom.js
 )
+Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 # Paths fix for non-rails sass gems
 additional_paths = ["#{Gem.loaded_specs['susy'].full_gem_path}/sass",

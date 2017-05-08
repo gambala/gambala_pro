@@ -10,6 +10,7 @@ module Gambala
     config.encoding = 'utf-8'
     config.i18n.available_locales = [:ru, :en]
     config.i18n.default_locale = :ru
+    config.load_defaults 5.1
     config.middleware.use Rack::Deflater
     config.time_zone = 'Moscow'
   end

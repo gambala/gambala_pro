@@ -1,9 +1,11 @@
 # frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 gem 'aasm'
+gem 'autoprefixer-rails'
 gem 'breakpoint'
 gem 'bugsnag'
 gem 'carrierwave'
@@ -12,7 +14,6 @@ gem 'clearance', github: 'gambala/clearance'
 gem 'coffee-rails'
 gem 'figaro'
 gem 'friendly_id'
-gem 'jquery-rails'
 gem 'mini_magick'
 gem 'pg'
 gem 'pry'
@@ -26,6 +27,7 @@ gem 'stlr'
 gem 'susy'
 gem 'turbolinks'
 gem 'uglifier'
+gem 'webpacker'
 
 group :development do
   gem 'annotate'
@@ -53,10 +55,6 @@ group :development do
   gem 'spring-watcher-listen'
   gem 'traceroute'
   gem 'web-console'
-end
-
-group :production do
-  gem 'autoprefixer-rails'
 end
 
 source 'https://rails-assets.org' do
