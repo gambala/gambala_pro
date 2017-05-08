@@ -21,7 +21,7 @@ gem 'pry-rails'
 gem 'puma'
 gem 'rails', '>= 5.0.0.1'
 gem 'rails-i18n'
-gem 'sassc-rails', github: 'sass/sassc-rails'
+gem 'sassc-rails'
 gem 'slim'
 gem 'stlr'
 gem 'susy'
@@ -48,7 +48,7 @@ group :development do
   gem 'meta_request'
   gem 'rack-livereload'
   gem 'rails_best_practices', require: false
-  gem 'rb-inotify', github: 'nex3/rb-inotify', require: false
+  gem 'rb-inotify', require: false
   gem 'rubocop', require: false
   gem 'rubycritic', require: false
   gem 'spring'
