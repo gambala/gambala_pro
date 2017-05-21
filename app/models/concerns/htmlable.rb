@@ -28,7 +28,7 @@ module Htmlable
 
   def first_image_from_body
     match = body.match(/src="([^"]+)"/)
-    return unless match.present?
+    return if match.blank?
     match[1]
   end
 

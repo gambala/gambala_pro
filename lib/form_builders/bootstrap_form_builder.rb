@@ -8,7 +8,7 @@ class BootstrapFormBuilder < ActionView::Helpers::FormBuilder
 
   def form_group(field_name, options = {})
     class_def = 'form-group'
-    class_def << ' has-error' unless @object.errors[field_name].blank?
+    class_def << ' has-error' if @object.errors[field_name].present?
     class_def << " #{options[:class]}" if options[:class].present?
     options[:class] = class_def
     @template.content_tag(:div, options) { yield }
