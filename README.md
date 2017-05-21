@@ -1,7 +1,5 @@
 ![Сайт Gambala.pro](https://github.com/gambala/gambala/raw/master/app/assets/images/logo.png)
 
-[![Build Status](https://semaphoreci.com/api/v1/gambala/gambala/branches/master/shields_badge.svg)](https://semaphoreci.com/gambala/gambala)
-
 Работает на:
 * ruby 2.4.1
 * rails 5.1.x

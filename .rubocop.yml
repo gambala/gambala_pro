@@ -8,6 +8,12 @@ AllCops:
   TargetRubyVersion: 2.4
 Lint/AssignmentInCondition:
   Enabled: false
+Lint/Debugger:
+  Enabled: true
+Lint/DefEndAlignment:
+  AutoCorrect: true
+Lint/EndAlignment:
+  AutoCorrect: true
 Metrics/LineLength:
   Enabled: false
   Max: 100
@@ -17,6 +23,8 @@ Style/AsciiComments:
   Enabled: false
 Style/Alias:
   EnforcedStyle: prefer_alias_method
+Style/AutoResourceCleanup:
+  Enabled: true
 Style/ClassAndModuleChildren:
   Enabled: false
 Style/CollectionMethods:
@@ -35,7 +43,8 @@ Style/FileName:
   Description: Use snake_case for source file names.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#snake-case-files
   Enabled: false
-  Exclude: []
+Style/IndentationConsistency:
+  EnforcedStyle: normal
 Style/PercentLiteralDelimiters:
   PreferredDelimiters:
     '%i': '()'

@@ -12,7 +12,7 @@ cd gambala
 Заводим ветку для работы:
 
 ```
-git checkout -d feature/my-feature
+git checkout -d my-feature
 ```
 
 Работаем и коммитим. Сообщения к коммитам пишем на английском:
