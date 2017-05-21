@@ -6,7 +6,7 @@ module Sluggable
   included do
     extend FriendlyId
     SLUG_FORMAT = /[a-z\-\d]+/
-    friendly_id :id, use: [:slugged, :history, :finders]
+    friendly_id :id, use: %i(slugged history finders)
     validates :slug, uniqueness: { case_sensitive: false },
                      format: { with: Regexp.new('\A' + SLUG_FORMAT.source + '\z') },
                      allow_blank: true

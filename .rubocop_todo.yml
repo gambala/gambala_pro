@@ -34,10 +34,3 @@ Rails/Blank:
 Rails/Present:
   Exclude:
     - 'lib/form_builders/bootstrap_form_builder.rb'
-
-# Offense count: 6
-# Cop supports --auto-correct.
-# Configuration parameters: SupportedStyles.
-# SupportedStyles: percent, brackets
-Style/SymbolArray:
-  EnforcedStyle: brackets
