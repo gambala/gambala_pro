@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class CreateFriendlyIdSlugs < ActiveRecord::Migration
   def change
     create_table :friendly_id_slugs do |t|

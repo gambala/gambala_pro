@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 environment ENV.fetch('RAILS_ENV') { 'development' }
 plugin :tmp_restart
 port ENV.fetch('PORT') { 3000 }

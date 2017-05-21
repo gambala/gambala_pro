@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 server '95.213.204.64', user: 'deployer', port: 3602, roles: %w(web app db)
 set :forbidden_locations, ['/88.php',
                            '/cms/',

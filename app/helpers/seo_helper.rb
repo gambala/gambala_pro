@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module SeoHelper
   OG_AUTHOR = ['https://www.facebook.com/gambala.pro',
                'https://vk.com/gambala'].freeze

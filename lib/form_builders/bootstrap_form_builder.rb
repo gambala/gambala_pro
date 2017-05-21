@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class BootstrapFormBuilder < ActionView::Helpers::FormBuilder
   def error_message(field_name)
     return if @object.errors[field_name].blank?

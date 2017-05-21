@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module UrlHelper
   def external_url(url)
     return url if url.match?(%r{^https://})

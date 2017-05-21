@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 set :application, 'gambala'
 set :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 set :deploy_to, "/home/deployer/apps/#{fetch(:application)}"

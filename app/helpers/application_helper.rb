@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module ApplicationHelper
   def viewport_tag
     params = %w(width=device-width

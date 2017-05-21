@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Web::Personal::Admin
   class ApplicationController < Web::Personal::ApplicationController
     before_action :require_admin

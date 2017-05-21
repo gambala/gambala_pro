@@ -35,11 +35,6 @@ Rails/Present:
   Exclude:
     - 'lib/form_builders/bootstrap_form_builder.rb'
 
-# Offense count: 67
-# Cop supports --auto-correct.
-Style/EmptyLineAfterMagicComment:
-  Enabled: false
-
 # Offense count: 6
 # Cop supports --auto-correct.
 # Configuration parameters: SupportedStyles.

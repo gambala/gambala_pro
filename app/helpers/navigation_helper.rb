@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module NavigationHelper
   def menu_link_to(*args, exact_route_match: false, &block)
     # because of link_to behavior
