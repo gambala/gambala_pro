@@ -16,6 +16,15 @@ GIT
       rails (>= 3.1)
       slim
 
+GIT
+  remote: https://github.com/seuros/capistrano-puma.git
+  revision: c4314255ebaf051956e58675a4a61273ca9f5b55
+  specs:
+    capistrano3-puma (3.1.0)
+      capistrano (~> 3.7)
+      capistrano-bundler
+      puma (~> 3.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -104,10 +113,6 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    capistrano3-puma (3.1.0)
-      capistrano (~> 3.7)
-      capistrano-bundler
-      puma (~> 3.4)
     carrierwave (1.1.0)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -403,7 +408,7 @@ DEPENDENCIES
   capistrano-figaro-yml
   capistrano-rails
   capistrano-rvm
-  capistrano3-puma
+  capistrano3-puma!
   carrierwave
   ckeditor!
   clearance!

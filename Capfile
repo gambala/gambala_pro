@@ -13,4 +13,5 @@ require 'capistrano/puma'
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
 install_plugin Capistrano::SCM::Git
 install_plugin Capistrano::Puma
+install_plugin Capistrano::Puma::Monit
 install_plugin Capistrano::Puma::Nginx
