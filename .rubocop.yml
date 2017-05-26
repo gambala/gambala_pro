@@ -6,6 +6,8 @@ AllCops:
     - 'node_modules/**/*'
     - 'vendor/**/*'
   TargetRubyVersion: 2.4
+Layout/IndentationConsistency:
+  EnforcedStyle: normal
 Lint/AssignmentInCondition:
   Enabled: false
 Lint/Debugger:
@@ -43,8 +45,6 @@ Style/FileName:
   Description: Use snake_case for source file names.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#snake-case-files
   Enabled: false
-Style/IndentationConsistency:
-  EnforcedStyle: normal
 Style/PercentLiteralDelimiters:
   PreferredDelimiters:
     '%i': '()'
