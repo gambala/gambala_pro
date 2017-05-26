@@ -20,9 +20,3 @@ Metrics/BlockLength:
 # Configuration parameters: CountComments.
 Metrics/MethodLength:
   Max: 13
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Rails/ApplicationRecord:
-  Exclude:
-    - 'app/models/ckeditor/asset.rb'
