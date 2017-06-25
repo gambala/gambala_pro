@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
-gem 'aasm'
 gem 'autoprefixer-rails'
 gem 'breakpoint'
 gem 'bugsnag'

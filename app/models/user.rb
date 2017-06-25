@@ -3,7 +3,6 @@
 class User < ApplicationRecord
   extend Enumerize
   include Clearance::User
-  include AASM
 
   ACCESS_LEVELS = %i(user admin).freeze
 
@@ -13,15 +12,6 @@ class User < ApplicationRecord
             scope: true
 
   validates :password, length: { minimum: 3 }, on: :create
-
-  aasm do
-    state :account, initial: true
-    state :admin
-
-    event :to_admin do
-      transitions from: :account, to: :admin
-    end
-  end
 end
 
 # == Schema Information
