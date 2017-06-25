@@ -12,6 +12,5 @@ Rails.application.config.assets.precompile += %w(
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 # Paths fix for non-rails sass gems
-additional_paths = ["#{Gem.loaded_specs['susy'].full_gem_path}/sass",
-                    "#{Gem.loaded_specs['breakpoint'].full_gem_path}/stylesheets"]
+additional_paths = ["#{Gem.loaded_specs['breakpoint'].full_gem_path}/stylesheets"]
 Rails.application.config.assets.paths += additional_paths
