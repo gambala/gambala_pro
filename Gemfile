@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 gem 'autoprefixer-rails'
+gem 'bootsnap'
 gem 'breakpoint'
 gem 'bugsnag'
 gem 'carrierwave'
