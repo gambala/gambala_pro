@@ -352,7 +352,7 @@ GEM
     sshkit (1.13.1)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    stlr (1.0.0)
+    stlr (2.0.0)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     susy (2.2.12)
