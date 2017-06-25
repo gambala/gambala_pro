@@ -1,5 +1,13 @@
 # frozen_string_literal: true
 
+class Ckeditor::Asset < ApplicationRecord
+  include Ckeditor::Orm::ActiveRecord::AssetBase
+
+  delegate :url, :current_path, :content_type, to: :data
+
+  validates :data, presence: true
+end
+
 # == Schema Information
 #
 # Table name: ckeditor_assets
@@ -16,11 +24,8 @@
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #
-
-class Ckeditor::Asset < ApplicationRecord
-  include Ckeditor::Orm::ActiveRecord::AssetBase
-
-  delegate :url, :current_path, :content_type, to: :data
-
-  validates :data, presence: true
-end
+# Indexes
+#
+#  idx_ckeditor_assetable       (assetable_type,assetable_id)
+#  idx_ckeditor_assetable_type  (assetable_type,type,assetable_id)
+#

@@ -1,5 +1,13 @@
 # frozen_string_literal: true
 
+class Ckeditor::AttachmentFile < Ckeditor::Asset
+  mount_uploader :data, CkeditorAttachmentFileUploader, mount_on: :data_file_name
+
+  def url_thumb
+    @url_thumb ||= Ckeditor::Utils.filethumb(filename)
+  end
+end
+
 # == Schema Information
 #
 # Table name: ckeditor_assets
@@ -16,11 +24,8 @@
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #
-
-class Ckeditor::AttachmentFile < Ckeditor::Asset
-  mount_uploader :data, CkeditorAttachmentFileUploader, mount_on: :data_file_name
-
-  def url_thumb
-    @url_thumb ||= Ckeditor::Utils.filethumb(filename)
-  end
-end
+# Indexes
+#
+#  idx_ckeditor_assetable       (assetable_type,assetable_id)
+#  idx_ckeditor_assetable_type  (assetable_type,type,assetable_id)
+#

@@ -1,5 +1,15 @@
 # frozen_string_literal: true
 
+class Project < ApplicationRecord
+  include Sluggable
+
+  mount_uploader :page_mockup_image, MockupImageUploader
+
+  def to_s
+    title
+  end
+end
+
 # == Schema Information
 #
 # Table name: projects
@@ -14,13 +24,3 @@
 #  page_cover_class  :string
 #  page_mockup_image :string
 #
-
-class Project < ApplicationRecord
-  include Sluggable
-
-  mount_uploader :page_mockup_image, MockupImageUploader
-
-  def to_s
-    title
-  end
-end
