@@ -16,6 +16,7 @@ Lint/DefEndAlignment:
   AutoCorrect: true
 Lint/EndAlignment:
   AutoCorrect: true
+  EnforcedStyleAlignWith: keyword
 Metrics/LineLength:
   Enabled: false
   Max: 100
@@ -52,3 +53,5 @@ Style/PercentLiteralDelimiters:
     '%r': '{}'
     '%w': '()'
     '%W': '()'
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
