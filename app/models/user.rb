@@ -28,9 +28,11 @@ end
 #  confirmation_token :string(128)
 #  remember_token     :string(128)      not null
 #  aasm_state         :string
+#  access_level       :string
 #
 # Indexes
 #
+#  index_users_on_access_level    (access_level)
 #  index_users_on_email           (email)
 #  index_users_on_remember_token  (remember_token)
 #
