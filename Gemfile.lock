@@ -250,8 +250,20 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-doc (0.9.0)
+      pry (~> 0.9)
+      yard (~> 0.8)
+    pry-highlight (0.1.0)
+      coderay
+      json
+      nokogiri
+      pry
+    pry-pretty-numeric (0.1.1)
+      pry
     pry-rails (0.3.6)
       pry (>= 0.10.4)
+    pry-theme (1.2.0)
+      coderay (~> 1.1)
     public_suffix (2.0.5)
     puma (3.9.1)
     rack (2.0.3)
@@ -440,7 +452,11 @@ DEPENDENCIES
   mini_racer
   pg
   pry
+  pry-doc
+  pry-highlight
+  pry-pretty-numeric
   pry-rails
+  pry-theme
   puma
   rack-livereload
   rails (>= 5.0.0.1)
