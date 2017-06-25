@@ -267,6 +267,8 @@ GEM
     public_suffix (2.0.5)
     puma (3.9.1)
     rack (2.0.3)
+    rack-attack (5.0.1)
+      rack
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
     rack-livereload (0.3.16)
@@ -458,6 +460,7 @@ DEPENDENCIES
   pry-rails
   pry-theme
   puma
+  rack-attack
   rack-livereload
   rails (>= 5.0.0.1)
   rails-i18n
