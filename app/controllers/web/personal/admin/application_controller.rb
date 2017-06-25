@@ -7,7 +7,7 @@ module Web::Personal::Admin
     private
 
     def require_admin
-      redirect_to :root, error: 'Нет доступа к админке' unless current_user.admin?
+      redirect_to :root, error: 'Нет доступа к админке' unless current_user.access_level.admin?
     end
   end
 end

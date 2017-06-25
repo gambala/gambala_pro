@@ -1,8 +1,16 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  extend Enumerize
   include Clearance::User
   include AASM
+
+  ACCESS_LEVELS = %i(user admin).freeze
+
+  enumerize :access_level,
+            in: ACCESS_LEVELS,
+            default: ACCESS_LEVELS.first,
+            scope: true
 
   validates :password, length: { minimum: 3 }, on: :create
 
