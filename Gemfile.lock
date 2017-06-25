@@ -198,6 +198,7 @@ GEM
     json (2.1.0)
     launchy (2.4.3)
       addressable (~> 2.3)
+    libv8 (5.3.332.38.5-x86_64-linux)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -217,6 +218,8 @@ GEM
     mime-types-data (3.2016.0521)
     mini_magick (4.7.2)
     mini_portile2 (2.2.0)
+    mini_racer (0.1.9)
+      libv8 (~> 5.3)
     minitest (5.10.2)
     multi_json (1.12.1)
     nenv (0.3.0)
@@ -425,6 +428,7 @@ DEPENDENCIES
   listen
   meta_request
   mini_magick
+  mini_racer
   pg
   pry
   pry-rails
