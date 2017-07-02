@@ -1,14 +1,4 @@
 GIT
-  remote: https://github.com/gambala/clearance.git
-  revision: 717e54bac50d9dce1b33e241d7dd5e0841333bca
-  specs:
-    clearance (1.16.0)
-      bcrypt
-      email_validator (~> 1.4)
-      rails (>= 3.1)
-      slim
-
-GIT
   remote: https://github.com/seuros/capistrano-puma.git
   revision: 00708fa18a029cb34f46aef60f920106c0c00107
   specs:
@@ -72,7 +62,6 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
-    bcrypt (3.1.11)
     bindex (0.5.0)
     bootsnap (1.1.1)
       msgpack (~> 1.0)
@@ -129,8 +118,6 @@ GEM
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
-    email_validator (1.6.0)
-      activemodel
     enumerize (2.1.2)
       activesupport (>= 3.2)
     equalizer (0.0.11)
@@ -424,7 +411,6 @@ DEPENDENCIES
   capistrano-rvm
   capistrano3-puma!
   carrierwave
-  clearance!
   coffee-rails
   enumerize
   faster_path

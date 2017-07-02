@@ -2,7 +2,6 @@
 
 class User < ApplicationRecord
   extend Enumerize
-  include Clearance::User
 
   ACCESS_LEVELS = %i(user admin).freeze
 
