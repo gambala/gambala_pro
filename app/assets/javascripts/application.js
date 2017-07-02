@@ -4,4 +4,3 @@
 //= require ckeditor/plugins/codesnippet/lib/highlight/highlight.pack
 //= require turbolinks
 //= require_tree ./components
-//= require ./cable
