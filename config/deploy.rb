@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 set :application, 'gambala'
-set :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+set :branch, (proc { `git rev-parse --abbrev-ref HEAD`.chomp })
 set :deploy_to, "/home/deployer/apps/#{fetch(:application)}"
 set :linked_dirs, %w(log node_modules tmp/pids tmp/cache tmp/sockets
                      vendor/bundle public/system public/uploads public/assets public/sitemaps)
