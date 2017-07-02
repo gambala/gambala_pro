@@ -8,13 +8,6 @@ module SeoHelper
     content_for :description, value.to_s
   end
 
-  def text_from_html(value)
-    value = strip_tags(value)
-    value = truncate(value, length: 150)
-    value = value.gsub(/\n\n+/, '\n').gsub(/^\n|\n$/, ' ').squish
-    value
-  end
-
   def image(value)
     content_for :image, value.to_s
   end
@@ -36,11 +29,7 @@ module SeoHelper
   end
 
   def title(value = nil, &block)
-    if block_given?
-      content_for :title, capture(&block)
-    else
-      content_for :title, value.to_s
-    end
+    content_for :title, block_given? ? capture(&block) : value.to_s
   end
 
   def meta_for_article
@@ -104,14 +93,17 @@ module SeoHelper
     content_tag :title, page_title
   end
 
+  def text_from_html(value)
+    value = strip_tags(value)
+    value = truncate(value, length: 150)
+    value = value.gsub(/\n\n+/, '\n').gsub(/^\n|\n$/, ' ').squish
+    value
+  end
+
   private
 
   def page_title
-    if content_for(:title)
-      "#{content_for(:title)} | #{site_name}"
-    else
-      site_name
-    end
+    content_for(:title) ? content_for(:title) : site_name
   end
 
   def site_name
