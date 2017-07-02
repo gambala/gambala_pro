@@ -10,5 +10,4 @@ html prefix=meta_html_prefix
     = yield
     = render 'footer'
     div id='permanent-js' data-turbolinks-permanent=''
-      = javascript_include_tag 'modernizr-custom', data: { turbolinks_track: 'reload' }
       = render 'scripts' if Rails.env.production?
