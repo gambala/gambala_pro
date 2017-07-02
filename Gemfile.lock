@@ -1,12 +1,4 @@
 GIT
-  remote: https://github.com/gambala/ckeditor.git
-  revision: 1a0db76ca95b2547de8b4b13097e2d782f1922e3
-  specs:
-    ckeditor (4.2.2)
-      cocaine
-      orm_adapter (~> 0.5.0)
-
-GIT
   remote: https://github.com/gambala/clearance.git
   revision: 717e54bac50d9dce1b33e241d7dd5e0841333bca
   specs:
@@ -117,9 +109,6 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
-    climate_control (0.2.0)
-    cocaine (0.5.8)
-      climate_control (>= 0.0.3, < 1.0)
     code_analyzer (0.4.7)
       sexp_processor
     codeclimate-engine-rb (0.4.0)
@@ -241,7 +230,6 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
-    orm_adapter (0.5.0)
     parallel (1.11.2)
     parser (2.4.0.0)
       ast (~> 2.2)
@@ -436,7 +424,6 @@ DEPENDENCIES
   capistrano-rvm
   capistrano3-puma!
   carrierwave
-  ckeditor!
   clearance!
   coffee-rails
   enumerize

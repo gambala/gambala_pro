@@ -5,10 +5,6 @@ additional_paths = [Rails.root.join('node_modules'),
 
 Rails.application.config.assets.paths += additional_paths
 
-Rails.application.config.assets.precompile += %w(ckeditor/config.js
-                                                 ckeditor/filebrowser/*
-                                                 ckeditor/plugins/*
-                                                 ckeditor/skins/moonocolor/*
-                                                 modernizr-custom.js)
+Rails.application.config.assets.precompile += %w(modernizr-custom.js)
 
 Rails.application.config.assets.version = '1.0'
