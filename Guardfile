@@ -25,7 +25,4 @@ guard :livereload do
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(scss))).*}) do |m|
     "/assets/#{m[3].sub!('.scss', '.css')}"
   end
-  watch(%r{(app|vendor)(/assets/\w+/(.+\.(coffee))).*}) do |m|
-    "/assets/#{m[3].sub!('.coffee', '.js')}"
-  end
 end
