@@ -7,6 +7,7 @@ Bundler.require(*Rails.groups)
 
 module Gambala
   class Application < Rails::Application
+    config.action_dispatch.default_headers['X-UA-Compatible'] = 'IE=edge'
     config.action_view.default_form_builder = 'BootstrapFormBuilder'
     config.encoding = 'utf-8'
     config.i18n.available_locales = %i(ru en)
