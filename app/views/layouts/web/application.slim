@@ -1,9 +1,9 @@
 doctype html
 html prefix=meta_html_prefix
   head
+    meta name='viewport' content='width=device-width, initial-scale=1'
     = csrf_meta_tags
     = stylesheet_link_tag 'web/application', media: 'all', data: { turbolinks_track: 'reload' }
-    = viewport_tag
     = render 'favicons'
     = render 'meta'
   body
