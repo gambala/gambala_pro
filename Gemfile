@@ -41,7 +41,7 @@ group :development do
   gem 'capistrano-figaro-yml'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
-  gem 'capistrano3-puma', github: 'seuros/capistrano-puma'
+  gem 'capistrano3-puma'
   gem 'foreman'
   gem 'guard', require: false
   gem 'guard-bundler', require: false
