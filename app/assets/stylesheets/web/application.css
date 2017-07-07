@@ -1,5 +1,4 @@
 /*
-*= require normalize.css/normalize
-*= require_tree ./hacks
+*= require base/application
 *= require_tree ./blocks
 */

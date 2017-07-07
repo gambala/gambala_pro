@@ -1,0 +1,37 @@
+.ladda-button
+  overflow: hidden
+  position: relative
+
+  .ladda-spinner
+    display: inline-block
+    height: 32px
+    left: 50%
+    margin-left: -16px
+    margin-top: 0
+    opacity: 0
+    pointer-events: none
+    position: absolute
+    top: 50%
+    transform: scale(0.2)
+    transition: margin-left 0.25s, opacity 0.25s, transform 0.25s
+    width: 32px
+    z-index: 2
+
+  .ladda-label
+    display: inline-block
+    position: relative
+    transition: opacity 0.25s, transform 0.25s
+    z-index: 3
+
+  .ladda-progress
+    display: none
+
+.ladda-button[data-loading]
+  .ladda-spinner
+    margin-left: 0
+    opacity: 1
+    transform: none
+
+  .ladda-label
+    opacity: 0
+    transform: scale(2.2)

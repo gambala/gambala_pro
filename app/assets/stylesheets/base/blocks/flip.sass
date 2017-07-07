@@ -1,0 +1,25 @@
+@import 'base/mixins/chevron'
+
+.flip
+  .flip__icon
+    display: inline-block
+    height: 12px
+    margin-left: 5px
+    position: relative
+    top: -1px
+    transform: scaleY(1)
+    transition: transform 0.1s
+    vertical-align: middle
+    width: 12px
+
+    &::before
+      +chevron(8px, 2px)
+      content: ''
+      left: 2px
+      position: absolute
+      top: 0
+      transform: rotate(135deg)
+
+  .flip__toggle_active
+    .flip__icon
+      transform: scaleY(-1)

@@ -1,0 +1,16 @@
+@import 'base/mixins/focus'
+
+.fileinput
+  .fileinput__label
+    *
+      pointer-events: none
+
+  .fileinput__input:focus,
+  .fileinput__input_focus
+    + .fileinput__label
+      +focus
+
+.no-js
+  .fileinput
+    .fileinput__label
+      display: none

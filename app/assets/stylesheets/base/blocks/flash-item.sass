@@ -1,0 +1,43 @@
+@import 'breakpoint'
+
+.flash-item
+  max-height: 96px
+  opacity: 1
+  overflow: hidden
+  transition: max-height 0.5s, opacity 0.5s
+
+  .flash-item__body
+    background: #fff
+    border-radius: 3px
+    border: 1px solid #fff
+    border-top-width: 4px
+    padding: 12px 10px
+
+  .flash-item__body_alert
+    background: mix(#fff, #ffa442, 92%)
+    border-color: mix(#fff, #ffa442, 50%)
+    border-top-color: #ffa442
+
+  .flash-item__body_error
+    background: mix(#fff, #ff4060, 92%)
+    border-color: mix(#fff, #ff4060, 50%)
+    border-top-color: #ff4060
+
+  .flash-item__body_notice
+    background: mix(#fff, #428eff, 92%)
+    border-color: mix(#fff, #428eff, 50%)
+    border-top-color: #428eff
+
+  .flash-item__body_success
+    background: mix(#fff, #7d56dc, 92%)
+    border-color: mix(#fff, #7d56dc, 50%)
+    border-top-color: #7d56dc
+
+.flash-item_closed
+  max-height: 0
+  opacity: 0
+
++breakpoint(1024px)
+  .flash-item
+    .flash-item__body
+      margin-bottom: 12px
