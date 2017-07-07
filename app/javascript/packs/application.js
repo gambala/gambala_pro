@@ -3,9 +3,13 @@ import 'element-closest';
 import 'what-input';
 import Rails               from 'rails-ujs';
 import Turbolinks          from 'turbolinks';
+import WebFontLoader       from 'scripts/WebFontLoader';
 
 Rails.start();
 Turbolinks.start();
+
+WebFontLoader.load('SF UI Display', 'sfui-display-loaded');
+WebFontLoader.load('SF UI Text', 'sfui-text-loaded');
 
 if (document.readyState !== 'loading') {
   const event = document.createEvent('Event');
