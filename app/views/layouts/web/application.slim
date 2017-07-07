@@ -7,6 +7,7 @@ html.html prefix=meta_html_prefix lang='ru'
     = stylesheet_link_tag 'web/application', media: 'all', data: { turbolinks_track: 'reload' }
     = render 'favicons'
     = render 'meta'
+    = render 'sfui/webfonts'
   body.body
     = yield
     = render 'footer'

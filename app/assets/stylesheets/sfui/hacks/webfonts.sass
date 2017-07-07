@@ -1,0 +1,27 @@
+@import 'stlr/functions/str-replace'
+
+@function sym($family)
+  @return str-replace($family, ' ', '-')
+
+=loadfont($family, $weight, $style: normal)
+  @font-face
+    font-family: $family
+    font-style: $style
+    font-weight: $weight
+    src: local($family), font_url("sfui/#{sym($family)}/#{sym($family)}-#{$weight}-#{$style}.otf") format('opentype')
+
+$family: 'SF UI Display'
+
++loadfont($family, 300)
++loadfont($family, 400)
++loadfont($family, 500)
++loadfont($family, 600)
++loadfont($family, 700)
+
+$family: 'SF UI Text'
+
++loadfont($family, 300)
++loadfont($family, 400)
++loadfont($family, 500)
++loadfont($family, 600)
++loadfont($family, 700)

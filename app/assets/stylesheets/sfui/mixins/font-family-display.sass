@@ -1,0 +1,7 @@
+@import 'sfui/functions/font-family'
+
+=font-family-display($is-important: null)
+  font-family: font-family() $is-important;
+
+  .sfui-display-loaded &
+    font-family: font-family('SF UI Display') $is-important

@@ -1,4 +1,5 @@
 /*
 *= require base/application
+*= require sfui/application
 *= require_tree ./blocks
 */
