@@ -12,4 +12,5 @@ html.html prefix=meta_html_prefix lang='ru'
     = yield
     = render 'footer'
     div id='permanent-js' data-turbolinks-permanent=''
+      = javascript_pack_tag 'application', async: true, data: { turbolinks_track: 'reload' }
       = render 'scripts' if Rails.env.production?
