@@ -429,6 +429,7 @@ DEPENDENCIES
   rb-inotify
   rubocop
   rubycritic
+  sass
   sassc-rails
   serviceworker-rails
   slim
