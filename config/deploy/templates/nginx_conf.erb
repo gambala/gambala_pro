@@ -75,7 +75,7 @@ server {
     root /var/www/html;
   }
 
-  location ^~ /assets/ {
+  location ~ ^/(assets|packs)/ {
     add_header Cache-Control public;
     expires max;
     gzip_static on;
