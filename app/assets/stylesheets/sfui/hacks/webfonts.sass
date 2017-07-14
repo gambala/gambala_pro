@@ -1,14 +1,4 @@
-@import 'stlr/functions/str-replace'
-
-@function sym($family)
-  @return str-replace($family, ' ', '-')
-
-=loadfont($family, $weight, $style: normal)
-  @font-face
-    font-family: $family
-    font-style: $style
-    font-weight: $weight
-    src: local($family), font_url("sfui/#{sym($family)}/#{sym($family)}-#{$weight}-#{$style}.otf") format('opentype')
+@import 'sfui/mixins/loadfont'
 
 $family: 'SF UI Display'
 
