@@ -1,0 +1,12 @@
+@import 'breakpoint'
+@import 'stlr/mixins/bg'
+
++breakpoint(600px)
+  .frontend-welcome-section
+    .frontend-welcome-section__mockup
+      +bg('frontend-mockup', $size: contain)
+      bottom: -30%
+      left: 40%
+      position: absolute
+      right: 0
+      top: 20%

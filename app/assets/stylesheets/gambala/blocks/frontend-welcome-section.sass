@@ -1,7 +1,3 @@
-@import 'stlr/mixins/bg'
-@import 'stlr/mixins/retina-bg'
-@import 'breakpoint'
-
 .frontend-welcome-section
   background: #B3FFAB
   background: linear-gradient(-45deg, #fc00ff, #00dbde), radial-gradient(at bottom right, #DBD65C, transparent)
@@ -41,23 +37,3 @@
 
       &:hover
         color: mix(#000, mix(#000, #fff, 5%), 5%)
-
-+breakpoint(600px)
-  .frontend-welcome-section
-    .frontend-welcome-section__mockup
-      +bg('frontend-mockup', $size: contain)
-      bottom: -30%
-      left: 40%
-      position: absolute
-      right: 0
-      top: 20%
-
-+breakpoint(900px)
-  .frontend-welcome-section
-    .frontend-welcome-section__title
-      font-size: 32px
-      line-height: 36px
-
-    .frontend-welcome-section__text,
-    .frontend-welcome-section__links
-      font-size: 16px
