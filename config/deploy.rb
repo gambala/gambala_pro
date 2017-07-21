@@ -11,5 +11,6 @@ set :puma_bind, "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.s
 set :puma_init_active_record, true
 set :puma_preload_app, true
 set :puma_threads, [4, 16]
+set :puma_workers, 2
 set :repo_url, 'git@github.com:gambala/gambala.git'
 set :user, 'deployer'
