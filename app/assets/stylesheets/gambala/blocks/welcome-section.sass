@@ -1,5 +1,3 @@
-@import 'stlr/mixins/retina-image'
-
 .welcome-section
   background: #fff
   padding: 24px 20px 15%
@@ -8,16 +6,8 @@
   .welcome-section__card
     padding: 0
 
-  .welcome-section__avatar
-    +retina-image('avatar', 48px, 48px, $format: '.jpg')
-    border-radius: 50%
-    box-shadow: 0 1px 4px rgba(#000, 0.15)
-    float: left
-    margin-right: 10px
-
-  .welcome-section__title
-    font-size: 16px
-    font-weight: 500
+  .user-media.media
+    margin-bottom: 24px
 
   .welcome-section__text
     font-size: 14px
