@@ -46,6 +46,8 @@ Style/FileName:
   Description: Use snake_case for source file names.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#snake-case-files
   Enabled: false
+Style/FormatStringToken:
+  Enabled: false
 Style/PercentLiteralDelimiters:
   PreferredDelimiters:
     '%i': '()'
