@@ -1,2 +1,4 @@
 en:
-  hello: "Hello world"
+  copyright: 'Site updated at %{updated_at} ©'
+  site:
+    title: Vitaliy Emeliyantsev
