@@ -94,10 +94,10 @@ server {
   }
 
   location ~ \.php$ {
-    return 405;
+    return 501;
   }
 
   if ($request_method !~ ^(GET|HEAD|PUT|PATCH|POST|DELETE|OPTIONS)$ ){
-    return 405;
+    return 501;
   }
 }
