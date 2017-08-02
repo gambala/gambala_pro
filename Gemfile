@@ -42,6 +42,7 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-figaro-yml'
   gem 'capistrano-rails'
+  gem 'capistrano-rails-console', require: false
   gem 'capistrano-rvm'
   gem 'capistrano3-puma'
   gem 'foreman'
