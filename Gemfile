@@ -45,7 +45,6 @@ group :development do
   gem 'capistrano-rails-console', require: false
   gem 'capistrano-rvm'
   gem 'capistrano3-puma'
-  gem 'foreman'
   gem 'guard', require: false
   gem 'guard-bundler', require: false
   gem 'guard-livereload', require: false

@@ -1,2 +1,3 @@
-rls: PORT=3000 bundle exec rails s
-wpk: ./bin/webpack-dev-server
+rails: PORT=3000 bundle exec rails s
+guard: bundle exec guard
+assets: ./bin/webpack-dev-server
