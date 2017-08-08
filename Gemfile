@@ -54,7 +54,7 @@ group :development do
   gem 'rack-livereload'
   gem 'rails_best_practices', require: false
   gem 'rb-inotify', require: false
-  gem 'rubocop', require: false
+  gem 'rubocop-template', require: false
   gem 'rubycritic', require: false
   gem 'spring'
   gem 'spring-watcher-listen'
