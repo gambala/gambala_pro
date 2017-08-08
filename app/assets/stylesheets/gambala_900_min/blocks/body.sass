@@ -1,0 +1,11 @@
+@import 'breakpoint'
+
+$border-width: 15px
+
++breakpoint(900px)
+  .body
+    border-width: $border-width
+
+    &::before,
+    &::after
+      height: $border-width

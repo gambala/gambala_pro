@@ -1,3 +1,23 @@
+$border-width: 5px
+$border-color: #f099e8
+
 .body
+  border: $border-width solid $border-color
   margin: 0
   min-width: 320px
+
+  &::before,
+  &::after
+    background: $border-color
+    content: ''
+    height: $border-width
+    left: 0
+    position: fixed
+    width: 100%
+    z-index: 10
+
+  &::before
+    top: 0
+
+  &::after
+    bottom: 0
