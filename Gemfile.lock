@@ -47,7 +47,7 @@ GEM
       rake (>= 10.4, < 13.0)
     arel (8.0.0)
     ast (2.3.0)
-    autoprefixer-rails (7.1.2.3)
+    autoprefixer-rails (7.1.2.4)
       execjs
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
@@ -346,7 +346,7 @@ GEM
     sshkit (1.14.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    sshkit-interactive (0.2.1)
+    sshkit-interactive (0.2.2)
       sshkit (~> 1.12)
     stlr (2.0.0)
       autoprefixer-rails (>= 5.2.1)
