@@ -18,13 +18,6 @@ html.html.no-js prefix=meta_html_prefix lang='ru'
     = render 'sfui/webfonts'
   body.body
     = yield
-    = render 'footer'
-    .fixed-wrapper
-      .fixed-section
-        .fixed-link.fixed-link_home
-        .fixed-link.fixed-link_projects
-        .fixed-link.fixed-link_services
-        .fixed-link.fixed-link_contacts
     div id='permanent-js' data-turbolinks-permanent=''
       = javascript_pack_tag 'application', async: true, data: { turbolinks_track: 'reload' }
       = render 'scripts' if Rails.env.production?
