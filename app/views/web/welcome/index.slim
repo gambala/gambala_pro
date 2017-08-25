@@ -27,31 +27,31 @@
       img src="https://png.icons8.com/work/nolan/96" title="Работа" width="48" height="48"
       br
       | Чем могу быть полезен
-    .activities
+    .activity-collection
       .row
-        .activity
-          .activity__title Сверстаю веб-страницы по дизайну
-          .activity__text HTML5, CSS3, БЭМ. Быстро и качественно. Оплата по затраченному времени.
-        .activity
-          .activity__title Проведу аудит проекта на Ruby on Rails
-          .activity__text Найду слабые места в архитектуре и коде, составлю перечень задач по рефакторингу.
+        .activity-item
+          .activity-item__title Сверстаю веб-страницы по дизайну
+          .activity-item__text HTML5, CSS3, БЭМ. Быстро и качественно. Оплата по затраченному времени.
+        .activity-item
+          .activity-item__title Проведу аудит проекта на Ruby on Rails
+          .activity-item__text Найду слабые места в архитектуре и коде, составлю перечень задач по рефакторингу.
       .row
-        .activity
-          .activity__title Отрефакторю проект на Ruby on Rails
-          .activity__text Перенесу проект со старой версии платформы на новую. Улучшу код, устраню слабые места в архитектуре, уменьшу технический долг.
-        .activity
-          .activity__title Спроектирую онлайн стартап
-          .activity__text Выслушаю пожелания и идеи, составлю сценарии использования, виденье проекта и спецификации. На выходе будет дизайн-документ, по которому можно сформировать задачи программистам и начать разработку.
+        .activity-item
+          .activity-item__title Отрефакторю проект на Ruby on Rails
+          .activity-item__text Перенесу проект со старой версии платформы на новую. Улучшу код, устраню слабые места в архитектуре, уменьшу технический долг.
+        .activity-item
+          .activity-item__title Спроектирую онлайн стартап
+          .activity-item__text Выслушаю пожелания и идеи, составлю сценарии использования, виденье проекта и спецификации. На выходе будет дизайн-документ, по которому можно сформировать задачи программистам и начать разработку.
 .activity-section
   .container
     .activity-section__title
       img src="https://png.icons8.com/contacts/nolan/96" title="Контакты" width="48" height="48"
       br
       | Где меня можно найти
-    .activities
+    .activity-collection
       .row
-        .activity
-          .activity__title
+        .activity-item
+          .activity-item__title
             = link_to 'ВКонтакте', 'https://vk.com/gambala',
                       class: 'link', target: '_blank', rel: 'noopener'
             ' ,
@@ -60,42 +60,48 @@
             ' ,
             = link_to 'Фейсбук', 'https://facebook.com/gambala.pro',
                       class: 'link', target: '_blank', rel: 'noopener'
-          .activity__text Делюсь новостями из жизни.
-        .activity
-          .activity__title
+          .activity-item__text Делюсь новостями из жизни.
+        .activity-item
+          .activity-item__title
             = link_to 'Stack Overflow на русском', 'http://ru.stackoverflow.com/users/217849',
                       class: 'link', target: '_blank', rel: 'noopener'
-          .activity__text Отвечаю на вопросы по специальности.
+          .activity-item__text Отвечаю на вопросы по специальности.
       .row
-        .activity
-          .activity__title
-            = link_to 'Стим', 'https://steamcommunity.com/id/gambala',
-                      class: 'link', target: '_blank', rel: 'noopener'
-          .activity__text Играю в видеоигры.
-        .activity
-          .activity__title
-            = link_to 'Кинопоиск', 'https://kinopoisk.ru/user/1912288',
-                      class: 'link', target: '_blank', rel: 'noopener'
-          .activity__text Смотрю и оцениваю фильмы.
+        .activity-media.media
+          .media__aside
+            img.activity-media__icon src='https://png.icons8.com/steam/nolan/96'
+          .media__body
+            .activity-media__title
+              = link_to 'Стим', 'https://steamcommunity.com/id/gambala',
+                        class: 'link', target: '_blank', rel: 'noopener'
+            .activity-media__text Играю в видеоигры.
+        .activity-media.media
+          .media__aside
+            img.activity-media__icon src='https://png.icons8.com/movie/nolan/96'
+          .media__body
+            .activity-media__title
+              = link_to 'Кинопоиск', 'https://kinopoisk.ru/user/1912288',
+                        class: 'link', target: '_blank', rel: 'noopener'
+            .activity-media__text Смотрю и оцениваю фильмы.
       .row
-        .activity
-          .activity__title
+        .activity-item
+          .activity-media__title
             = link_to 'Гитхаб', 'https://github.com/gambala',
                       class: 'link', target: '_blank', rel: 'noopener'
-          .activity__text Работаю с кодом коммерческих и Open Source проектов.
-        .activity
-          .activity__title
+          .activity-media__text Работаю с кодом коммерческих и Open Source проектов.
+        .activity-item
+          .activity-media__title
             = link_to 'Инстаграм', 'https://instagram.com/gambala.pro',
                       class: 'link', target: '_blank', rel: 'noopener'
-          .activity__text Публикую фото и истории.
+          .activity-media__text Публикую фото и истории.
       .row
-        .activity
-          .activity__title
+        .activity-item
+          .activity-media__title
             = link_to 'Телеграм', 'https://t.me/gambala',
                       class: 'link', target: '_blank', rel: 'noopener'
-          .activity__text Делюсь опытом в профильных чатах.
-        .activity
-          .activity__title
+          .activity-media__text Делюсь опытом в профильных чатах.
+        .activity-item
+          .activity-media__title
             = link_to 'Почта', 'mailto:gambala.rus@gmail.com',
                       class: 'link', target: '_blank', rel: 'noopener'
-          .activity__text Веду деловую переписку.
+          .activity-media__text Веду деловую переписку.
