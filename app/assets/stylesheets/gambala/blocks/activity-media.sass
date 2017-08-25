@@ -1,3 +1,5 @@
+@import 'sfui/mixins/font'
+
 .activity-media
   margin-bottom: 6px
 
@@ -9,8 +11,11 @@
     width: 48px
 
   .activity-media__title
-    font-size: 16px
-    font-weight: 600
+    +font(16px)
+    font-weight: 500
+
+    .link
+      font-weight: 500
 
   .activity-media__text
-    font-size: 14px
+    +font(14px)

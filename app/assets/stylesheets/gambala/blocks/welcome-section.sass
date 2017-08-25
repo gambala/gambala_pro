@@ -1,3 +1,5 @@
+@import 'sfui/mixins/font'
+
 .welcome-section
   background: #fff
   padding: 24px 20px 15%
@@ -10,7 +12,7 @@
     margin-bottom: 24px
 
   .welcome-section__text
-    font-size: 14px
+    +font(14px)
     margin-bottom: 24px
 
     p
@@ -21,4 +23,4 @@
         margin-bottom: 0
 
   .welcome-section__links
-    font-size: 14px
+    +font(14px)

@@ -1,3 +1,5 @@
+@import 'sfui/mixins/font'
+
 .frontend-welcome-section
   background: #B3FFAB
   background: linear-gradient(-45deg, #fc00ff, #00dbde), radial-gradient(at bottom right, #DBD65C, transparent)
@@ -11,17 +13,17 @@
   text-shadow: 0 1px 3px rgba(#000, 0.05)
 
   .frontend-welcome-section__title
-    font-size: 20px
+    +font(20px)
     font-weight: 600
     margin-bottom: 24px
 
   .frontend-welcome-section__text
-    font-size: 14px
+    +font(14px)
     margin-bottom: 24px
     position: relative
 
   .frontend-welcome-section__links
-    font-size: 14px
+    +font(14px)
     position: relative
 
   .link

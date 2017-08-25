@@ -1,4 +1,5 @@
 @import 'breakpoint'
+@import 'sfui/mixins/font'
 
 +breakpoint(900px)
   .welcome-section
@@ -7,7 +8,7 @@
       padding: 24px 30px
 
     .welcome-section__text
-      font-size: 16px
+      +font(16px)
 
     .welcome-section__links
-      font-size: 16px
+      +font(16px)
