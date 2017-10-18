@@ -1,3 +1,5 @@
+@import 'breakpoint'
+
 .activity-collection
   margin-left: -20px
   margin-right: -20px
@@ -10,3 +12,9 @@
   .activity-media
     margin-bottom: 30px
     padding: 0 20px
+
+  +breakpoint(768px)
+    .activity-item,
+    .activity-media
+      float: left
+      width: 50%

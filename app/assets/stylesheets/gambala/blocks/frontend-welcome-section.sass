@@ -1,4 +1,6 @@
+@import 'breakpoint'
 @import 'sfui/mixins/font'
+@import 'stlr/mixins/bg'
 
 .frontend-welcome-section
   background: #B3FFAB
@@ -17,14 +19,35 @@
     font-weight: 600
     margin-bottom: 24px
 
-  .frontend-welcome-section__text
+    +breakpoint(1024px)
+      +font(32px)
+      line-height: 36px
+
+  .frontend-welcome-section__text,
+  .frontend-welcome-section__links
     +font(14px)
+
+    +breakpoint(1024px)
+      +font(16px)
+
+  .frontend-welcome-section__text
     margin-bottom: 24px
     position: relative
 
   .frontend-welcome-section__links
-    +font(14px)
     position: relative
+
+  .frontend-welcome-section__mockup
+    display: none
+
+    +breakpoint(768px)
+      +bg('frontend-mockup', $size: contain)
+      bottom: -30%
+      display: block
+      left: 40%
+      position: absolute
+      right: 0
+      top: 20%
 
   .link
     color: #fff

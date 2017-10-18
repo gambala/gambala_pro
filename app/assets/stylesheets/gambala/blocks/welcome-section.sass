@@ -1,9 +1,14 @@
+@import 'breakpoint'
 @import 'sfui/mixins/font'
+@import 'stlr/mixins/retina-bg'
 
 .welcome-section
   background: #fff
   padding: 24px 20px 15%
   position: relative
+
+  +breakpoint(768px)
+    padding-top: 15%
 
   .user-media.media
     margin-bottom: 24px
@@ -11,6 +16,9 @@
   .welcome-section__text
     +font(14px)
     margin-bottom: 24px
+
+    +breakpoint(1024px)
+      +font(16px)
 
     p
       margin-bottom: 6px
@@ -21,3 +29,6 @@
 
   .welcome-section__links
     +font(14px)
+
+    +breakpoint(1024px)
+      +font(16px)

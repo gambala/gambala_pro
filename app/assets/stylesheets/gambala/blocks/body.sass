@@ -1,23 +1,29 @@
-$border-width: 0
-$border-color: #000
+@import 'breakpoint'
+@import 'stlr/mixins/svg-image'
 
 .body
-  border: $border-width solid $border-color
   margin: 0
   min-width: 320px
 
-  &::before,
-  &::after
-    background: $border-color
-    content: ''
-    height: $border-width
-    left: 0
-    position: fixed
-    width: 100%
-    z-index: 10
+  +breakpoint(1024px)
+    background: #f099e8
+    padding-left: 25%
 
-  &::before
-    top: 0
+    &::before
+      +svg-image('browser-mockup', 1286px, 536px)
+      bottom: -192px
+      content: ''
+      left: 100px
+      position: fixed
+      top: auto
+      z-index: 0
 
-  &::after
-    bottom: 0
+    > div
+      position: relative
+      border-left: 1px solid rgba(#000, 0.3)
+
+  +breakpoint(1280px)
+    padding-left: 35%
+
+  +breakpoint(1440px)
+    padding-left: 40%
