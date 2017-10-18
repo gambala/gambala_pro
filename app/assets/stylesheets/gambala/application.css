@@ -1,6 +1,5 @@
 /*
-*= require normalize.css/normalize
 *= require sfui/application
-*= require_tree ./hacks
+*= require stlr/application
 *= require_tree ./blocks
 */
