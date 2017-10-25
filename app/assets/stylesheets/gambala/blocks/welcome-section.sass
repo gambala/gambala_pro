@@ -10,25 +10,26 @@
   +breakpoint(768px)
     padding-top: 15%
 
-  .user-media.media
-    margin-bottom: 24px
+  .welcome-section__title
+    +font(22px)
+    font-weight: 500
+    margin-bottom: 18px
+
+    +breakpoint(1024px)
+      +font(32px)
+      line-height: 36px
 
   .welcome-section__text
     +font(14px)
     margin-bottom: 24px
+    max-width: 640px
 
     +breakpoint(1024px)
       +font(16px)
 
     p
-      margin-bottom: 6px
+      margin-bottom: 12px
       margin-top: 0
 
       &:last-child
         margin-bottom: 0
-
-  .welcome-section__links
-    +font(14px)
-
-    +breakpoint(1024px)
-      +font(16px)

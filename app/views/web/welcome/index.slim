@@ -1,25 +1,48 @@
 .welcome-section
   .container
-    .user-media.media
-      .media__aside
-        .user-media__avatar
-      .media__body
-        .user-media__name Виталий Емельянцев
-        .user-media__attributes 26 лет • Новороссийск, Россия
+    h1.welcome-section__title Виталий Емельянцев
     .welcome-section__text
-      p Создаю сайты, интернет-магазины и онлайн-стартапы. 5&nbsp;лет на рынке.
-      p Проектирую, дизайню, программирую, поддерживаю.
-      p Люблю простоту, качество и лоск.
-    .welcome-section__links
-        ' Напишите мне:
-        = link_to 'ВК', 'https://vk.com/gambala',
-                  class: 'link', target: '_blank', rel: 'noopener'
-        ' ,
-        = link_to 'Телеграм', 'https://t.me/gambala',
-                  class: 'link', target: '_blank', rel: 'noopener'
-        ' ,
-        = link_to 'Почта', 'mailto:gambala.rus@gmail.com',
-                  class: 'link', target: '_blank', rel: 'noopener'
+      p Создаю сайты, онлайн-стартапы и веб-проекты с 2012-го года.
+      p
+        | Сооснователь и технический директор
+        =<> link_to 'Melp.pro', 'https://melp.pro/',
+                    class: 'link', target: '_blank', rel: 'noopener'
+        | и
+        =< link_to 'Startup Garden', 'https://startupgarden.ru/',
+                   class: 'link', target: '_blank', rel: 'noopener'
+        | , ментор,
+        =< link_to 'визионер', 'https://t.me/gambala_live',
+                   class: 'link', target: '_blank', rel: 'noopener'
+        | ,
+        =< link_to 'open-source контрибьютор', 'javascript:;',
+                   class: 'link'
+        | .
+      p
+        = link_to 'Проведу аудит', 'javascript:;',
+                  class: 'link'
+        | ,
+        =< link_to 'отрефакторю Ruby on Rails код', 'javascript:;',
+                   class: 'link'
+        | ,
+        =< link_to 'сверстаю страницы по дизайну', 'javascript:;',
+                   class: 'link'
+        | ,
+        =< link_to 'спроектирую и составлю ТЗ', 'javascript:;',
+                   class: 'link'
+        | .
+      p
+        | Работаю
+        =< link_to 'с заключением договора', 'javascript:;',
+                   class: 'link'
+        | ,
+        =< link_to 'над вашими задачами', 'javascript:;',
+                   class: 'link'
+        | ,
+        =< link_to 'с оплатой по часам', 'javascript:;',
+                   class: 'link'
+        | .
+      p = link_to 'Напишите мне, где вам удобно.', 'javascript:;',
+                  class: 'link'
 .activity-section.activity-section_light
   .container
     .activity-section__title Чем могу быть полезен
