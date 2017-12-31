@@ -29,6 +29,9 @@ server {
 server {
   listen <%= fetch(:nginx_use_ssl) ? '443 ssl http2' : '80' %>;
   server_name <%= fetch(:nginx_server_name) %>;
+
+  merge_slashes off;
+  rewrite (.*)//+(.*) $1/$2 permanent;
   rewrite ^/(.*)/$ /$1 permanent;
 
   client_max_body_size 4G;
