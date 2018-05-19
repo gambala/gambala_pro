@@ -5,6 +5,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'www.gambala.pro' }
   config.action_mailer.perform_caching = false
   config.active_record.dump_schema_after_migration = false
+  config.active_storage.service = :local
   config.active_support.deprecation = :notify
   config.assets.compile = false
   config.cache_classes = true
@@ -16,7 +17,6 @@ Rails.application.configure do
   config.log_tags = [:request_id]
   config.middleware.use Rack::Attack
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
-  config.read_encrypted_secrets = true
 
   if ENV['RAILS_LOG_TO_STDOUT'].present?
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
@@ -28,9 +28,15 @@ Rails.application.configure do
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_controller.asset_host = 'http://assets.example.com'
+  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
+  # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_mailer.raise_delivery_errors = false
   # config.active_job.queue_adapter = :resque
   # config.active_job.queue_name_prefix = "gambala_#{Rails.env}"
+  # config.assets.css_compressor = :sass
   # config.cache_store = :mem_cache_store
   # config.force_ssl = true
+  # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
+  # config.require_master_key = true
+  # require 'syslog/logger'
 end
