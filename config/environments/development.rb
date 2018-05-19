@@ -12,7 +12,6 @@ Rails.application.configure do
   config.consider_all_requests_local = true
   config.eager_load = false
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-  config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
   config.sass.inline_source_maps = true
   config.sass.line_comments = false
   config.sass.preferred_syntax = :sass

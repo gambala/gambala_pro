@@ -1,13 +1,15 @@
 import 'bundles/modernizr';
 import 'element-closest';
 import 'what-input';
+import $                   from 'jquery';
 import Rails               from 'rails-ujs';
 import Turbolinks          from 'turbolinks';
-import ServiceWorkerLoader from 'scripts/ServiceWorkerLoader';
 import WebFontLoader       from 'scripts/WebFontLoader';
 
+window.$ = $;
+window.jQuery = $;
+
 Rails.start();
-ServiceWorkerLoader.start();
 Turbolinks.start();
 
 WebFontLoader.load('SF UI Display', 'sfui-display-loaded');
