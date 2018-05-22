@@ -1,25 +1,19 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: 5
+  pool: <%= ENV["postgres_pool"] %>
+  username: <%= ENV["postgres_username"] %>
+  password: <%= ENV["postgres_password_plain"] %>
+  host: <%= ENV["postgres_host"] %>
 
 development:
   <<: *default
   database: gambala_development
-  username: <%= ENV["DB_USERNAME"] %>
-  password: <%= ENV["DB_PASSWORD"] %>
-  host: <%= ENV["DB_HOST"] %>
+
+test:
+  <<: *default
+  database: gambala_test
 
 production:
   <<: *default
   database: gambala_production
-  username: <%= ENV["DB_USERNAME"] %>
-  password: <%= ENV["DB_PASSWORD"] %>
-  host: <%= ENV["DB_HOST"] %>
-
-test: &test
-  <<: *default
-  database: gambala_test<%= ENV['TEST_ENV_NUMBER'] %>
-  username: <%= ENV["DB_USERNAME"] %>
-  password: <%= ENV["DB_PASSWORD"] %>
-  host: <%= ENV["DB_HOST"] %>

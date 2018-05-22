@@ -1,64 +1,13 @@
 # frozen_string_literal: true
 
-server '95.213.204.64', user: 'deployer', port: 3602, roles: %w(web app db)
-set :forbidden_locations, ['/88.php',
-                           '/cms/',
-                           '^/.bzr',
-                           '^/.git',
-                           '^/.hg',
-                           '^/.svn',
-                           '^/_admin',
-                           '^/aaa',
-                           '^/adm/',
-                           '^/admin/login.php',
-                           '^/administrator',
-                           '^/apple-app-site-association',
-                           '^/away',
-                           '^/backup',
-                           '^/bitrix',
-                           '^/browserconfig.xml',
-                           '^/cache',
-                           '^/cgi-sys',
-                           '^/clientaccesspolicy',
-                           '^/core/',
-                           '^/data/',
-                           '^/default.php',
-                           '^/downloader',
-                           '^/engine',
-                           '^/go/',
-                           '^/hostcmsfiles',
-                           '^/html/logs.php',
-                           '^/include/ajax',
-                           '^/includes/init.php',
-                           '^/index.php',
-                           '^/installed',
-                           '^/js/',
-                           '^/license.php',
-                           '^/m/',
-                           '^/manager',
-                           '^/media/system',
-                           '^/mobile',
-                           '^/modules/system',
-                           '^/mysql',
-                           '^/netcat',
-                           '^/password_double_opt',
-                           '^/phpmyadmin',
-                           '^/redirect.php',
-                           '^/scripts/init.js',
-                           '^/sftp-settings',
-                           '^/skin',
-                           '^/sql',
-                           '^/styles/skins',
-                           '^/templates/system',
-                           '^/typo3',
-                           '^/uploads/goods',
-                           '^/wp-admin',
-                           '^/wp-login.php',
-                           '^/xml/',
-                           '^/xmlrpc.php']
+require_relative 'forbidden_locations'
+
+server ENV['deploy_host'], port: ENV['deploy_port'], user: ENV['deploy_user'], roles: %w(app db web)
+set :forbidden_locations, Deploy::FORBIDDEN_LOCATIONS
+set :letsencrypt_path, 'gambala.pro'
 set :nginx_config_name, 'gambala.production.nginx.conf'
 set :nginx_server_name, 'gambala.pro'
-set :nginx_use_ssl, true
+set :nginx_use_ssl, false
 set :ssh_options, keys: %w(/home/gambala/.ssh/id_rsa),
-                  forward_agent: false,
+                  forward_agent: true,
                   auth_methods: %w(publickey)

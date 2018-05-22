@@ -12,17 +12,25 @@ upstream puma_<%= fetch(:nginx_config_name) %> { <%
   <%= server %><% end %>
 }
 
-server {
-  listen 80;
-  server_name www.<%= fetch(:nginx_server_name) %>;
-  return 301 $scheme://<%= fetch(:nginx_server_name) %>$request_uri;
-}
-
 <% if fetch(:nginx_use_ssl) %>
 server {
   listen 80;
-  server_name <%= fetch(:nginx_server_name) %>;
+  server_name <%= fetch(:nginx_server_name) %> *.<%= fetch(:nginx_server_name) %>;
+  return 301 https://$host$request_uri;
+}
+server {
+  listen 443 ssl http2;
+  server_name www.<%= fetch(:nginx_server_name) %>;
+  ssl_certificate /etc/letsencrypt/live/<%= fetch(:letsencrypt_path) %>/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/<%= fetch(:letsencrypt_path) %>/privkey.pem;
+  ssl_trusted_certificate /etc/letsencrypt/live/<%= fetch(:letsencrypt_path) %>/chain.pem;
   return 301 https://<%= fetch(:nginx_server_name) %>$request_uri;
+}
+<% else %>
+server {
+  listen 80;
+  server_name www.<%= fetch(:nginx_server_name) %>;
+  return 301 http://<%= fetch(:nginx_server_name) %>$request_uri;
 }
 <% end %>
 
@@ -52,15 +60,15 @@ server {
   ssl_session_timeout 5m;
   ssl_stapling on;
   ssl_stapling_verify on;
-  ssl_certificate /etc/letsencrypt/live/<%= fetch(:nginx_server_name) %>/fullchain.pem;
-  ssl_certificate_key /etc/letsencrypt/live/<%= fetch(:nginx_server_name) %>/privkey.pem;
-  ssl_trusted_certificate /etc/letsencrypt/live/<%= fetch(:nginx_server_name) %>/chain.pem;
+  ssl_certificate /etc/letsencrypt/live/<%= fetch(:letsencrypt_path) %>/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/<%= fetch(:letsencrypt_path) %>/privkey.pem;
+  ssl_trusted_certificate /etc/letsencrypt/live/<%= fetch(:letsencrypt_path) %>/chain.pem;
 <% end %>
 
   location @puma_<%= fetch(:nginx_config_name) %> {
     access_log <%= shared_path %>/log/nginx.access.log;
     error_log <%= shared_path %>/log/nginx.error.log;
-    limit_req zone=one burst=3;
+    limit_req zone=one burst=10;
     proxy_pass http://puma_<%= fetch(:nginx_config_name) %>;
     proxy_redirect off;
     proxy_set_header Host $host;
@@ -88,6 +96,10 @@ server {
     add_header X-Content-Type-Options nosniff;
     add_header X-Frame-Options SAMEORIGIN;
 <% end %>
+  }
+
+  location /nginx_status {
+    stub_status;
   }
 
   location ~ (<%= fetch(:forbidden_locations).join('|') %>) {

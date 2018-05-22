@@ -1,0 +1,39 @@
+bugsnag_api_key: <get it from admin if needed>
+
+development:
+  app_host: http://localhost:3000
+  postgres_host:
+  postgres_password_plain:
+  postgres_pool: '5'
+  postgres_username:
+  redis_host: localhost:6379
+  redis_password:
+  redis_pool: '5'
+
+test:
+  app_host: http://localhost:3000
+  postgres_host:
+  postgres_password_plain:
+  postgres_pool: '5'
+  postgres_username:
+  redis_host: localhost:6379
+  redis_password:
+  redis_pool: '5'
+
+production:
+  app_host: <get it from admin if needed>
+  deploy_host: <get it from admin if needed>
+  deploy_port: <get it from admin if needed>
+  deploy_user: <get it from admin if needed>
+  mailgun_api_key: <get it from admin if needed>
+  postgres_host:
+  postgres_password_plain:
+  postgres_pool: '5'
+  postgres_username:
+  RAILS_MASTER_KEY: <get it from admin if needed>
+  redis_host: localhost:6379
+  REDIS_HOST: localhost:6379
+  redis_password:
+  REDIS_PASSWORD:
+  redis_pool: '5'
+  secret_key_base: <rails secret>
