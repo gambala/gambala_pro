@@ -18,6 +18,7 @@ REVISION
 /public/packs
 /public/uploads
 /rethinkdb_data
+/server
 /spec/examples.txt
 /tmp/*
 /uploads
