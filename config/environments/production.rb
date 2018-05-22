@@ -20,6 +20,7 @@ Rails.application.configure do
   config.log_tags = [:request_id]
   config.middleware.use Rack::Attack
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.require_master_key = true
 
   if ENV['RAILS_LOG_TO_STDOUT'].present?
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
@@ -40,6 +41,5 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
   # config.force_ssl = true
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
-  # config.require_master_key = true
   # require 'syslog/logger'
 end
