@@ -9,6 +9,7 @@ require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 require 'capistrano/rails/console'
 require 'capistrano/figaro_yml'
+require 'capistrano/touch-linked-files'
 require 'capistrano/puma'
 
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }

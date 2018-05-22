@@ -92,6 +92,8 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    capistrano-touch-linked-files (0.3.0)
+      capistrano (>= 3.0)
     capistrano3-puma (3.1.1)
       capistrano (~> 3.7)
       capistrano-bundler
@@ -373,6 +375,7 @@ DEPENDENCIES
   capistrano-rails
   capistrano-rails-console
   capistrano-rvm
+  capistrano-touch-linked-files
   capistrano3-puma
   carrierwave
   enumerize
