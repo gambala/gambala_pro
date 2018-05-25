@@ -12,6 +12,7 @@
     "lodash": "^4.17.4",
     "normalize.css": "^6.0.0",
     "rails-ujs": "^5.1.2",
+    "smooth-scroll": "cferdinandi/smooth-scroll",
     "turbolinks": "^5.0.3",
     "what-input": "^4.3.0"
   },

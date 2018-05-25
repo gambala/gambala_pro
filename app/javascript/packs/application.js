@@ -3,6 +3,7 @@ import 'element-closest';
 import 'what-input';
 import $                   from 'jquery';
 import Rails               from 'rails-ujs';
+import SmoothScrollLinks   from 'scripts/SmoothScrollLinks';
 import Turbolinks          from 'turbolinks';
 import WebFontLoader       from 'scripts/WebFontLoader';
 
@@ -10,6 +11,7 @@ window.$ = $;
 window.jQuery = $;
 
 Rails.start();
+SmoothScrollLinks.start();
 Turbolinks.start();
 
 WebFontLoader.load('SF UI Display', 'sfui-display-loaded');

@@ -3,7 +3,8 @@
     h1.screen-section__title Виталий Емельянцев
     .screen-section__text
       p
-        = link_to 'Создаю сайты и веб-проекты на Ruby on Rails с 2012-го года.', 'javascript:;',
+        = link_to 'Создаю сайты и веб-проекты на Ruby on Rails с 2012-го года.',
+                  '#rails', data: { scroll: true },
                   class: 'link'
       p
         = link_to 'Учу людей,', 'javascript:;',
@@ -31,7 +32,7 @@
                    class: 'link'
       p = link_to 'Напишите мне, где вам удобно.', 'javascript:;',
                   class: 'link'
-.screen-section
+.screen-section id='rails'
   .container
     h1.screen-section__title Работаю с Ruby on Rails
     .screen-section__text
