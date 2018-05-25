@@ -2,6 +2,8 @@
 @import 'sfui/mixins/font'
 @import 'stlr/mixins/retina-bg'
 
+$visited: mix(#fc00ff, #1178FF, 50%)
+
 .welcome-section
   background: #fff
   display: flex
@@ -34,3 +36,20 @@
 
       &:last-child
         margin-bottom: 0
+
+    a
+      border-radius: 2px
+      display: inline-block
+      margin: -2px -5px
+      padding: 2px 5px
+
+      &:hover
+        background: #1178FF linear-gradient(135deg, mix(#fff, #1178FF, 20%), mix(#fff, $visited, 20%))
+        color: #fff
+
+      &:visited
+        color: $visited
+
+        &:hover
+          background: $visited linear-gradient(135deg, mix(#fff, $visited, 20%), mix(#fff, $visited, 30%))
+          color: #fff
