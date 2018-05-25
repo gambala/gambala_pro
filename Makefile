@@ -12,3 +12,6 @@ lint-security:
 
 start:
 	overmind start
+
+watch:
+	overmind start
