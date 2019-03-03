@@ -1,7 +1,7 @@
 ![Сайт Gambala.pro](https://github.com/gambala/gambala/raw/master/app/assets/images/logo.png)
 
 Работает на:
-* ruby 2.4.1
+* ruby 2.6.1
 * rails 5.1.x
 * pg
 
