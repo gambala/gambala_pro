@@ -11,7 +11,9 @@ lint-security:
 	brakeman
 
 start:
-	overmind start
+	bundle exec falcon serve -b http://localhost:3000 --threaded
 
 watch:
 	overmind start
+
+s: start
