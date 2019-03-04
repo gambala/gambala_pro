@@ -1,11 +1,11 @@
 @import 'breakpoint'
-@import 'stlr/mixins/image'
+@import 'stlr/mixins/bg'
 @import 'stlr/mixins/svg-image'
 
 .body
   +breakpoint(1024px)
     background: #54eaca
-    padding-left: 25%
+    padding-right: 25%
 
     &::before
       +svg-image('browser-mockup', 1286px, 536px)
@@ -17,11 +17,14 @@
       z-index: 1
 
     &::after
-      +image('body', 226.5px, 845.75px)
+      +bg('body')
+      background-size: contain
       content: ''
-      left: calc(50% - 550px)
+      height: 125vh
+      left: calc(50% + 310px)
       position: fixed
       top: 30px
+      width: 300px
       z-index: 0
 
     > div
@@ -30,7 +33,7 @@
       z-index: 2
 
   +breakpoint(1280px)
-    padding-left: 35%
+    padding-right: 35%
 
   +breakpoint(1440px)
-    padding-left: 40%
+    padding-right: 40%
