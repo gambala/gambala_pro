@@ -4,8 +4,10 @@
 .env
 .idea
 .yardoc
+.yarn-integrity
 dump.rdb
 REVISION
+yarn-debug.log*
 
 /.elasticbeanstalk/*
 /config/application.yml
@@ -17,6 +19,7 @@ REVISION
 /log/*
 /node_modules
 /public/packs
+/public/packs-test
 /public/uploads
 /rethinkdb_data
 /server
