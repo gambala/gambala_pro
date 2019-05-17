@@ -1,3 +1,6 @@
+console:
+	rails console
+
 lint-js:
 	./node_modules/.bin/eslint app/javascript --fix
 
