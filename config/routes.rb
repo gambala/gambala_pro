@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/*path', to: redirect("/#{I18n.default_locale}/%{path}")
-  root to: redirect("/#{I18n.default_locale}")
+  get '/',      to: 'redirects#no_locale'
+  get '/*path', to: 'redirects#no_locale'
 end
