@@ -1,6 +1,9 @@
 console:
 	rails console
 
+db-migrate:
+	bundle exec rake db:migrate
+
 lint-js:
 	./node_modules/.bin/eslint app/javascript --fix
 

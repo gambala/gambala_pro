@@ -1,0 +1,53 @@
+@import rails-plus/mixins/media
+
+.soda-layout
+  .soda-header
+    background: #f2f3f5
+    background: var(--soda-header-background)
+    box-shadow: 0 1px 1px rgba(#000, 0.1)
+    height: 48px
+    position: sticky
+    top: 0
+    z-index: 10
+
+    .row.jc_sb
+      height: 48px
+
+  .soda-page
+    min-height: calc(100vh - 48px)
+
+  .soda-aside
+    background: transparent
+    background: var(--soda-aside-background)
+    display: none
+
+    +from(640px)
+      display: block
+
+    .aside-section
+      +from(640px)
+        position: sticky
+        top: 48px
+        padding: 12px 0
+
+  .soda-main
+    min-height: calc(100vh - 48px)
+
+    +from(640px)
+      .frame
+        padding-left: 40px
+        padding-right: 40px
+
+  .soda-layout__burger
+    +from(640px)
+      display: none
+
+.soda-layout_menu-visible.body
+  .soda-aside
+    display: block
+
+  .soda-main
+    display: none
+
+    +from(640px)
+      display: block

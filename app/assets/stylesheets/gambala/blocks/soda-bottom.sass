@@ -1,0 +1,16 @@
+@import rails-plus/mixins/media
+
+.soda-bottom
+  background: #f2f3f5
+  background: var(--soda-header-background)
+  bottom: 0
+  box-shadow: 0 -1px 1px rgba(#000, 0.1)
+  display: none
+  position: sticky
+  z-index: 10
+
+  +from(1024px)
+    display: none
+
+  .soda-menu
+    justify-content: space-around

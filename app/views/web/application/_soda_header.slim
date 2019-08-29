@@ -1,0 +1,8 @@
+.soda-header.dn_print
+  .frame
+    .row.jc_sb
+      = render 'soda_menu'
+      .row
+        div = render 'group_language' if params[:locale].present? || mimic_user&.admin?
+        button.button.button_iconic.soda-layout__burger> data-action='soda-js#toggle'
+          = fa_icon('bars')

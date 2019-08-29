@@ -15,5 +15,9 @@ module Gambala
     config.load_defaults 5.1
     config.middleware.use Rack::Deflater
     config.time_zone = 'Moscow'
+
+    config.generators do |g|
+      g.test_framework false, fixture: false
+    end
   end
 end

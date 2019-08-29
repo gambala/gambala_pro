@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2017_06_25_201140) do
+ActiveRecord::Schema.define(version: 2019_08_29_080801) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,18 @@ ActiveRecord::Schema.define(version: 2017_06_25_201140) do
     t.datetime "happened_at", default: "2018-05-25 11:15:11", null: false
     t.integer "project_id"
     t.index ["project_id"], name: "index_hits_on_project_id"
+  end
+
+  create_table "i18n_languages", id: false, force: :cascade do |t|
+    t.string "locale", null: false
+    t.string "title"
+    t.boolean "is_active", default: false, null: false
+    t.integer "position"
+    t.string "flag_code"
+    t.string "title_localized"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["locale"], name: "index_i18n_languages_on_locale", unique: true
   end
 
   create_table "projects", id: :serial, force: :cascade do |t|

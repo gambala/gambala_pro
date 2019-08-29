@@ -1,0 +1,18 @@
+.visible_1024_max
+  .language-dropdown.dropdown.flip.flip_closable data-turbolinks='false'
+    a.dropdown__toggle.flip__toggle.site-header__link href='javascript:;' data-target='language-menu'
+      = flag_icon(active_i18n_language.flag_code)
+      b.caret
+    .dropdown__body.flip__target id='language-menu'
+      - active_i18n_languages.each do |i18n_language|
+        = link_to params.to_unsafe_h.merge(locale: i18n_language.locale)
+          .whs_nw
+            span style="margin-right: 5px;" = flag_icon(i18n_language.flag_code)
+            = i18n_language.title_localized
+.visible_1024_min
+  .language-group data-turbolinks='false'
+    - active_i18n_languages.each do |i18n_language|
+      = nav_link_to flag_icon(i18n_language.flag_code),
+                    params.to_unsafe_h.merge(locale: i18n_language.locale),
+                    title: i18n_language.title_localized,
+                    class: 'language-group__item'

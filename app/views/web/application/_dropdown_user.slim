@@ -1,0 +1,11 @@
+span.dropdown.flip.flip_closable
+  a.dropdown__toggle.flip__toggle.soda-header__link href='javascript:;' data-target='user-menu'
+    span.visible_640_max
+      = fa_icon('user', class: 'header-icon')
+    span.visible_640_min
+      = mimic_user.email
+    b.caret
+  .dropdown__body.flip__target id='user-menu' style="min-width: 200px;"
+    .visible_640_max
+      .c_grey.pad_3_5 = mimic_user.email
+      .divider

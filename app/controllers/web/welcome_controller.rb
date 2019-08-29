@@ -2,6 +2,8 @@
 
 module Web
   class WelcomeController < Web::ApplicationController
-    def index; end
+    def index
+      @is_root_link_hided = true
+    end
   end
 end

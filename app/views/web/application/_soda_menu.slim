@@ -1,0 +1,5 @@
+.soda-menu
+  - unless is_root_link_hided
+    = nav_link_to :root, title: t('resources.root'), class: 'soda-menu__item'
+      = fa_icon('home')
+      span.soda-menu__label =< t('resources.root')

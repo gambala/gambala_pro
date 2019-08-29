@@ -1,0 +1,21 @@
+@import rails-plus/mixins/media
+
+.soda-page
+  +from(640px)
+    display: flex
+    flex-flow: row nowrap
+
+  .soda-aside
+    +from(640px)
+      flex-shrink: 0
+      position: relative
+      width: 250px
+      z-index: 1
+
+  .soda-main
+    +from(640px)
+      flex-grow: 1
+
+  .soda-aside + .soda-main
+    +from(640px)
+      max-width: calc(100% - 250px)

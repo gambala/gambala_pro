@@ -1,0 +1,23 @@
+:root {
+  --body-background: #fff;
+  --body-color: #292d3c;
+
+  --link-color: #1178FF;
+  --link-hover-color: #fc00ff;
+  --link-active-color: #fc00ff;
+
+  --soda-aside-background: #fff;
+  --soda-header-background: #fff;
+  --soda-header-color: #292d3c;
+  --soda-header-hover-background: rgba(0, 0, 0, 0.07);
+  --soda-header-link-color: #1178FF;
+
+  --soda-menu-color: #1178FF;
+  --soda-menu-hover-background: rgba(0, 0, 0, 0.07);
+  --soda-menu-active-border: #fc00ff;
+
+  --menu-item-color: #292d3c;
+  --menu-item-hover-background: rgba(0, 0, 0, 0.07);
+  --menu-item-hover-color: #292d3c;
+  --menu-item-active-color: #fc00ff;
+}

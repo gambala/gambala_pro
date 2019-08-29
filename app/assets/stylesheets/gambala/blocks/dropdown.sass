@@ -1,0 +1,45 @@
+@import rails-plus/mixins/media
+
+.dropdown
+  display: inline-block
+  position: relative
+
+  a.dropdown__toggle
+    text-decoration: none
+
+  .dropdown__body
+    background: #fff
+    border: 1px solid #777
+    border-radius: 4px
+    color: #000
+    min-width: 100%
+    position: absolute
+    right: 0
+    top: 100%
+
+    a
+      color: #292d3c
+      display: block
+      padding: 3px 10px
+      text-decoration: none
+
+      &:hover
+        background: #f7f7f7
+
+    .divider
+      height: 1px
+      background: #e3e3e3
+      margin: 6px 10px
+
+.dropdown.flip
+  .dropdown__body.flip__target
+    opacity: 0
+    transform: translateY(-6px)
+    transition: opacity 0.25s, visibility 0.25s, transform 0.25s
+    visibility: hidden
+    z-index: 10
+
+  .dropdown__body.flip__target_active
+    opacity: 1
+    transform: translateY(0)
+    visibility: visible

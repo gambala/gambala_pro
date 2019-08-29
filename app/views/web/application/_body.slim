@@ -1,0 +1,4 @@
+div id='permanent-js' data-turbolinks-permanent=''
+  = javascript_pack_tag 'application', async: true, data: { turbolinks_track: 'reload',
+                                                            turbolinks_suppress_warning: true }
+  = render 'scripts' if Rails.env.production?

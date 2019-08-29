@@ -1,0 +1,36 @@
+@import rails-plus/mixins/media
+
+.soda-header
+  color: #222
+  color: var(--soda-header-color)
+
+  .soda-menu
+    margin-left: -10px
+
+  .row
+    align-items: center
+
+  .soda-header__link
+    color: #1481BA
+    color: var(--soda-header-link-color)
+    text-decoration: none
+
+  .language-group
+    margin-right: 10px
+
+  .avatar-image
+    height: 30px
+    width: 30px
+
+    +from(640px)
+      height: 36px
+      width: 36px
+
+  .button_iconic
+    color: #222
+    color: var(--soda-header-color)
+    margin-right: -10px
+
+    &:hover
+      background: rgba(0, 0, 0, 0.2)
+      background: var(--soda-header-hover-background)
