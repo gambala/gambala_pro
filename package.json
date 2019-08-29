@@ -11,6 +11,7 @@
     "jquery-textcomplete": "^1.8.0",
     "lodash": "^4.17.4",
     "normalize.css": "^6.0.0",
+    "rails-plus": "https://github.com/gambala/rails-plus#develop",
     "rails-ujs": "^5.1.2",
     "smooth-scroll": "cferdinandi/smooth-scroll",
     "turbolinks": "^5.0.3",

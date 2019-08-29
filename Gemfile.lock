@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/gambala/rails-plus.git
+  revision: e6623cb6c7f9cf4120d99cdd5628f9eab14a233e
+  branch: develop
+  specs:
+    rails-plus (0.1.0)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -363,9 +372,6 @@ GEM
       net-ssh (>= 2.8.0)
     sshkit-interactive (0.3.0)
       sshkit (~> 1.12)
-    stlr (2.0.0)
-      autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
     temple (0.8.1)
     term-ansicolor (1.7.1)
       tins (~> 1.0)
@@ -442,6 +448,7 @@ DEPENDENCIES
   rack-attack
   rails (~> 5)
   rails-i18n
+  rails-plus!
   rails_best_practices
   rb-inotify
   rubocop-template
@@ -451,7 +458,6 @@ DEPENDENCIES
   slim
   spring
   spring-watcher-listen
-  stlr
   traceroute
   turbolinks
   web-console
