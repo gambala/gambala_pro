@@ -6,7 +6,6 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 gem 'autoprefixer-rails'
 gem 'bootsnap', require: false
-gem 'breakpoint'
 gem 'bugsnag'
 gem 'carrierwave'
 gem 'enumerize'

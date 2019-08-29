@@ -1,4 +1,4 @@
-@import 'breakpoint'
+@import 'rails-plus/mixins/media'
 @import 'rails-plus/mixins/bg'
 @import 'rails-plus/mixins/svg-image'
 
@@ -6,7 +6,7 @@
   margin: 0
   min-width: 320px
 
-  +breakpoint(1024px)
+  +from(1024px)
     // background: #54eaca
     padding-right: 25%
 
@@ -35,8 +35,8 @@
       border-left: 1px solid rgba(#000, 0.3)
       z-index: 2
 
-  +breakpoint(1280px)
+  +from(1280px)
     padding-right: 35%
 
-  +breakpoint(1440px)
+  +from(1440px)
     padding-right: 40%

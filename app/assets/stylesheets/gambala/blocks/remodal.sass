@@ -1,4 +1,4 @@
-@import 'breakpoint'
+@import 'rails-plus/mixins/media'
 
 html.remodal-is-locked
   overflow: hidden
@@ -69,7 +69,7 @@ html.remodal-is-locked
     opacity: 1
     transform: scale(1)
 
-  +breakpoint(768px)
+  +from(768px)
     max-width: 768px
 
 .remodal-is-initialized

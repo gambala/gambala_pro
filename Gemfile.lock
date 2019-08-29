@@ -85,9 +85,6 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
-    breakpoint (2.7.1)
-      sass (~> 3.3)
-      sassy-maps (< 1.0.0)
     bugsnag (6.11.1)
       concurrent-ruby (~> 1.0)
     build-environment (1.11.0)
@@ -349,8 +346,6 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    sassy-maps (0.4.0)
-      sass (~> 3.3)
     sexp_processor (4.12.1)
     slim (4.0.1)
       temple (>= 0.7.6, < 0.9)
@@ -416,7 +411,6 @@ DEPENDENCIES
   annotate
   autoprefixer-rails
   bootsnap
-  breakpoint
   bugsnag
   bullet
   bundler-audit
