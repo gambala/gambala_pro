@@ -1,4 +1,4 @@
 en:
-  copyright: 'Site updated at %{updated_at} ©'
+  copyright: 'Site updated at %{updated_at}'
   site:
     title: Vitaliy Emeliyantsev

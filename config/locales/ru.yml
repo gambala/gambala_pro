@@ -8,7 +8,7 @@ ru:
         page_title: Заголовок
         slug: Символьный идентификатор
         title: Название проекта
-  copyright: 'Версия сайта от %{updated_at} ©'
+  copyright: 'Версия сайта от %{updated_at}'
   helpers:
     placeholder:
       project:
