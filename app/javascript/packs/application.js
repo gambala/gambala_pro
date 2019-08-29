@@ -2,13 +2,15 @@ import 'bundles/modernizr';
 import 'element-closest';
 import 'what-input';
 
-import $                   from 'jquery';
-import Rails               from 'rails-ujs';
-import SmoothScrollLinks   from 'scripts/SmoothScrollLinks';
-import Turbolinks          from 'turbolinks';
-import WebFontLoader       from 'scripts/WebFontLoader';
+import $                          from 'jquery';
+import Rails                      from 'rails-ujs';
+import Turbolinks                 from 'turbolinks';
 import { Application }            from 'stimulus';
 import { definitionsFromContext } from 'stimulus/webpack-helpers';
+
+import FontAwesome       from 'modules/FontAwesome';
+import SmoothScrollLinks from 'scripts/SmoothScrollLinks';
+import WebFontLoader     from 'scripts/WebFontLoader';
 
 window.$ = $;
 window.jQuery = $;
