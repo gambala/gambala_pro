@@ -1,0 +1,85 @@
+@import rails-plus/mixins/colors
+@import rails-plus/mixins/colors-for-states
+
+.button_blue
+  &
+    +colors(#fff, #3b67c4, #355db0)
+
+  &:hover
+    +colors(#fff, #2f529d, #274481)
+
+  &:active
+    +colors(#fff, #274481, #18294e)
+
+  &.button_disabled
+    +colors-for-states(#fff, #62658D)
+
+.button_green
+  &
+    +colors(#fff, #3BC476)
+
+  &:hover
+    +colors(#fff, #2f9d5e)
+
+  &:active
+    +colors(#fff, #27814e)
+
+  &.button_disabled
+    +colors-for-states(#fff, #9DB0A5)
+
+.button_orange
+  &
+    +colors(#fff, #ed8355)
+
+  &:hover
+    +colors(#fff, #e86127)
+
+  &:active
+    +colors(#fff, #e86127)
+
+  &.button_disabled
+    +colors-for-states(#fff, #B67D7B)
+
+.button_red
+  &
+    +colors(#fff, #CC342D)
+
+  &:hover
+    +colors(#fff, #E62B23)
+
+  &:active
+    +colors(#fff, #AD3A35)
+
+  &.button_disabled
+    +colors-for-states(#fff, #B67D7B)
+
+.button_white
+  &
+    +colors(#222, #fff, #ccc)
+
+  &:hover
+    +colors(#000, #f7f7f7, #ccc)
+
+  &:active
+    +colors(#000, #efefef, #ccc)
+
+  &.button_white_active
+    +colors(#fff, #274481, #18294e)
+    cursor: default
+
+.button_link
+  &
+    +colors(#333, transparent)
+
+  &:hover
+    +colors(#333, #efefef)
+
+  &.button_link_active
+    +colors(#E54B4B, transparent)
+    cursor: default
+
+.button_blue_border
+  &,
+  &:hover,
+  &:active
+    border: 2px solid #00D1F0

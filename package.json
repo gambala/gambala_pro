@@ -14,6 +14,7 @@
     "rails-plus": "https://github.com/gambala/rails-plus#develop",
     "rails-ujs": "^5.1.2",
     "smooth-scroll": "cferdinandi/smooth-scroll",
+    "stimulus": "^1.1.0",
     "turbolinks": "^5.0.3",
     "what-input": "^4.3.0"
   },
