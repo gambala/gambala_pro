@@ -5,5 +5,7 @@ module Web
     def index
       @is_root_link_hided = true
     end
+
+    def old; end
   end
 end

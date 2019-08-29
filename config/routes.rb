@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get 'posts-t',   to: redirect('/posts-t.html')
       get 'resume',    to: 'redirects#resume'
 
+      get 'old', to: 'welcome#old'
       root to: 'welcome#index'
       get '*unmatched_route', to: 'errors#not_found'
     end
