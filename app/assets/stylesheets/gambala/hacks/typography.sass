@@ -1,0 +1,28 @@
+@import rails-plus/functions/font-family
+
+=font-family-roboto
+  font-family: font-family()
+
+  .roboto-loaded &
+    font-family: font-family("Roboto")
+
+html
+  font-size: 14px
+
+body
+  +font-family-roboto
+  font-size: 14px
+  font-stretch: normal
+  font-style: normal
+  font-weight: 400
+  line-height: 24px
+
+// Normalize.css fix
+button,
+input,
+optgroup,
+select,
+textarea
+  +font-family-roboto
+  font-size: 14px
+  line-height: 24px

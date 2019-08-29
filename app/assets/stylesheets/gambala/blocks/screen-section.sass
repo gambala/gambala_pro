@@ -1,5 +1,4 @@
 @import 'breakpoint'
-@import 'sfui/mixins/font'
 @import 'rails-plus/mixins/retina-bg'
 
 $visited: mix(#fc00ff, #1178FF, 50%)
@@ -14,21 +13,21 @@ $visited: mix(#fc00ff, #1178FF, 50%)
   position: relative
 
   .screen-section__title
-    +font(22px)
+    font-size: 22px
     font-weight: 500
     margin-bottom: 18px
 
     +breakpoint(1024px)
-      +font(32px)
+      font-size: 32px
       line-height: 36px
 
   .screen-section__text
-    +font(14px)
+    font-size: 14px
     margin-bottom: 24px
     max-width: 640px
 
     +breakpoint(1024px)
-      +font(16px)
+      font-size: 16px
 
     p
       margin-bottom: 12px
