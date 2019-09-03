@@ -1,22 +1,23 @@
-@import 'rails-plus/mixins/retina-image'
+@import 'rails-plus/mixins/bg'
 
 .user-media.media
   .media__aside
     margin-right: 10px
 
   .user-media__avatar
-    +retina-image('avatar', 48px, 48px, $format: '.jpg')
+    +bg('avatar-new', $format: '.jpg', $size: cover)
+    height: 60px
+    width: 60px
     border-radius: 50%
-    box-shadow: 0 1px 4px rgba(#000, 0.15), 0 0 2px rgba(#f099e8, 0.75) inset
 
   .user-media__name
+    font-size: 16px
     font-weight: 500
-    line-height: 19px
-    padding: 3px 0 (24px - 19px - 3px)
+    line-height: 24px
+    padding: 4px 0 0
 
   .user-media__attributes
     color: #565656
-    font-size: 12px
-    font-weight: 300
-    line-height: 16px
-    padding: (24px - 16px - 4px) 0 4px
+    font-size: 14px
+    line-height: 21px
+    padding: 4px 0 4px
