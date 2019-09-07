@@ -1,6 +1,5 @@
 {
   "name": "gambala",
-  "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.2",
     "@rails/webpacker": "^4.0.2",
@@ -22,5 +21,6 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "webpack-dev-server": "^3.2.1"
-  }
+  },
+  "private": true
 }
