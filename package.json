@@ -9,7 +9,7 @@
     "fontfaceobserver": "^2.0.9",
     "jquery": "^3.5.0",
     "jquery-textcomplete": "^1.8.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.19",
     "normalize.css": "^6.0.0",
     "rails-plus": "https://github.com/gambala/rails-plus#develop",
     "rails-ujs": "^5.1.2",
